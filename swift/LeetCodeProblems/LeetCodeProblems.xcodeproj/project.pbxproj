@@ -11,6 +11,8 @@
 		98E3666F2A9E66CD009D9057 /* Problem_1768.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E3666E2A9E66CD009D9057 /* Problem_1768.swift */; };
 		98E3667B2A9E6759009D9057 /* Problem_1768.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E3666E2A9E66CD009D9057 /* Problem_1768.swift */; };
 		98E3667D2A9E678D009D9057 /* LeetCode75Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E3667C2A9E678D009D9057 /* LeetCode75Tests.swift */; };
+		98E3667F2A9E6936009D9057 /* Problem_1071.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E3667E2A9E6936009D9057 /* Problem_1071.swift */; };
+		98E366802A9E6936009D9057 /* Problem_1071.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E3667E2A9E6936009D9057 /* Problem_1071.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,7 @@
 		98E3666E2A9E66CD009D9057 /* Problem_1768.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_1768.swift; sourceTree = "<group>"; };
 		98E366742A9E6754009D9057 /* LeetCodeProblemsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeetCodeProblemsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E3667C2A9E678D009D9057 /* LeetCode75Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode75Tests.swift; sourceTree = "<group>"; };
+		98E3667E2A9E6936009D9057 /* Problem_1071.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_1071.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				98E3666E2A9E66CD009D9057 /* Problem_1768.swift */,
+				98E3667E2A9E6936009D9057 /* Problem_1071.swift */,
 			);
 			path = LeetCode75;
 			sourceTree = "<group>";
@@ -183,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98E3667F2A9E6936009D9057 /* Problem_1071.swift in Sources */,
 				98E366672A9E62C7009D9057 /* main.swift in Sources */,
 				98E3666F2A9E66CD009D9057 /* Problem_1768.swift in Sources */,
 			);
@@ -192,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98E366802A9E6936009D9057 /* Problem_1071.swift in Sources */,
 				98E3667D2A9E678D009D9057 /* LeetCode75Tests.swift in Sources */,
 				98E3667B2A9E6759009D9057 /* Problem_1768.swift in Sources */,
 			);
