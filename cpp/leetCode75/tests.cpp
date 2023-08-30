@@ -4,6 +4,42 @@
 
 #include "solutions.h"
 
+void printVector(std::vector<bool> items) {
+    for (int item : items) {
+        std::cout << item << " ";
+    }
+}
+
+#pragma region Problem 1431: Kids With the Greatest Number of Candies
+class Problem1431_Tests : public ::testing::TestWithParam<std::tuple<std::vector<int>, int, std::vector<bool>>> { };
+
+std::vector<int> candies1 = {2, 3, 5, 1, 3};
+std::vector<int> candies2 = {4, 2, 1, 1, 2};
+std::vector<int> candies3 = {2, 1, 12};
+
+std::vector<bool> result1 = {true, true, true, false, true};
+std::vector<bool> result2 = {true, false, false, false, false};
+std::vector<bool> result3 = {true, false, true};
+
+std::tuple<std::vector<int>, int, std::vector<bool>> testsCases_problem1431[] {
+    std::make_tuple(candies1, 3, result1),
+    std::make_tuple(candies2, 1, result2),
+    std::make_tuple(candies3, 10, result3),
+};
+
+TEST_P(Problem1431_Tests, BasicTests) {
+    std::vector<int> candies;
+    int extraCandies;
+    std::vector<bool> result;
+    std::tie(candies, extraCandies, result) = GetParam();
+
+    auto actual = problem_1431_kidsWithCandies(candies, extraCandies);
+    printVector(actual);
+    EXPECT_EQ(std::equal(actual.begin(), actual.end(), result.begin(), result.end()), true);
+};
+
+INSTANTIATE_TEST_SUITE_P(Default, Problem1431_Tests, ::testing::ValuesIn(testsCases_problem1431));
+#pragma endregion
 
 #pragma region Problem 1071: Greatest Common Divisor of Strings
 class Problem1071_Tests : public ::testing::TestWithParam<std::tuple<std::string, std::string, std::string>> { };
