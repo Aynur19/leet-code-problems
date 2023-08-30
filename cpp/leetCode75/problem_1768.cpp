@@ -61,8 +61,3 @@ std::string problem_1768_mergeAlternately(std::string word1, std::string word2) 
 
     return result;
 }
-
-
-int sumNumbers(int a, int b) {
-    return a + b;
-}
