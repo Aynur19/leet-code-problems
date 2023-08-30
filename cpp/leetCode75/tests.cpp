@@ -10,8 +10,38 @@ void printVector(std::vector<bool> items) {
     }
 }
 
+#pragma region Problem 605: Can Place Flowers
+class Problem_605_Tests : public ::testing::TestWithParam<std::tuple<std::vector<int>, int, bool>> { };
+
+std::vector<int> flowerbed_1 = {1, 0, 0, 0, 1};
+std::vector<int> flowerbed_2 = {1, 0, 0, 0, 1};
+std::vector<int> flowerbed_109 = {1, 0, 0, 0, 0, 1};
+std::vector<int> flowerbed_123 = {0, 1, 0};
+std::vector<int> flowerbed_112 = {0, 0, 1, 0, 1};
+
+std::tuple<std::vector<int>, int, bool> testsCases_problem_605[] {
+    std::make_tuple(flowerbed_1, 1, true),
+    std::make_tuple(flowerbed_2, 2, false),
+    std::make_tuple(flowerbed_109, 2, false),
+    std::make_tuple(flowerbed_123, 1, false),
+    std::make_tuple(flowerbed_112, 1, true),
+};
+
+TEST_P(Problem_605_Tests, BasicTests) {
+    std::vector<int> flowerbed;
+    int n;
+    bool result;
+    std::tie(flowerbed, n, result) = GetParam();
+
+    auto actual = problem_605_canPlaceFlowers(flowerbed, n);
+    EXPECT_EQ(actual, result);
+};
+
+INSTANTIATE_TEST_SUITE_P(Default, Problem_605_Tests, ::testing::ValuesIn(testsCases_problem_605));
+#pragma endregion
+
 #pragma region Problem 1431: Kids With the Greatest Number of Candies
-class Problem1431_Tests : public ::testing::TestWithParam<std::tuple<std::vector<int>, int, std::vector<bool>>> { };
+class Problem_1431_Tests : public ::testing::TestWithParam<std::tuple<std::vector<int>, int, std::vector<bool>>> { };
 
 std::vector<int> candies1 = {2, 3, 5, 1, 3};
 std::vector<int> candies2 = {4, 2, 1, 1, 2};
@@ -21,13 +51,13 @@ std::vector<bool> result1 = {true, true, true, false, true};
 std::vector<bool> result2 = {true, false, false, false, false};
 std::vector<bool> result3 = {true, false, true};
 
-std::tuple<std::vector<int>, int, std::vector<bool>> testsCases_problem1431[] {
+std::tuple<std::vector<int>, int, std::vector<bool>> testsCases_problem_1431[] {
     std::make_tuple(candies1, 3, result1),
     std::make_tuple(candies2, 1, result2),
     std::make_tuple(candies3, 10, result3),
 };
 
-TEST_P(Problem1431_Tests, BasicTests) {
+TEST_P(Problem_1431_Tests, BasicTests) {
     std::vector<int> candies;
     int extraCandies;
     std::vector<bool> result;
@@ -38,19 +68,19 @@ TEST_P(Problem1431_Tests, BasicTests) {
     EXPECT_EQ(std::equal(actual.begin(), actual.end(), result.begin(), result.end()), true);
 };
 
-INSTANTIATE_TEST_SUITE_P(Default, Problem1431_Tests, ::testing::ValuesIn(testsCases_problem1431));
+INSTANTIATE_TEST_SUITE_P(Default, Problem_1431_Tests, ::testing::ValuesIn(testsCases_problem_1431));
 #pragma endregion
 
 #pragma region Problem 1071: Greatest Common Divisor of Strings
-class Problem1071_Tests : public ::testing::TestWithParam<std::tuple<std::string, std::string, std::string>> { };
+class Problem_1071_Tests : public ::testing::TestWithParam<std::tuple<std::string, std::string, std::string>> { };
 
-std::tuple<std::string, std::string, std::string> testCases_problem1071[] {
+std::tuple<std::string, std::string, std::string> testCases_problem_1071[] {
     std::make_tuple("ABCABC", "ABC", "ABC"),
     std::make_tuple("ABABAB", "ABAB", "AB"),
     std::make_tuple("LEET", "CODE", "")
 };
 
-TEST_P(Problem1071_Tests, BasicTests) {
+TEST_P(Problem_1071_Tests, BasicTests) {
     std::string str1, str2, result;
     std::tie(str1, str2, result) = GetParam();
 
@@ -58,19 +88,19 @@ TEST_P(Problem1071_Tests, BasicTests) {
     EXPECT_EQ(actual, result);
 };
 
-INSTANTIATE_TEST_SUITE_P(Default, Problem1071_Tests, ::testing::ValuesIn(testCases_problem1071));
+INSTANTIATE_TEST_SUITE_P(Default, Problem_1071_Tests, ::testing::ValuesIn(testCases_problem_1071));
 #pragma endregion
 
 #pragma region Problem 1768: Merge Strings Alternately
-class Problem1768_Tests : public ::testing::TestWithParam<std::tuple<std::string, std::string, std::string>> { };
+class Problem_1768_Tests : public ::testing::TestWithParam<std::tuple<std::string, std::string, std::string>> { };
 
-std::tuple<std::string, std::string, std::string> testCases_problem1768[] {
+std::tuple<std::string, std::string, std::string> testCases_problem_1768[] {
     std::make_tuple("abc", "pqr", "apbqcr"),
     std::make_tuple("ab", "pqrs", "apbqrs"),
     std::make_tuple("abcd", "pq", "apbqcd")
 };
 
-TEST_P(Problem1768_Tests, BasicTests) {
+TEST_P(Problem_1768_Tests, BasicTests) {
     std::string word1, word2, result;
     std::tie(word1, word2, result) = GetParam();
 
@@ -78,5 +108,5 @@ TEST_P(Problem1768_Tests, BasicTests) {
     EXPECT_EQ(actual, result);
 };
 
-INSTANTIATE_TEST_SUITE_P(Default, Problem1768_Tests, ::testing::ValuesIn(testCases_problem1768));
+INSTANTIATE_TEST_SUITE_P(Default, Problem_1768_Tests, ::testing::ValuesIn(testCases_problem_1768));
 #pragma endregion
