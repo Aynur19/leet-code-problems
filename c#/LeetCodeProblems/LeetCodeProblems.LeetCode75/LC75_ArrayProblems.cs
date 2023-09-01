@@ -4,6 +4,28 @@ namespace LeetCodeProblems.LeetCode75;
 
 public static class LC75_ArrayProblems
 {
+    #region Problem 1431. Kids With the Greatest Number of Candies
+    public static IList<bool> Problem_1431_KidsWithCandies(int[] candies, int extraCandies)
+    {
+        var max = candies.Max();
+        var result = new List<bool>(candies.Length);
+
+        for (int i = 0; i < candies.Length; i++)
+        {
+            if (candies[i] + extraCandies >= max)
+            {
+                result.Add(true);
+            }
+            else
+            {
+                result.Add(false);
+            }
+        }
+
+        return result;
+    }
+    #endregion
+
     #region Problem 1071. Greatest Common Divisor of Strings
     public static string Problem_1071_GcdOfStrings(string str1, string str2)
     {
