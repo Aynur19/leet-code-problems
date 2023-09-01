@@ -4,6 +4,37 @@ namespace LeetCodeProblems.LeetCode75;
 
 public static class LC75_ArrayProblems
 {
+    #region 605. Can Place Flowers
+    public static bool Problem_605_CanPlaceFlowers(int[] flowerbed, int n)
+    {
+        if (flowerbed[0] == 0)
+        {
+            flowerbed[0] = 2;
+            n--;
+        }
+
+        for (int i = 1; i < flowerbed.Length; i++)
+        {
+            if (flowerbed[i] == 1)
+            {
+                if (flowerbed[i - 1] == 2)
+                {
+                    flowerbed[i - 1] = 0;
+                    n++;
+                }
+            } 
+            else if (flowerbed[i - 1] == 0)
+            {
+                flowerbed[i] = 2;
+                n--;
+            }
+        }
+
+
+        return n <= 0;
+    }
+    #endregion
+
     #region Problem 1431. Kids With the Greatest Number of Candies
     public static IList<bool> Problem_1431_KidsWithCandies(int[] candies, int extraCandies)
     {
