@@ -4,6 +4,45 @@ namespace LeetCodeProblems.LeetCode75;
 
 public static class LC75_ArrayProblems
 {
+    #region Problem 345. Reverse Vowels of a String
+    public static string Problem_345_ReverseVowels(string s)
+    {
+        var vowels = new char[] { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' };
+        var left = 0;
+        var right = s.Length - 1;
+
+        var result = new StringBuilder(s);
+
+        while (left < right)
+        {
+            var leftCharIsContains = vowels.Contains(result[left]);
+            var rightCharIsContains = vowels.Contains(result[right]);
+            
+            if (leftCharIsContains && rightCharIsContains)
+            {
+                (result[right], result[left]) = (result[left], result[right]);
+                
+                right--;
+                left++;
+                continue;
+            }
+
+            if (!rightCharIsContains)
+            {
+                right--;
+            }
+
+
+            if (!leftCharIsContains)
+            {
+                left++;
+            }
+        }
+
+        return result.ToString();
+    }
+    #endregion
+
     #region 605. Can Place Flowers
     public static bool Problem_605_CanPlaceFlowers(int[] flowerbed, int n)
     {

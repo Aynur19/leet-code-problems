@@ -2,6 +2,18 @@ namespace LeetCodeProblems.LeetCode75.Tests;
 
 public class LC75_ArrayProblemsTests
 {
+    #region Problem 345. Reverse Vowels of a String
+    [Theory]
+    [InlineData("hello", "holle")]
+    [InlineData("leetcode", "leotcede")]
+    public static void Problem_345_ReverseVowels(string s, string result)
+    {
+        var actual = LC75_ArrayProblems.Problem_345_ReverseVowels(s);
+
+        Assert.Equal(result, actual);
+    }
+    #endregion
+
     #region 605. Can Place Flowers
     [Theory]
     [InlineData(new int[] { 1, 0, 0, 0, 1 }, 1, true)]
