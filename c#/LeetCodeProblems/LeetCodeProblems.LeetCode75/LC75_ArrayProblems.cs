@@ -4,6 +4,15 @@ namespace LeetCodeProblems.LeetCode75;
 
 public static class LC75_ArrayProblems
 {
+    #region Problem 151. Reverse Words in a String
+    public static string Problem_151_ReverseWords(string s)
+    {
+        return string.Join(' ', s
+            .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+            .Reverse());
+    }
+    #endregion
+
     #region Problem 345. Reverse Vowels of a String
     public static string Problem_345_ReverseVowels(string s)
     {
@@ -43,7 +52,7 @@ public static class LC75_ArrayProblems
     }
     #endregion
 
-    #region 605. Can Place Flowers
+    #region Problem 605. Can Place Flowers
     public static bool Problem_605_CanPlaceFlowers(int[] flowerbed, int n)
     {
         if (flowerbed[0] == 0)

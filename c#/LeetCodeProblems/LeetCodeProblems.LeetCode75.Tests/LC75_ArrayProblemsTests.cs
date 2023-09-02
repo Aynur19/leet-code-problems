@@ -2,11 +2,24 @@ namespace LeetCodeProblems.LeetCode75.Tests;
 
 public class LC75_ArrayProblemsTests
 {
+    #region Problem 151. Reverse Words in a String
+    [Theory]
+    [InlineData("the sky is blue", "blue is sky the")]
+    [InlineData("  hello world  ", "world hello")]
+    [InlineData("a good   example", "example good a")]
+    public static void Problem_151_ReverseWords_Tests(string s, string result)
+    {
+        var actual = LC75_ArrayProblems.Problem_151_ReverseWords(s);
+
+        Assert.Equal(result, actual);
+    }
+    #endregion
+
     #region Problem 345. Reverse Vowels of a String
     [Theory]
     [InlineData("hello", "holle")]
     [InlineData("leetcode", "leotcede")]
-    public static void Problem_345_ReverseVowels(string s, string result)
+    public static void Problem_345_ReverseVowels_Tests(string s, string result)
     {
         var actual = LC75_ArrayProblems.Problem_345_ReverseVowels(s);
 
@@ -14,7 +27,7 @@ public class LC75_ArrayProblemsTests
     }
     #endregion
 
-    #region 605. Can Place Flowers
+    #region Problem 605. Can Place Flowers
     [Theory]
     [InlineData(new int[] { 1, 0, 0, 0, 1 }, 1, true)]
     [InlineData(new int[] { 1, 0, 0, 0, 1 }, 2, false)]
