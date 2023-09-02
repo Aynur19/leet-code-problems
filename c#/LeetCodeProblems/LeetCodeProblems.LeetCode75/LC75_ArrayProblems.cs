@@ -4,6 +4,30 @@ namespace LeetCodeProblems.LeetCode75;
 
 public static class LC75_ArrayProblems
 {
+    #region Problem 238. Product of Array Except Self
+    public static int[] Problem_238_ProductExceptSelf(int[] nums)
+    {
+        var n = nums.Length;
+        var result = new int[n];
+        result[0] = 1;
+
+        for (var i = 1; i < n; i++)
+        {
+            result[i] = result[i - 1] * nums[i - 1];
+        }
+
+        var right = 1;
+        for (int i = n - 2; i >= 0; i--)
+        {
+            result[i] *= right * nums[i + 1];
+            right *= nums[i + 1];
+        }
+
+        return result;
+    }
+
+    #endregion
+
     #region Problem 151. Reverse Words in a String
     public static string Problem_151_ReverseWords(string s)
     {

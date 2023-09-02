@@ -2,6 +2,18 @@ namespace LeetCodeProblems.LeetCode75.Tests;
 
 public class LC75_ArrayProblemsTests
 {
+    #region Problem 238. Product of Array Except Self
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3, 4 }, new int[] { 24, 12, 8, 6 })]
+    [InlineData(new int[] { -1, 1, 0, -3, 3 }, new int[] { 0, 0, 9, 0, 0 })]
+    public static void Problem_238_ProductExceptSelf_Tests(int[] nums, int[] result)
+    {
+        var actual = LC75_ArrayProblems.Problem_238_ProductExceptSelf(nums);
+
+        Assert.True(result.SequenceEqual(actual));
+    }
+    #endregion
+
     #region Problem 151. Reverse Words in a String
     [Theory]
     [InlineData("the sky is blue", "blue is sky the")]
