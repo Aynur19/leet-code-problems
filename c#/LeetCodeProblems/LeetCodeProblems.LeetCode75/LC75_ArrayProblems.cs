@@ -4,6 +4,33 @@ namespace LeetCodeProblems.LeetCode75;
 
 public static class LC75_ArrayProblems
 {
+    #region Problem 334. Increasing Triplet Subsequence
+    public static bool Problem_334_IncreasingTriplet(int[] nums)
+    {
+        var n = nums.Length;
+        var left = int.MaxValue;
+        var middle = int.MaxValue;
+
+        for ( var i = 0; i < n; i++)
+        {
+            if (nums[i] > middle)
+            {
+                return true;
+            }
+            else if (nums[i] > left && nums[i] < middle)
+            {
+                middle = nums[i];
+            }
+            else if (nums[i] < left)
+            {
+                left = nums[i];
+            }
+        }
+
+        return false;
+    }
+    #endregion
+
     #region Problem 238. Product of Array Except Self
     public static int[] Problem_238_ProductExceptSelf(int[] nums)
     {
@@ -25,7 +52,6 @@ public static class LC75_ArrayProblems
 
         return result;
     }
-
     #endregion
 
     #region Problem 151. Reverse Words in a String
