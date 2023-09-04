@@ -1,13 +1,14 @@
 //
-//  LeetCode75Tests.swift
+//  LC75_ArrayProblems_Tests.swift
 //  LeetCodeProblemsTests
 //
-//  Created by Aynur Nasybullin on 29.08.2023.
+//  Created by Aynur Nasybullin on 04.09.2023.
 //
 
 import XCTest
+@testable import LeetCodeProblems
 
-final class LeetCode75Tests: XCTestCase {
+final class LC75_ArrayProblems_Tests: XCTestCase {
     // MARK: Problem 151: Reverse Words in a String
     lazy var testsData_problem_151: [(s: String, result: String)] = {
         var testsData = [(s: String, result: String)]()
@@ -21,8 +22,8 @@ final class LeetCode75Tests: XCTestCase {
     
     func tests_problem_151_reverseWords() throws {
         for data in testsData_problem_151 {
-            XCTAssertEqual(problem_151_reverseWords(data.s), data.result,
-                           "s: \(data.s), result: \(data.result)")
+            let actual = LC75_ArrayProblems.problem_151_reverseWords(data.s)
+            XCTAssertEqual(actual, data.result, "s: \(data.s), result: \(data.result)")
         }
     }
     
@@ -40,11 +41,10 @@ final class LeetCode75Tests: XCTestCase {
     
     func tests_problem_345_reverseVowels() throws {
         for data in testsData_problem_345 {
-            XCTAssertEqual(problem_345_reverseVowels(data.s), data.result,
-                           "s: \(data.s), result: \(data.result)")
+            let actual = LC75_ArrayProblems.problem_345_reverseVowels(data.s)
+            XCTAssertEqual(actual, data.result, "s: \(data.s), result: \(data.result)")
         }
     }
-    
     
     // MARK: Problem 605: Can Place Flowers
     lazy var testsData_problem_605: [(flowerbed: [Int], n: Int, result: Bool)] = {
@@ -62,8 +62,8 @@ final class LeetCode75Tests: XCTestCase {
     
     func tests_problem_605_canPlaceFlowers() throws {
         for data in testsData_problem_605 {
-            XCTAssertEqual(problem_605_canPlaceFlowers(data.flowerbed, data.n), data.result,
-                           "flowerbed: \(data.flowerbed), n: \(data.n)")
+            let actual = LC75_ArrayProblems.problem_605_canPlaceFlowers(data.flowerbed, data.n)
+            XCTAssertEqual(actual, data.result, "flowerbed: \(data.flowerbed), n: \(data.n)")
         }
     }
     
@@ -81,10 +81,10 @@ final class LeetCode75Tests: XCTestCase {
     
     func tests_problem_1431_kidsWithCandies() throws {
         for data in testsData_problem_1431 {
-            XCTAssertEqual(problem_1431_kidsWithCandies(data.candies, data.extraCandies), data.result)
+            let actual = LC75_ArrayProblems.problem_1431_kidsWithCandies(data.candies, data.extraCandies)
+            XCTAssertEqual(actual, data.result)
         }
     }
-    
     
     // MARK: Problem 1071: Merge Strings Alternately
     lazy var testsData_problem_1071: [(str1: String, str2: String, result: String)] = {
@@ -101,11 +101,11 @@ final class LeetCode75Tests: XCTestCase {
     
     func tests_problem_1071_gcdOfStrings() throws {
         for data in testsData_problem_1071 {
-            XCTAssertEqual(problem_1071_gcdOfStrings(data.str1, data.str2), data.result)
+            let actual = LC75_ArrayProblems.problem_1071_gcdOfStrings(data.str1, data.str2)
+            XCTAssertEqual(actual, data.result)
         }
     }
-    
-    
+
     // MARK: Problem 1768: Merge Strings Alternately
     lazy var testsData_problem_1768: [(word1: String, word2: String, result: String)] = {
         var testsData = [(word1: String, word2: String, result: String)]()
@@ -119,7 +119,8 @@ final class LeetCode75Tests: XCTestCase {
     
     func tests_problem_1768_mergeAlternately() throws {
         for data in testsData_problem_1768 {
-            XCTAssertEqual(problem_1768_mergeAlternately(data.word1, data.word2), data.result)
+            let actual = LC75_ArrayProblems.problem_1768_mergeAlternately(data.word1, data.word2)
+            XCTAssertEqual(actual, data.result)
         }
     }
 }
