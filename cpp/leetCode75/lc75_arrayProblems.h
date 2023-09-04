@@ -4,6 +4,8 @@
 #include <algorithm>
 #include <sstream>
 
+std::vector<int> problem_238_productExceptSelf(std::vector<int>& nums);
+
 std::string problem_151_reverseWords(std::string s);
 
 std::string problem_345_reverseVowels(std::string s);

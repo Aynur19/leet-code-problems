@@ -1,6 +1,21 @@
 #include "lc75_arrayProblems.h"
 
+std::vector<int> problem_238_productExceptSelf(std::vector<int>& nums) {
+    int count = nums.size();
+    std::vector<int> result(count, 1);
+    int tmp = 1;
+    
+    for (int i = 1; i < count; i++) {
+        result[i] = result[i - 1] * nums[i - 1];
+    }
 
+    for (int i = count - 2; i >= 0; i--) {
+        tmp = tmp * nums[i + 1];
+        result[i] = result[i] * tmp;
+    }
+
+    return result;
+}
 
 std::string problem_151_reverseWords(std::string s) {
     std::stringstream ss(s);
@@ -31,8 +46,9 @@ std::string problem_345_reverseVowels(std::string s) {
     
     std::reverse(wordVowels.begin(), wordVowels.end());
     int idx = 0;
-    for (size_t i = 0; i < size, idx < wordVowels.size(); i++)
+    for (size_t i = 0; idx < wordVowels.size(); i++)
     {
+        if (i >= size) { break; }
         if (std::find(vowels.begin(), vowels.end(), s[i]) != vowels.end()) {
             s[i] = wordVowels[idx];
             idx++;
