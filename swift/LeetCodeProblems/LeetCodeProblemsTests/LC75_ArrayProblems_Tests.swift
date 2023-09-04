@@ -9,6 +9,25 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class LC75_ArrayProblems_Tests: XCTestCase {
+    // MARK: Problem 334. Increasing Triplet Subsequence
+    lazy var testsData_problem_334: [(nums: [Int], result: Bool)] = {
+        var testsData = [(nums: [Int], result: Bool)]()
+        
+        testsData.append((nums: [1, 2, 3, 4, 5], result: true))
+        testsData.append((nums: [5, 4, 3, 2, 1], result: false))
+        testsData.append((nums: [2, 1, 5,0,4,6], result: true))
+        
+        return testsData
+    }()
+    
+    func tests_problem_334_increasingTriplet() throws {
+        for data in testsData_problem_334 {
+            let actual = LC75_ArrayProblems.problem_334_increasingTriplet(data.nums)
+            XCTAssertEqual(actual, data.result)
+        }
+    }
+    
+    
     // MARK: Problem 238. Product of Array Except Self
     lazy var testsData_problem_238: [(nums: [Int], result: [Int])] = {
         var testsData = [(nums: [Int], result: [Int])]()

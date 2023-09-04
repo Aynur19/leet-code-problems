@@ -8,6 +8,23 @@
 import Foundation
 
 public final class LC75_ArrayProblems {
+    public static func problem_334_increasingTriplet(_ nums: [Int]) -> Bool {
+        var left = Int.max
+        var middle = Int.max
+        
+        for idx in nums.indices {
+            if nums[idx] > middle {
+                return true
+            } else if nums[idx] > left, nums[idx] <= middle {
+                middle = nums[idx]
+            } else if nums[idx] <= left {
+                left = nums[idx]
+            }
+        }
+        
+        return false
+    }
+    
     public static func problem_238_productExceptSelf(_ nums: [Int]) -> [Int] {
         var result = Array<Int>(repeating: 1, count: nums.count)
         var tmp = 1
