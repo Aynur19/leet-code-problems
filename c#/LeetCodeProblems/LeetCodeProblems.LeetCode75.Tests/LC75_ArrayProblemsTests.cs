@@ -2,6 +2,21 @@ namespace LeetCodeProblems.LeetCode75.Tests;
 
 public class LC75_ArrayProblemsTests
 {
+    #region Problem 443. String Compression
+    [Theory]
+    [InlineData(new char[] { 'a', 'a', 'b', 'b', 'c', 'c', 'c' }, 6, new char[] { 'a', '2', 'b', '2', 'c', '3' })]
+    [InlineData(new char[] { 'a' }, 1, new char[] { 'a' })]
+    [InlineData(new char[] { 'a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b' }, 4, new char[] { 'a', 'b', '1', '2' })]
+    [InlineData(new char[] { 'a', 'b', 'c' }, 3, new char[] { 'a', 'b', 'c' })]
+    public static void Problem_443_Compress(char[] chars, int result, char[] resultChars)
+    {
+        var actual = LC75_ArrayProblems.Problem_443_Compress(chars);
+
+        Assert.Equal(result, actual);
+        Assert.True(resultChars.SequenceEqual(chars[0..resultChars.Length]));
+    }
+    #endregion
+
     #region Problem 334. Increasing Triplet Subsequence
     [Theory]
     [InlineData(new int[] { 1, 2, 3, 4, 5 }, true)]

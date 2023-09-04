@@ -4,6 +4,45 @@ namespace LeetCodeProblems.LeetCode75;
 
 public static class LC75_ArrayProblems
 {
+    #region Problem 443. String Compression
+    public static int Problem_443_Compress(char[] chars)
+    {
+        var compress = new StringBuilder();
+        compress.Append(chars[0]);
+        var count = 1;
+
+        for (int i = 1; i < chars.Length; i++)
+        {
+            if (chars[i] == compress[^1])
+            {
+                count++;
+            } 
+            else
+            {
+                if (count > 1)
+                {
+                    compress.Append(count);
+                }
+                compress.Append(chars[i]);
+                count = 1;
+            }
+        }
+
+        if (count > 1)
+        {
+            compress.Append(count);
+        }
+
+        var newChars = compress.ToString().ToCharArray();
+        for (int i = 0; i < newChars.Length; i++)
+        {
+            chars[i] = newChars[i];
+        }
+
+        return compress.Length;
+    }
+    #endregion
+
     #region Problem 334. Increasing Triplet Subsequence
     public static bool Problem_334_IncreasingTriplet(int[] nums)
     {
