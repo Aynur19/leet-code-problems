@@ -10,7 +10,28 @@ void printVector(std::vector<bool> items) {
     }
 }
 
-#pragma region Problem 605: Can Place Flowers
+
+#pragma region Problem 345. Reverse Vowels of a String
+class Problem_345_Tests : public ::testing::TestWithParam<std::tuple<std::string, std::string>> { };
+
+std::tuple<std::string, std::string> testsCases_problem_345[] {
+    std::make_tuple("hello", "holle"),
+    std::make_tuple("leetcode", "leotcede"),
+};
+
+TEST_P(Problem_345_Tests, BasicTests) {
+    std::string s, result;
+    std::tie(s, result) = GetParam();
+
+    auto actual = problem_345_reverseVowels(s);
+    EXPECT_EQ(actual, result);
+};
+
+INSTANTIATE_TEST_SUITE_P(Default, Problem_345_Tests, ::testing::ValuesIn(testsCases_problem_345));
+#pragma endregion
+
+
+#pragma region Problem 605. Can Place Flowers
 class Problem_605_Tests : public ::testing::TestWithParam<std::tuple<std::vector<int>, int, bool>> { };
 
 std::vector<int> flowerbed_1 = {1, 0, 0, 0, 1};
@@ -40,7 +61,8 @@ TEST_P(Problem_605_Tests, BasicTests) {
 INSTANTIATE_TEST_SUITE_P(Default, Problem_605_Tests, ::testing::ValuesIn(testsCases_problem_605));
 #pragma endregion
 
-#pragma region Problem 1431: Kids With the Greatest Number of Candies
+
+#pragma region Problem 1431. Kids With the Greatest Number of Candies
 class Problem_1431_Tests : public ::testing::TestWithParam<std::tuple<std::vector<int>, int, std::vector<bool>>> { };
 
 std::vector<int> candies1 = {2, 3, 5, 1, 3};
@@ -70,7 +92,8 @@ TEST_P(Problem_1431_Tests, BasicTests) {
 INSTANTIATE_TEST_SUITE_P(Default, Problem_1431_Tests, ::testing::ValuesIn(testsCases_problem_1431));
 #pragma endregion
 
-#pragma region Problem 1071: Greatest Common Divisor of Strings
+
+#pragma region Problem 1071. Greatest Common Divisor of Strings
 class Problem_1071_Tests : public ::testing::TestWithParam<std::tuple<std::string, std::string, std::string>> { };
 
 std::tuple<std::string, std::string, std::string> testCases_problem_1071[] {
@@ -90,7 +113,8 @@ TEST_P(Problem_1071_Tests, BasicTests) {
 INSTANTIATE_TEST_SUITE_P(Default, Problem_1071_Tests, ::testing::ValuesIn(testCases_problem_1071));
 #pragma endregion
 
-#pragma region Problem 1768: Merge Strings Alternately
+
+#pragma region Problem 1768. Merge Strings Alternately
 class Problem_1768_Tests : public ::testing::TestWithParam<std::tuple<std::string, std::string, std::string>> { };
 
 std::tuple<std::string, std::string, std::string> testCases_problem_1768[] {

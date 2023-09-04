@@ -1,5 +1,30 @@
 #include "lc75_arrayProblems.h"
 
+std::string problem_345_reverseVowels(std::string s) {
+    std::vector<char> vowels = { 'A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u' };
+    std::vector<char> wordVowels;
+
+    auto size = s.length();
+    for (size_t i = 0; i < size; i++)
+    {
+        if (std::find(vowels.begin(), vowels.end(), s[i]) != vowels.end()) {
+            wordVowels.push_back(s[i]);
+        }
+    }
+    
+    std::reverse(wordVowels.begin(), wordVowels.end());
+    int idx = 0;
+    for (size_t i = 0; i < size, idx < wordVowels.size(); i++)
+    {
+        if (std::find(vowels.begin(), vowels.end(), s[i]) != vowels.end()) {
+            s[i] = wordVowels[idx];
+            idx++;
+        }
+    }
+    
+    return s;
+}
+
 bool problem_605_canPlaceFlowers(std::vector<int>& flowerbed, int n) {
     if (flowerbed[0] == 0) {
         flowerbed[0] = 2;

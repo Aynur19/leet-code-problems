@@ -1,6 +1,9 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <algorithm>
+
+std::string problem_345_reverseVowels(std::string s);
 
 bool problem_605_canPlaceFlowers(std::vector<int>& flowerbed, int n);
 
