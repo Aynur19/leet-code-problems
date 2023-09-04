@@ -1,0 +1,5 @@
+
+# Visual Studio Comminity 
+*.vs
+bin/
+obj/
