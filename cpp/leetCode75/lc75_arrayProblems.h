@@ -4,6 +4,8 @@
 #include <algorithm>
 #include <sstream>
 
+int problem_443_compress(std::vector<char>& chars);
+
 bool problem_334_increasingTriplet(std::vector<int>& nums);
 
 std::vector<int> problem_238_productExceptSelf(std::vector<int>& nums);

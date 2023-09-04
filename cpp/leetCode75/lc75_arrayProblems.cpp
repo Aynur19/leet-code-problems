@@ -1,19 +1,56 @@
 #include "lc75_arrayProblems.h"
 
+int problem_443_compress(std::vector<char>& chars) {
+    if (chars.empty()) { return 0; }
+
+    int n = chars.size();
+    chars.push_back(chars[0]);
+    int count = 1;
+
+    for (int i = 1; i < n; i++)
+    {
+        if (chars[i] == chars.back()) {
+            count++;
+        } else {
+            if (count > 1) {
+                auto countStr = std::to_string(count);
+                for (char character : countStr) {
+                    chars.push_back(character);
+                }
+            }
+
+            chars.push_back(chars[i]);
+            count = 1;
+        }
+    }
+    
+    if (count > 1) {
+        auto countStr = std::to_string(count);
+        for (char character : countStr) {
+            chars.push_back(character);
+        }
+    }
+
+    chars.erase(chars.begin(), chars.begin() + n);
+    return chars.size();
+}
+
 bool problem_334_increasingTriplet(std::vector<int>& nums) {
+    int n = nums.size();
+    if (n < 3) { return false; }
+
     int left = INT_MAX;
     int middle = INT_MAX;
 
-    for (size_t i = 0; i < nums.size(); i++)
-    {
-        if (nums[i] > middle) {
+    for(auto& number : nums) {
+        if (number > middle) {
             return true;
         }
-        else if (nums[i] > left && nums[i] < middle) {
-            middle = nums[i];
+        else if (number > left && number < middle) {
+            middle = number;
         }
-        else if (nums[i] < left) {
-            left = nums[i];
+        else if (number < left) {
+            left = number;
         }
     }
 

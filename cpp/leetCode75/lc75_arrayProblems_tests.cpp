@@ -207,3 +207,34 @@ TEST_P(Problem_334_Tests, BasicTests) {
 
 INSTANTIATE_TEST_SUITE_P(Default, Problem_334_Tests, ::testing::ValuesIn(testCases_problem_334));
 #pragma endregion
+
+
+#pragma region Problem 443. String Compression
+class Problem_443_Tests : public ::testing::TestWithParam<std::tuple<std::vector<char>, int, std::vector<char>>> { };
+
+std::vector<char> input_443_1 = { 'a', 'a', 'b', 'b', 'c', 'c', 'c' };
+std::vector<char> input_443_2 = { 'a' };
+std::vector<char> input_443_3 = { 'a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b' };
+
+std::vector<char> output_443_1 = { 'a', '2', 'b', '2', 'c', '3' };
+std::vector<char> output_443_2 = { 'a' };
+std::vector<char> output_443_3 = { 'a', 'b', '1', '2' };
+
+std::tuple<std::vector<char>, int, std::vector<char>> testCases_problem_443[] {
+    std::make_tuple(input_443_1, 6, output_443_1),
+    std::make_tuple(input_443_2, 1, output_443_2),
+    std::make_tuple(input_443_3, 4, output_443_3),
+};
+
+TEST_P(Problem_443_Tests, BasicTests) {
+    std::vector<char> chars, expectedChars;
+    int expected;
+    std::tie(chars, expected, expectedChars) = GetParam();
+
+    auto actual = problem_443_compress(chars);
+    EXPECT_EQ(actual, expected);
+    EXPECT_EQ(chars, expectedChars);
+};
+
+INSTANTIATE_TEST_SUITE_P(Default, Problem_443_Tests, ::testing::ValuesIn(testCases_problem_443));
+#pragma endregion
