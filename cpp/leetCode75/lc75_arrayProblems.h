@@ -1,5 +1,6 @@
 #include <string>
 #include <vector>
+#include <iostream>
 
 bool problem_605_canPlaceFlowers(std::vector<int>& flowerbed, int n);
 

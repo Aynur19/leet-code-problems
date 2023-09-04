@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-#include "solutions.h"
+#include "lc75_arrayProblems.h"
 
 void printVector(std::vector<bool> items) {
     for (int item : items) {
@@ -64,7 +64,6 @@ TEST_P(Problem_1431_Tests, BasicTests) {
     std::tie(candies, extraCandies, result) = GetParam();
 
     auto actual = problem_1431_kidsWithCandies(candies, extraCandies);
-    printVector(actual);
     EXPECT_EQ(std::equal(actual.begin(), actual.end(), result.begin(), result.end()), true);
 };
 
