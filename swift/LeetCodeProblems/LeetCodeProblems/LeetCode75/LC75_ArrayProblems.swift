@@ -8,6 +8,25 @@
 import Foundation
 
 public final class LC75_ArrayProblems {
+    public static func problem_238_productExceptSelf(_ nums: [Int]) -> [Int] {
+        var result = Array<Int>(repeating: 1, count: nums.count)
+        var tmp = 1
+        let n = nums.count
+        
+        for idx in 1..<nums.count {
+            tmp = tmp * nums[idx - 1]
+            result[idx] = tmp
+        }
+        
+        tmp = 1
+        for idx in stride(from: n - 2, to: -1, by: -1) {
+            tmp = tmp * nums[idx + 1]
+            result[idx] = result[idx] * tmp
+        }
+        
+        return result
+    }
+    
     public static func problem_151_reverseWords(_ s: String) -> String {
         return s
             .split(separator: " ", omittingEmptySubsequences: true)

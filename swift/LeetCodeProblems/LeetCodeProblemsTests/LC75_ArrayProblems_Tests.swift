@@ -9,7 +9,25 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class LC75_ArrayProblems_Tests: XCTestCase {
-    // MARK: Problem 151: Reverse Words in a String
+    // MARK: Problem 238. Product of Array Except Self
+    lazy var testsData_problem_238: [(nums: [Int], result: [Int])] = {
+        var testsData = [(nums: [Int], result: [Int])]()
+        
+        testsData.append((nums: [1, 2, 3, 4], result: [24, 12, 8, 6]))
+        testsData.append((nums: [-1, 1, 0, -3, 3], result: [0, 0, 9, 0, 0]))
+        
+        return testsData
+    }()
+    
+    func tests_problem_238_productExceptSelf() throws {
+        for data in testsData_problem_238 {
+            let actual = LC75_ArrayProblems.problem_238_productExceptSelf(data.nums)
+            XCTAssertEqual(actual, data.result)
+        }
+    }
+    
+    
+    // MARK: Problem 151. Reverse Words in a String
     lazy var testsData_problem_151: [(s: String, result: String)] = {
         var testsData = [(s: String, result: String)]()
         
@@ -28,7 +46,7 @@ final class LC75_ArrayProblems_Tests: XCTestCase {
     }
     
     
-    // MARK: Problem 345: Reverse Vowels of a String
+    // MARK: Problem 345. Reverse Vowels of a String
     lazy var testsData_problem_345: [(s: String, result: String)] = {
         var testsData = [(s: String, result: String)]()
         
@@ -46,7 +64,8 @@ final class LC75_ArrayProblems_Tests: XCTestCase {
         }
     }
     
-    // MARK: Problem 605: Can Place Flowers
+    
+    // MARK: Problem 605. Can Place Flowers
     lazy var testsData_problem_605: [(flowerbed: [Int], n: Int, result: Bool)] = {
         var testsData = [(flowerbed: [Int], n: Int, result: Bool)]()
         
@@ -68,7 +87,7 @@ final class LC75_ArrayProblems_Tests: XCTestCase {
     }
     
     
-    // MARK: Problem 1431: Kids With the Greatest Number of Candies
+    // MARK: Problem 1431. Kids With the Greatest Number of Candies
     lazy var testsData_problem_1431: [(candies: [Int], extraCandies: Int, result: [Bool])] = {
         var testsData = [(candies: [Int], extraCandies: Int, result: [Bool])]()
         
@@ -86,7 +105,8 @@ final class LC75_ArrayProblems_Tests: XCTestCase {
         }
     }
     
-    // MARK: Problem 1071: Merge Strings Alternately
+    
+    // MARK: Problem 1071. Merge Strings Alternately
     lazy var testsData_problem_1071: [(str1: String, str2: String, result: String)] = {
         var testsData = [(str1: String, str2: String, result: String)]()
         
@@ -106,7 +126,8 @@ final class LC75_ArrayProblems_Tests: XCTestCase {
         }
     }
 
-    // MARK: Problem 1768: Merge Strings Alternately
+    
+    // MARK: Problem 1768. Merge Strings Alternately
     lazy var testsData_problem_1768: [(word1: String, word2: String, result: String)] = {
         var testsData = [(word1: String, word2: String, result: String)]()
         
