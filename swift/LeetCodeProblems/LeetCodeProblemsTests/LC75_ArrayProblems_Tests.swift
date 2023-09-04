@@ -9,6 +9,34 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class LC75_ArrayProblems_Tests: XCTestCase {
+    // MARK: Problem 443. String Compression
+    lazy var testsData_problem_443: [(chars: [Character], result: Int, resultChars: [Character])] = {
+        var testsData = [(chars: [Character], result: Int, resultChars: [Character])]()
+        
+        testsData.append((chars: ["a", "a", "b", "b", "c", "c", "c"],
+                          result: 6,
+                          resultChars: ["a", "2", "b", "2", "c", "3"]))
+        testsData.append((chars: ["a"],
+                          result: 1,
+                          resultChars: ["a"]))
+        testsData.append((chars: ["a", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b"],
+                          result: 4,
+                          resultChars: ["a", "b", "1", "2"]))
+        
+        return testsData
+    }()
+    
+    func tests_problem_443_compress() throws {
+        for data in testsData_problem_443 {
+            var chars = data.chars
+            let actual = LC75_ArrayProblems.problem_443_compress(&chars)
+            
+            XCTAssertEqual(actual, data.result)
+            XCTAssertEqual(chars, data.resultChars)
+        }
+    }
+    
+    
     // MARK: Problem 334. Increasing Triplet Subsequence
     lazy var testsData_problem_334: [(nums: [Int], result: Bool)] = {
         var testsData = [(nums: [Int], result: Bool)]()

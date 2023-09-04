@@ -8,6 +8,32 @@
 import Foundation
 
 public final class LC75_ArrayProblems {
+    public static func problem_443_compress(_ chars: inout [Character]) -> Int {
+        let n = chars.count
+        chars.append(chars[0])
+        var count = 1
+        
+        for idx in 1..<n {
+            if chars[idx] == chars.last {
+                count += 1
+            } else {
+                if count > 1 {
+                    chars.append(contentsOf: Array(String(count)))
+                }
+                
+                chars.append(chars[idx])
+                count = 1
+            }
+        }
+        
+        if count > 1 {
+            chars.append(contentsOf: Array(String(count)))
+        }
+        
+        chars.removeFirst(n)
+        return chars.count
+    }
+    
     public static func problem_334_increasingTriplet(_ nums: [Int]) -> Bool {
         var left = Int.max
         var middle = Int.max
