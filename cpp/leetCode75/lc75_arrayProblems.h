@@ -2,6 +2,9 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include <sstream>
+
+std::string problem_151_reverseWords(std::string s);
 
 std::string problem_345_reverseVowels(std::string s);
 

@@ -11,6 +11,27 @@ void printVector(std::vector<bool> items) {
 }
 
 
+#pragma region Problem 151. Reverse Words in a String
+class Problem_151_Tests : public ::testing::TestWithParam<std::tuple<std::string, std::string>> { };
+
+std::tuple<std::string, std::string> testCases_problem_151[] {
+    std::make_tuple("the sky is blue", "blue is sky the"),
+    std::make_tuple("  hello world  ", "world hello"),
+    std::make_tuple("a good   example", "example good a"),
+};
+
+TEST_P(Problem_151_Tests, BasicTests) {
+    std::string s, expected;
+    std::tie(s, expected) = GetParam();
+
+    auto actual = problem_151_reverseWords(s);
+    EXPECT_EQ(actual, expected);
+};
+
+INSTANTIATE_TEST_SUITE_P(Default, Problem_151_Tests, ::testing::ValuesIn(testCases_problem_151));
+#pragma endregion
+
+
 #pragma region Problem 345. Reverse Vowels of a String
 class Problem_345_Tests : public ::testing::TestWithParam<std::tuple<std::string, std::string>> { };
 
@@ -65,13 +86,13 @@ INSTANTIATE_TEST_SUITE_P(Default, Problem_605_Tests, ::testing::ValuesIn(testsCa
 #pragma region Problem 1431. Kids With the Greatest Number of Candies
 class Problem_1431_Tests : public ::testing::TestWithParam<std::tuple<std::vector<int>, int, std::vector<bool>>> { };
 
-std::vector<int> candies1 = {2, 3, 5, 1, 3};
-std::vector<int> candies2 = {4, 2, 1, 1, 2};
-std::vector<int> candies3 = {2, 1, 12};
+std::vector<int> candies1 = { 2, 3, 5, 1, 3 };
+std::vector<int> candies2 = { 4, 2, 1, 1, 2 };
+std::vector<int> candies3 = { 2, 1, 12 };
 
-std::vector<bool> result1 = {true, true, true, false, true};
-std::vector<bool> result2 = {true, false, false, false, false};
-std::vector<bool> result3 = {true, false, true};
+std::vector<bool> result1 = { true, true, true, false, true };
+std::vector<bool> result2 = { true, false, false, false, false };
+std::vector<bool> result3 = { true, false, true };
 
 std::tuple<std::vector<int>, int, std::vector<bool>> testsCases_problem_1431[] {
     std::make_tuple(candies1, 3, result1),

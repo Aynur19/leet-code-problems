@@ -1,5 +1,22 @@
 #include "lc75_arrayProblems.h"
 
+
+
+std::string problem_151_reverseWords(std::string s) {
+    std::stringstream ss(s);
+    std::string word;
+
+    s.clear();
+
+    while (ss >> word)
+    {
+        s = word + " " + s;
+    }
+
+    
+    return s.substr(0, s.length() - 1);   
+}
+
 std::string problem_345_reverseVowels(std::string s) {
     std::vector<char> vowels = { 'A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u' };
     std::vector<char> wordVowels;
