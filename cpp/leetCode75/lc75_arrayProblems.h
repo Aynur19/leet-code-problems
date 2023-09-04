@@ -4,6 +4,8 @@
 #include <algorithm>
 #include <sstream>
 
+bool problem_334_increasingTriplet(std::vector<int>& nums);
+
 std::vector<int> problem_238_productExceptSelf(std::vector<int>& nums);
 
 std::string problem_151_reverseWords(std::string s);

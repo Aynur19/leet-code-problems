@@ -182,3 +182,28 @@ TEST_P(Problem_238_Tests, BasicTests) {
 INSTANTIATE_TEST_SUITE_P(Default, Problem_238_Tests, ::testing::ValuesIn(testCases_problem_238));
 #pragma endregion
 
+
+#pragma region Problem 334. Increasing Triplet Subsequence
+class Problem_334_Tests : public ::testing::TestWithParam<std::tuple<std::vector<int>, bool>> { };
+
+std::vector<int> input_334_1 = { 1, 2, 3, 4, 5 };
+std::vector<int> input_334_2 = { 5, 4, 3, 2, 1 };
+std::vector<int> input_334_3 = { 2, 1, 5, 0, 4, 6 };
+
+std::tuple<std::vector<int>, bool> testCases_problem_334[] {
+    std::make_tuple(input_334_1, true),
+    std::make_tuple(input_334_2, false),
+    std::make_tuple(input_334_3, true),
+};
+
+TEST_P(Problem_334_Tests, BasicTests) {
+    std::vector<int> nums;
+    bool expected;
+    std::tie(nums, expected) = GetParam();
+
+    auto actual = problem_334_increasingTriplet(nums);
+    EXPECT_EQ(actual, expected);
+};
+
+INSTANTIATE_TEST_SUITE_P(Default, Problem_334_Tests, ::testing::ValuesIn(testCases_problem_334));
+#pragma endregion

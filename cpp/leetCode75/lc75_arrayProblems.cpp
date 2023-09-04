@@ -1,5 +1,25 @@
 #include "lc75_arrayProblems.h"
 
+bool problem_334_increasingTriplet(std::vector<int>& nums) {
+    int left = INT_MAX;
+    int middle = INT_MAX;
+
+    for (size_t i = 0; i < nums.size(); i++)
+    {
+        if (nums[i] > middle) {
+            return true;
+        }
+        else if (nums[i] > left && nums[i] < middle) {
+            middle = nums[i];
+        }
+        else if (nums[i] < left) {
+            left = nums[i];
+        }
+    }
+
+    return false;
+}
+
 std::vector<int> problem_238_productExceptSelf(std::vector<int>& nums) {
     int count = nums.size();
     std::vector<int> result(count, 1);
