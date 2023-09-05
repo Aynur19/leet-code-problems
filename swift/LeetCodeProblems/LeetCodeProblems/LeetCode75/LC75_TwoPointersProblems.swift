@@ -8,7 +8,6 @@
 import Foundation
 
 public final class LC75_TwoPointersProblems {
-    // 0 0 1 2 0 0 3 0 4 5 3 0
     static func problem_283_moveZeroes(_ nums: inout [Int]) {
         guard nums.count > 1 else { return }
         
@@ -29,5 +28,29 @@ public final class LC75_TwoPointersProblems {
                 left += 1
             }
         }
+    }
+    
+    static func problem_392_isSubsequence(_ s: String, _ t: String) -> Bool {
+        guard s.count <= t.count else { return false }
+        
+        var s = Array(s)
+        var t = Array(t)
+        
+        var sIdx = 0
+        var tIdx = 0
+        
+        while sIdx < s.count {
+            if tIdx >= t.count { return false }
+            
+            if s[sIdx] != t[tIdx] {
+                tIdx += 1
+                continue
+            }
+            
+            tIdx += 1
+            sIdx += 1
+        }
+                
+        return true
     }
 }

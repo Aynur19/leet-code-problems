@@ -29,4 +29,23 @@ final class LC75_TwoPointersProblems_Tests: XCTestCase {
             XCTAssertEqual(nums, data.expected)
         }
     }
+    
+    
+    // MARK: Problem 392. Is Subsequence
+    private lazy var testsData_problem_392: [(s: String, t: String, expected: Bool)] = {
+        var testsData = [(s: String, t: String, expected: Bool)]()
+        
+        testsData.append((s: "abc", t: "ahbgdc", expected: true))
+        testsData.append((s: "axc", t: "ahbgdc", expected: false))
+        
+        return testsData
+    }()
+    
+    func tests_problem_392_isSubsequence() throws {
+        for data in testsData_problem_392 {
+            let actual = LC75_TwoPointersProblems.problem_392_isSubsequence(data.s, data.t)
+            
+            XCTAssertEqual(actual, data.expected)
+        }
+    }
 }
