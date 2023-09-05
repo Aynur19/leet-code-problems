@@ -67,4 +67,23 @@ final class LC75_TwoPointersProblems_Tests: XCTestCase {
             XCTAssertEqual(actual, data.expected)
         }
     }
+    
+    
+    // MARK: Problem 1679. Max Number of K-Sum Pairs
+    private lazy var testsData_problem_1679: [(nums: [Int], k: Int, expected: Int)] = {
+        var testsData = [(nums: [Int], k: Int, expected: Int)]()
+        
+        testsData.append((nums: [1, 2, 3, 4], k: 5, expected: 2))
+        testsData.append((nums: [3, 1, 3, 4, 3], k: 6, expected: 1))
+        
+        return testsData
+    }()
+    
+    func tests_problem_1679_maxOperations() throws {
+        for data in testsData_problem_1679 {
+            let actual = LC75_TwoPointersProblems.problem_1679_maxOperations(data.nums, data.k)
+            
+            XCTAssertEqual(actual, data.expected, "nums: \(data.nums)")
+        }
+    }
 }

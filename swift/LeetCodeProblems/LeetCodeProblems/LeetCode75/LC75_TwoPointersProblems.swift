@@ -71,4 +71,29 @@ public final class LC75_TwoPointersProblems {
         
         return volume
     }
+    
+    static func problem_1679_maxOperations(_ nums: [Int], _ k: Int) -> Int {
+        guard nums.count > 1 else { return 0 }
+        
+        let nums = nums.sorted()
+        var left = 0
+        var right = nums.count - 1
+        var count = 0
+        
+        while left < right {
+            if nums[left] + nums[right] == k {
+                count += 1
+                left += 1
+                right -= 1
+            } else {
+                if nums[left] + nums[right] > k {
+                    right -= 1
+                } else  {
+                    left += 1
+                }
+            }
+        }
+        
+        return count
+    }
 }
