@@ -44,4 +44,22 @@ bool problem_392_isSubsequence(std::string s, std::string t) {
     return true;
 }
 
+int problem_11_maxArea(std::vector<int>& height) {
+    int volume = 0;
+    int n = height.size();
+    int left = 0;
+    int right = n - 1;
 
+    while (left < right) {
+        volume = std::max(volume, std::min(height[left], height[right]) * (right - left));
+
+        if (height[left] > height[right]) {
+            right--;
+        }
+        else {
+            left++;
+        }
+    }
+
+    return volume;
+}

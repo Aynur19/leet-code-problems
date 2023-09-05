@@ -49,3 +49,31 @@ TEST_P(Problem_392_Tests, BasicTests) {
 INSTANTIATE_TEST_SUITE_P(Default, Problem_392_Tests, ::testing::ValuesIn(testCases_problem_392));
 #pragma endregion
 
+
+#pragma region Problem 11. Container With Most Water
+class Problem_11_Tests : public ::testing::TestWithParam<std::tuple<std::vector<int>, int>> { };
+
+std::vector<int> input_11_1 = { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
+std::vector<int> input_11_2 = { 1, 1 };
+
+std::tuple<std::vector<int>, int> testCases_problem_11[] {
+    std::make_tuple(input_11_1, 49),
+    std::make_tuple(input_11_2, 1),
+};
+
+TEST_P(Problem_11_Tests, BasicTests) {
+    std::vector<int> height;
+    int expected;
+    std::tie(height, expected) = GetParam();
+
+    auto actual = problem_11_maxArea(height);
+    EXPECT_EQ(actual, expected);
+};
+
+INSTANTIATE_TEST_SUITE_P(Default, Problem_11_Tests, ::testing::ValuesIn(testCases_problem_11));
+#pragma endregion
+
+
+
+
+
