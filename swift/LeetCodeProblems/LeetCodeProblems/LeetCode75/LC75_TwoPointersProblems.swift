@@ -33,8 +33,8 @@ public final class LC75_TwoPointersProblems {
     static func problem_392_isSubsequence(_ s: String, _ t: String) -> Bool {
         guard s.count <= t.count else { return false }
         
-        var s = Array(s)
-        var t = Array(t)
+        let s = Array(s)
+        let t = Array(t)
         
         var sIdx = 0
         var tIdx = 0
@@ -52,5 +52,23 @@ public final class LC75_TwoPointersProblems {
         }
                 
         return true
+    }
+    
+    static func problem_11_maxArea(_ height: [Int]) -> Int {
+        var left = 0
+        var right = height.count - 1
+        var volume = 0
+        
+        while left < right {
+            volume = max(volume, min(height[left], height[right]) * (right - left))
+            
+            if height[left] > height[right] {
+                right -= 1
+            } else {
+                left += 1
+            }
+        }
+        
+        return volume
     }
 }
