@@ -1,5 +1,5 @@
-#include "lc75_arrayProblems.h"
-#include "lc75_arrayProblems_tests.cpp"
+#include "lc75_array.h"
+#include "lc75_array_tests.cpp"
 
 int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);

@@ -1,4 +1,4 @@
-#include "lc75_twoPointersProblems.h"
+#include "lc75_twoPointers.h"
 
 void problem_283_moveZeroes(std::vector<int>& nums) {
     int n = nums.size();

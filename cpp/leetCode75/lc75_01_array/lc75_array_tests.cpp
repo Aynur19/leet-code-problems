@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-#include "lc75_arrayProblems.h"
+#include "lc75_array.h"
 
 void printVector(std::vector<bool> items) {
     for (int item : items) {

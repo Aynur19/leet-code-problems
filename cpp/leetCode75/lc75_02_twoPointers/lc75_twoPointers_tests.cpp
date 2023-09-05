@@ -1,15 +1,15 @@
 #include <tuple>
 #include <gtest/gtest.h>
 
-#include "lc75_twoPointersProblems.h"
+#include "lc75_twoPointers.h"
 
 #pragma region Problem 283. Move Zeroes
 class Problem_283_Tests : public ::testing::TestWithParam<std::tuple<std::vector<int>, std::vector<int>>> { };
 
 std::vector<int> input_283_1 = { 0, 1, 0, 3, 12 };
-std::vector<int> input_283_2 = { 1, 3, 12, 0, 0 };
+std::vector<int> input_283_2 = { 0 };
 
-std::vector<int> output_283_1 = { 0 };
+std::vector<int> output_283_1 = { 1, 3, 12, 0, 0 };
 std::vector<int> output_283_2 = { 0 };
 
 std::tuple<std::vector<int>, std::vector<int>> testCases_problem_283[] {
