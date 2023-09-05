@@ -21,3 +21,27 @@ void problem_283_moveZeroes(std::vector<int>& nums) {
         right++;
     }
 }
+
+bool problem_392_isSubsequence(std::string s, std::string t) {
+    int sSize = s.size();
+    int tSize = t.size();
+    if (sSize > tSize) { return false; }
+
+    int sIdx = 0;
+    int tIdx = 0;
+
+    while (sIdx < sSize) {
+        if (tIdx >= tSize) { return false; }
+
+        if (s[sIdx] == t[tIdx]) {
+            sIdx++;
+            tIdx++;
+        } else {
+            tIdx++;
+        }
+    }
+
+    return true;
+}
+
+

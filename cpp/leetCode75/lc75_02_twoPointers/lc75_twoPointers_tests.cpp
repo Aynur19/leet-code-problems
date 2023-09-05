@@ -27,3 +27,25 @@ TEST_P(Problem_283_Tests, BasicTests) {
 
 INSTANTIATE_TEST_SUITE_P(Default, Problem_283_Tests, ::testing::ValuesIn(testCases_problem_283));
 #pragma endregion
+
+
+#pragma region Problem 392. Is Subsequence
+class Problem_392_Tests : public ::testing::TestWithParam<std::tuple<std::string, std::string, bool>> { };
+
+std::tuple<std::string, std::string, bool> testCases_problem_392[] {
+    std::make_tuple("abc", "ahbgdc", true),
+    std::make_tuple("axc", "ahbgdc", false),
+};
+
+TEST_P(Problem_392_Tests, BasicTests) {
+    std::string s, t;
+    bool expected;
+    std::tie(s, t, expected) = GetParam();
+
+    auto actual = problem_392_isSubsequence(s, t);
+    EXPECT_EQ(actual, expected);
+};
+
+INSTANTIATE_TEST_SUITE_P(Default, Problem_392_Tests, ::testing::ValuesIn(testCases_problem_392));
+#pragma endregion
+
