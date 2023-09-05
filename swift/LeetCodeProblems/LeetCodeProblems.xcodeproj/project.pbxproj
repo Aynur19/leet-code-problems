@@ -10,6 +10,9 @@
 		988074A12AA5E6F0001670E7 /* LC75_ArrayProblems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988074A02AA5E6F0001670E7 /* LC75_ArrayProblems.swift */; };
 		988074A32AA5E71E001670E7 /* LC75_ArrayProblems_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988074A22AA5E71E001670E7 /* LC75_ArrayProblems_Tests.swift */; };
 		988074A42AA5E727001670E7 /* LC75_ArrayProblems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988074A02AA5E6F0001670E7 /* LC75_ArrayProblems.swift */; };
+		988074A62AA71D95001670E7 /* LC75_TwoPointersProblems_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988074A52AA71D95001670E7 /* LC75_TwoPointersProblems_Tests.swift */; };
+		988074A82AA71DC1001670E7 /* LC75_TwoPointersProblems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988074A72AA71DC1001670E7 /* LC75_TwoPointersProblems.swift */; };
+		988074A92AA71DC1001670E7 /* LC75_TwoPointersProblems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988074A72AA71DC1001670E7 /* LC75_TwoPointersProblems.swift */; };
 		98E366672A9E62C7009D9057 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E366662A9E62C7009D9057 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +31,8 @@
 /* Begin PBXFileReference section */
 		988074A02AA5E6F0001670E7 /* LC75_ArrayProblems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC75_ArrayProblems.swift; sourceTree = "<group>"; };
 		988074A22AA5E71E001670E7 /* LC75_ArrayProblems_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC75_ArrayProblems_Tests.swift; sourceTree = "<group>"; };
+		988074A52AA71D95001670E7 /* LC75_TwoPointersProblems_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC75_TwoPointersProblems_Tests.swift; sourceTree = "<group>"; };
+		988074A72AA71DC1001670E7 /* LC75_TwoPointersProblems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC75_TwoPointersProblems.swift; sourceTree = "<group>"; };
 		98E366632A9E62C7009D9057 /* LeetCodeProblems */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCodeProblems; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E366662A9E62C7009D9057 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		98E366742A9E6754009D9057 /* LeetCodeProblemsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeetCodeProblemsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				988074A02AA5E6F0001670E7 /* LC75_ArrayProblems.swift */,
+				988074A72AA71DC1001670E7 /* LC75_TwoPointersProblems.swift */,
 			);
 			path = LeetCode75;
 			sourceTree = "<group>";
@@ -90,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				988074A22AA5E71E001670E7 /* LC75_ArrayProblems_Tests.swift */,
+				988074A52AA71D95001670E7 /* LC75_TwoPointersProblems_Tests.swift */,
 			);
 			path = LeetCodeProblemsTests;
 			sourceTree = "<group>";
@@ -185,6 +192,7 @@
 			files = (
 				988074A12AA5E6F0001670E7 /* LC75_ArrayProblems.swift in Sources */,
 				98E366672A9E62C7009D9057 /* main.swift in Sources */,
+				988074A82AA71DC1001670E7 /* LC75_TwoPointersProblems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +201,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				988074A32AA5E71E001670E7 /* LC75_ArrayProblems_Tests.swift in Sources */,
+				988074A92AA71DC1001670E7 /* LC75_TwoPointersProblems.swift in Sources */,
+				988074A62AA71D95001670E7 /* LC75_TwoPointersProblems_Tests.swift in Sources */,
 				988074A42AA5E727001670E7 /* LC75_ArrayProblems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
