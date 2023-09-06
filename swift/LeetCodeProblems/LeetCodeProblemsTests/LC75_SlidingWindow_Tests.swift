@@ -28,4 +28,24 @@ final class LC75_SlidingWindow_Tests: XCTestCase {
             XCTAssertEqual(actual, data.expected)
         }
     }
+    
+    // MARK: Problem 1456. Maximum Number of Vowels in a Substring of Given Length
+    private lazy var testsData_problem_1456: [(s: String, k: Int, expected: Int)] = {
+        var testsData = [(s: String, k: Int, expected: Int)]()
+        
+        testsData.append((s: "abciiidef", k: 3, expected: 3))
+        testsData.append((s: "aeiou", k: 2, expected: 2))
+        testsData.append((s: "leetcode", k: 3, expected: 2))
+        testsData.append((s: "zpuerktejfp", k: 3, expected: 2))
+        
+        return testsData
+    }()
+    
+    func tests_problem_1456_maxVowels() throws {
+        for data in testsData_problem_1456 {
+            let actual = LC75_SlidingWindow.problem_1456_maxVowels(data.s, data.k)
+            
+            XCTAssertEqual(actual, data.expected)
+        }
+    }
 }
