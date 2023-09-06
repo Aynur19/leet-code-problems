@@ -63,3 +63,33 @@ int problem_11_maxArea(std::vector<int>& height) {
 
     return volume;
 }
+
+int problem_1679_maxOperations(std::vector<int>& nums, int k) {
+    int n = nums.size();
+    if (n < 2) { return 0; }
+
+    std::sort(nums.begin(), nums.end());
+    int left = 0;
+    int right = n - 1;
+    int count = 0;
+
+    while (left < right)
+    {
+        auto sum = nums[left] + nums[right];
+        if (sum == k) {
+            count++;
+            left++;
+            right--;
+        } 
+        else {
+            if (sum > k) {
+                right--;
+            }
+            else {
+                left++;
+            }
+        }
+    }
+    
+    return count;
+}
