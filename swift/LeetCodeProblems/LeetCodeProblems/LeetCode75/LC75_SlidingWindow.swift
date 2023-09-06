@@ -54,4 +54,42 @@ public final class LC75_SlidingWindow {
         
         return maxCount
     }
+    
+    static func problem_1004_longestOnes(_ nums: [Int], _ k: Int) -> Int {
+        var maxCount = 0
+        var count = 0
+        var kCount = k
+        var left = 0
+        var right = 0
+        
+        while kCount > 0, right < nums.count {
+            if nums[right] == 0 {
+                kCount -= 1
+            }
+            
+            count += 1
+            right += 1
+        }
+        maxCount = count
+        if kCount > 0 { return maxCount }
+        
+        while right < nums.count {
+            if nums[right] == 0 {
+                while nums[left] != 0 {
+                    left += 1
+                    count -= 1
+                }
+                left += 1
+            } else {
+                count += 1
+            }
+            
+            maxCount = max(maxCount, count)
+            right += 1
+        }
+        
+        return maxCount
+    }
+    
+    
 }

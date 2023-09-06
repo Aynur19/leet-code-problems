@@ -29,6 +29,7 @@ final class LC75_SlidingWindow_Tests: XCTestCase {
         }
     }
     
+    
     // MARK: Problem 1456. Maximum Number of Vowels in a Substring of Given Length
     private lazy var testsData_problem_1456: [(s: String, k: Int, expected: Int)] = {
         var testsData = [(s: String, k: Int, expected: Int)]()
@@ -44,6 +45,25 @@ final class LC75_SlidingWindow_Tests: XCTestCase {
     func tests_problem_1456_maxVowels() throws {
         for data in testsData_problem_1456 {
             let actual = LC75_SlidingWindow.problem_1456_maxVowels(data.s, data.k)
+            
+            XCTAssertEqual(actual, data.expected)
+        }
+    }
+    
+    
+    // MARK: Problem 1004. Max Consecutive Ones III
+    private lazy var testsData_problem_1004: [(nums: [Int], k: Int, expected: Int)] = {
+        var testsData = [(nums: [Int], k: Int, expected: Int)]()
+        
+        testsData.append((nums: [1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], k: 2, expected: 6))
+        testsData.append((nums: [0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1], k: 3, expected: 10))
+        
+        return testsData
+    }()
+    
+    func tests_problem_1004_findMaxAverage() throws {
+        for data in testsData_problem_1004 {
+            let actual = LC75_SlidingWindow.problem_1004_longestOnes(data.nums, data.k)
             
             XCTAssertEqual(actual, data.expected)
         }
