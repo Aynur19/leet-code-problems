@@ -25,4 +25,18 @@ public final class LC75_HashMap_Set {
         
         return [answers1, answers2]
     }
+    
+    static func problem_1207_uniqueOccurrences(_ arr: [Int]) -> Bool {
+        var dict = [Int:Int]()
+        
+        for i in arr.indices {
+            if let count = dict[arr[i]] {
+                dict[arr[i]] = count + 1
+            } else {
+                dict[arr[i]] = 1
+            }
+        }
+        
+        return dict.count == Set(dict.values).count
+    }
 }

@@ -26,4 +26,23 @@ final class LC75_HashMap_Set_Tests: XCTestCase {
             XCTAssertEqual(actual.map { $0.sorted() }, data.expected.map { $0.sorted() })
         }
     }
+    
+    // MARK: Problem 1207. Unique Number of Occurrences
+    private lazy var testsData_problem_1207: [(arr: [Int], expected: Bool)] = {
+        var testsData = [(arr: [Int], expected: Bool)]()
+        
+        testsData.append((arr: [1, 2, 2, 1, 1, 3], expected: true))
+        testsData.append((arr: [1, 2], expected: false))
+        testsData.append((arr: [-3, 0, 1, -3, 1, 1, 1, -3, 10, 0], expected: true))
+        
+        return testsData
+    }()
+    
+    func tests_problem_1207_largestAltitude() throws {
+        for data in testsData_problem_1207 {
+            let actual = LC75_HashMap_Set.problem_1207_uniqueOccurrences(data.arr)
+            
+            XCTAssertEqual(actual, data.expected)
+        }
+    }
 }
