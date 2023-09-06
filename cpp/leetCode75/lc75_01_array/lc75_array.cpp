@@ -1,4 +1,4 @@
-#include "lc75_arrayProblems.h"
+#include "lc75_array.h"
 
 int problem_443_compress(std::vector<char>& chars) {
     if (chars.empty()) { return 0; }
