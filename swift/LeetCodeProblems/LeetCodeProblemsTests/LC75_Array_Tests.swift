@@ -1,5 +1,5 @@
 //
-//  LC75_ArrayProblems_Tests.swift
+//  LC75_Array_Tests.swift
 //  LeetCodeProblemsTests
 //
 //  Created by Aynur Nasybullin on 04.09.2023.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import LeetCodeProblems
 
-final class LC75_ArrayProblems_Tests: XCTestCase {
+final class LC75_Array_Tests: XCTestCase {
     // MARK: Problem 443. String Compression
     lazy var testsData_problem_443: [(chars: [Character], result: Int, resultChars: [Character])] = {
         var testsData = [(chars: [Character], result: Int, resultChars: [Character])]()
@@ -29,7 +29,7 @@ final class LC75_ArrayProblems_Tests: XCTestCase {
     func tests_problem_443_compress() throws {
         for data in testsData_problem_443 {
             var chars = data.chars
-            let actual = LC75_ArrayProblems.problem_443_compress(&chars)
+            let actual = LC75_Array.problem_443_compress(&chars)
             
             XCTAssertEqual(actual, data.result)
             XCTAssertEqual(chars, data.resultChars)
@@ -50,7 +50,7 @@ final class LC75_ArrayProblems_Tests: XCTestCase {
     
     func tests_problem_334_increasingTriplet() throws {
         for data in testsData_problem_334 {
-            let actual = LC75_ArrayProblems.problem_334_increasingTriplet(data.nums)
+            let actual = LC75_Array.problem_334_increasingTriplet(data.nums)
             XCTAssertEqual(actual, data.result)
         }
     }
@@ -68,7 +68,7 @@ final class LC75_ArrayProblems_Tests: XCTestCase {
     
     func tests_problem_238_productExceptSelf() throws {
         for data in testsData_problem_238 {
-            let actual = LC75_ArrayProblems.problem_238_productExceptSelf(data.nums)
+            let actual = LC75_Array.problem_238_productExceptSelf(data.nums)
             XCTAssertEqual(actual, data.result)
         }
     }
@@ -87,7 +87,7 @@ final class LC75_ArrayProblems_Tests: XCTestCase {
     
     func tests_problem_151_reverseWords() throws {
         for data in testsData_problem_151 {
-            let actual = LC75_ArrayProblems.problem_151_reverseWords(data.s)
+            let actual = LC75_Array.problem_151_reverseWords(data.s)
             XCTAssertEqual(actual, data.result, "s: \(data.s), result: \(data.result)")
         }
     }
@@ -106,7 +106,7 @@ final class LC75_ArrayProblems_Tests: XCTestCase {
     
     func tests_problem_345_reverseVowels() throws {
         for data in testsData_problem_345 {
-            let actual = LC75_ArrayProblems.problem_345_reverseVowels(data.s)
+            let actual = LC75_Array.problem_345_reverseVowels(data.s)
             XCTAssertEqual(actual, data.result, "s: \(data.s), result: \(data.result)")
         }
     }
@@ -128,7 +128,7 @@ final class LC75_ArrayProblems_Tests: XCTestCase {
     
     func tests_problem_605_canPlaceFlowers() throws {
         for data in testsData_problem_605 {
-            let actual = LC75_ArrayProblems.problem_605_canPlaceFlowers(data.flowerbed, data.n)
+            let actual = LC75_Array.problem_605_canPlaceFlowers(data.flowerbed, data.n)
             XCTAssertEqual(actual, data.result, "flowerbed: \(data.flowerbed), n: \(data.n)")
         }
     }
@@ -147,7 +147,7 @@ final class LC75_ArrayProblems_Tests: XCTestCase {
     
     func tests_problem_1431_kidsWithCandies() throws {
         for data in testsData_problem_1431 {
-            let actual = LC75_ArrayProblems.problem_1431_kidsWithCandies(data.candies, data.extraCandies)
+            let actual = LC75_Array.problem_1431_kidsWithCandies(data.candies, data.extraCandies)
             XCTAssertEqual(actual, data.result)
         }
     }
@@ -168,7 +168,7 @@ final class LC75_ArrayProblems_Tests: XCTestCase {
     
     func tests_problem_1071_gcdOfStrings() throws {
         for data in testsData_problem_1071 {
-            let actual = LC75_ArrayProblems.problem_1071_gcdOfStrings(data.str1, data.str2)
+            let actual = LC75_Array.problem_1071_gcdOfStrings(data.str1, data.str2)
             XCTAssertEqual(actual, data.result)
         }
     }
@@ -187,7 +187,7 @@ final class LC75_ArrayProblems_Tests: XCTestCase {
     
     func tests_problem_1768_mergeAlternately() throws {
         for data in testsData_problem_1768 {
-            let actual = LC75_ArrayProblems.problem_1768_mergeAlternately(data.word1, data.word2)
+            let actual = LC75_Array.problem_1768_mergeAlternately(data.word1, data.word2)
             XCTAssertEqual(actual, data.result)
         }
     }

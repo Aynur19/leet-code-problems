@@ -1,5 +1,5 @@
 //
-//  LC75_TwoPointersProblems_Tests.swift
+//  LC75_TwoPointers_Tests.swift
 //  LeetCodeProblemsTests
 //
 //  Created by Aynur Nasybullin on 05.09.2023.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import LeetCodeProblems
 
-final class LC75_TwoPointersProblems_Tests: XCTestCase {
+final class LC75_TwoPointers_Tests: XCTestCase {
     // MARK: Problem 283. Move Zeroes
     private lazy var testsData_problem_238: [(nums: [Int], expected: [Int])] = {
         var testsData = [(nums: [Int], expected: [Int])]()
@@ -24,7 +24,7 @@ final class LC75_TwoPointersProblems_Tests: XCTestCase {
     func tests_problem_283_moveZeroes() throws {
         for data in testsData_problem_238 {
             var nums = data.nums
-            LC75_TwoPointersProblems.problem_283_moveZeroes(&nums)
+            LC75_TwoPointers.problem_283_moveZeroes(&nums)
             
             XCTAssertEqual(nums, data.expected)
         }
@@ -43,7 +43,7 @@ final class LC75_TwoPointersProblems_Tests: XCTestCase {
     
     func tests_problem_392_isSubsequence() throws {
         for data in testsData_problem_392 {
-            let actual = LC75_TwoPointersProblems.problem_392_isSubsequence(data.s, data.t)
+            let actual = LC75_TwoPointers.problem_392_isSubsequence(data.s, data.t)
             
             XCTAssertEqual(actual, data.expected)
         }
@@ -62,7 +62,7 @@ final class LC75_TwoPointersProblems_Tests: XCTestCase {
     
     func tests_problem_11_maxArea() throws {
         for data in testsData_problem_11 {
-            let actual = LC75_TwoPointersProblems.problem_11_maxArea(data.height)
+            let actual = LC75_TwoPointers.problem_11_maxArea(data.height)
             
             XCTAssertEqual(actual, data.expected)
         }
@@ -81,7 +81,7 @@ final class LC75_TwoPointersProblems_Tests: XCTestCase {
     
     func tests_problem_1679_maxOperations() throws {
         for data in testsData_problem_1679 {
-            let actual = LC75_TwoPointersProblems.problem_1679_maxOperations(data.nums, data.k)
+            let actual = LC75_TwoPointers.problem_1679_maxOperations(data.nums, data.k)
             
             XCTAssertEqual(actual, data.expected, "nums: \(data.nums)")
         }
