@@ -1,0 +1,28 @@
+# macOS system files
+.DS_Store
+
+# Compiled binaries and libraries
+*.o
+*.a
+*.exe
+*.out
+
+# IDE specific files
+.vscode/
+.idea/
+*.xcodeproj/
+
+# Google Test build directory
+build/
+
+# LeetCode submission artifacts
+*.sublime-workspace
+*.sublime-project
+*.vs
+*.user
+leetcode/
+
+*.gtests
+
+# Ignore any user-specific configurations or credentials
+config.json
