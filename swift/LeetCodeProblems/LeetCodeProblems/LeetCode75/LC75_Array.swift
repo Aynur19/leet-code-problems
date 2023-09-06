@@ -1,5 +1,5 @@
 //
-//  LC75_ArrayProblems.swift
+//  LC75_Array.swift
 //  LeetCodeProblems
 //
 //  Created by Aynur Nasybullin on 04.09.2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public final class LC75_ArrayProblems {
+public final class LC75_Array {
     public static func problem_443_compress(_ chars: inout [Character]) -> Int {
         let n = chars.count
         chars.append(chars[0])

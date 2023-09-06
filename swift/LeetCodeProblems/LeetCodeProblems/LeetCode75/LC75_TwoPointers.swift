@@ -1,5 +1,5 @@
 //
-//  LC75_TwoPointersProblems.swift
+//  LC75_TwoPointers.swift
 //  LeetCodeProblems
 //
 //  Created by Aynur Nasybullin on 05.09.2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public final class LC75_TwoPointersProblems {
+public final class LC75_TwoPointers {
     static func problem_283_moveZeroes(_ nums: inout [Int]) {
         guard nums.count > 1 else { return }
         
