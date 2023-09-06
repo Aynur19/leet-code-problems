@@ -91,5 +91,42 @@ public final class LC75_SlidingWindow {
         return maxCount
     }
     
-    
+    static func problem_1493_longestSubarray(_ nums: [Int]) -> Int {
+        guard nums.count > 1 else { return 0 }
+        
+        var left = 0
+        while left < nums.count {
+            if nums[left] == 1 { break }
+            
+            left += 1
+        }
+        guard left < nums.count else { return 0 }
+        
+        var right = left + 1
+        var count = 1
+        var maxCount = count
+        var hasZero = false
+        
+        while right < nums.count {
+            if nums[right] == 0 {
+                if hasZero {
+                    while nums[left] != 0 {
+                        count -= 1
+                        left += 1
+                    }
+                    
+                    left += 1
+                } else {
+                    hasZero = true
+                }
+            } else {
+                count += 1
+            }
+            
+            maxCount = max(maxCount, count)
+            right += 1
+        }
+        
+        return maxCount == nums.count ? maxCount - 1 : maxCount
+    }
 }

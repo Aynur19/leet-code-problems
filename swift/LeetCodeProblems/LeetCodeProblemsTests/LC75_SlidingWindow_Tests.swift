@@ -68,4 +68,28 @@ final class LC75_SlidingWindow_Tests: XCTestCase {
             XCTAssertEqual(actual, data.expected)
         }
     }
+    
+    
+    // MARK: Problem 1493. Longest Subarray of 1's After Deleting One Element
+    private lazy var testsData_problem_1493: [(nums: [Int], expected: Int)] = {
+        var testsData = [(nums: [Int], expected: Int)]()
+        
+        testsData.append((nums: [1, 1, 0, 1], expected: 3))
+        testsData.append((nums: [0, 1, 1, 1, 0, 1, 1, 0, 1], expected: 5))
+        testsData.append((nums: [0, 1, 1, 1, 0, 0, 1, 1, 0, 1], expected: 3))
+        testsData.append((nums: [0, 1, 1, 0, 0, 0, 1, 1, 0, 1], expected: 3))
+        testsData.append((nums: [0, 1, 1, 1, 0, 0, 1, 0, 0, 1], expected: 3))
+        testsData.append((nums: [1, 1, 1], expected: 2))
+        testsData.append((nums: [1, 1, 0, 0, 1, 1, 1, 0, 1], expected: 4))
+        
+        return testsData
+    }()
+    
+    func tests_problem_1493_findMaxAverage() throws {
+        for data in testsData_problem_1493 {
+            let actual = LC75_SlidingWindow.problem_1493_longestSubarray(data.nums)
+            
+            XCTAssertEqual(actual, data.expected, "nums: \(data.nums)")
+        }
+    }
 }
