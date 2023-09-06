@@ -26,4 +26,23 @@ final class LC75_PrefixSum_Tests: XCTestCase {
             XCTAssertEqual(actual, data.expected)
         }
     }
+    
+    // MARK: Problem 724. Find Pivot Index
+    private lazy var testsData_problem_724: [(nums: [Int], expected: Int)] = {
+        var testsData = [(nums: [Int], expected: Int)]()
+        
+        testsData.append((nums: [1, 7, 3, 6, 5, 6], expected: 3))
+        testsData.append((nums: [1, 2, 3], expected: -1))
+        testsData.append((nums: [2, 1, -1], expected: 0))
+        
+        return testsData
+    }()
+    
+    func tests_problem_724_largestAltitude() throws {
+        for data in testsData_problem_724 {
+            let actual = LC75_PrefixSum.problem_724_pivotIndex(data.nums)
+            
+            XCTAssertEqual(actual, data.expected)
+        }
+    }
 }

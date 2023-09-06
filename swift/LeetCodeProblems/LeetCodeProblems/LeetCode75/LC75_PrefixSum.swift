@@ -19,4 +19,23 @@ public final class LC75_PrefixSum {
         
         return highestAltitude
     }
+    
+    static func problem_724_pivotIndex(_ nums: [Int]) -> Int {
+        let n = nums.count
+        var leftSum = Array<Int>(repeating: nums[0], count: n)
+        var rightSum = Array<Int>(repeating: nums[n - 1], count: n)
+        
+        for i in 1..<n {
+            leftSum[i] = leftSum[i - 1] + nums [i]
+            rightSum[n - 1 - i] = rightSum[n - i] + nums[n - 1 - i]
+        }
+        
+        for i in nums.indices {
+            if leftSum[i] == rightSum[i] {
+                return i
+            }
+        }
+        
+        return -1
+    }
 }
