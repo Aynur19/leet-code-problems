@@ -27,6 +27,7 @@ final class LC75_HashMap_Set_Tests: XCTestCase {
         }
     }
     
+    
     // MARK: Problem 1207. Unique Number of Occurrences
     private lazy var testsData_problem_1207: [(arr: [Int], expected: Bool)] = {
         var testsData = [(arr: [Int], expected: Bool)]()
@@ -43,6 +44,27 @@ final class LC75_HashMap_Set_Tests: XCTestCase {
             let actual = LC75_HashMap_Set.problem_1207_uniqueOccurrences(data.arr)
             
             XCTAssertEqual(actual, data.expected)
+        }
+    }
+    
+    
+    // MARK: Problem 1657. Determine if Two Strings Are Close
+    private lazy var testsData_problem_1657: [(word1: String, word2: String, expected: Bool)] = {
+        var testsData = [(word1: String, word2: String, expected: Bool)]()
+        
+        testsData.append((word1: "abc", word2: "bca", expected: true))
+        testsData.append((word1: "a", word2: "aa", expected: false))
+        testsData.append((word1: "cabbba", word2: "abbccc", expected: true))
+        testsData.append((word1: "abbbzcf", word2: "babzzcz", expected: false))
+        
+        return testsData
+    }()
+    
+    func tests_problem_1657_largestAltitude() throws {
+        for data in testsData_problem_1657 {
+            let actual = LC75_HashMap_Set.problem_1657_closeStrings(data.word1, data.word2)
+            
+            XCTAssertEqual(actual, data.expected, "word1: \(data.word1), word2: \(data.word2)")
         }
     }
 }

@@ -39,4 +39,21 @@ public final class LC75_HashMap_Set {
         
         return dict.count == Set(dict.values).count
     }
+    
+    static func problem_1657_closeStrings(_ word1: String, _ word2: String) -> Bool {
+        guard word1.count == word2.count else { return false }
+        
+        let chars1 = Array(word1)
+        let chars2 = Array(word2)
+        
+        var dict1 = [Character:Int]()
+        var dict2 = [Character:Int]()
+        
+        for i in chars1.indices {
+            dict1[chars1[i], default: 0] += 1
+            dict2[chars2[i], default: 0] += 1
+        }
+        
+        return dict1.keys == dict2.keys && dict1.values.sorted() == dict2.values.sorted()
+    }
 }
