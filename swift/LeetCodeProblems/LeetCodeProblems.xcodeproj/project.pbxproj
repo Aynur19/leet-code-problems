@@ -19,6 +19,9 @@
 		988074B02AA8E9AA001670E7 /* LC75_PrefixSum_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988074AF2AA8E9AA001670E7 /* LC75_PrefixSum_Tests.swift */; };
 		988074B22AA8E9CA001670E7 /* LC75_PrefixSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988074B12AA8E9CA001670E7 /* LC75_PrefixSum.swift */; };
 		988074B32AA8E9CE001670E7 /* LC75_PrefixSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988074B12AA8E9CA001670E7 /* LC75_PrefixSum.swift */; };
+		988074B52AA8F1C1001670E7 /* LC75_HashMap&Set_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988074B42AA8F1C1001670E7 /* LC75_HashMap&Set_Tests.swift */; };
+		988074B72AA8F1D4001670E7 /* LC75_HashMap&Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988074B62AA8F1D4001670E7 /* LC75_HashMap&Set.swift */; };
+		988074B82AA8F296001670E7 /* LC75_HashMap&Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988074B62AA8F1D4001670E7 /* LC75_HashMap&Set.swift */; };
 		98E366672A9E62C7009D9057 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E366662A9E62C7009D9057 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,8 @@
 		988074AC2AA88B18001670E7 /* LC75_SlidingWindow_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC75_SlidingWindow_Tests.swift; sourceTree = "<group>"; };
 		988074AF2AA8E9AA001670E7 /* LC75_PrefixSum_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC75_PrefixSum_Tests.swift; sourceTree = "<group>"; };
 		988074B12AA8E9CA001670E7 /* LC75_PrefixSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC75_PrefixSum.swift; sourceTree = "<group>"; };
+		988074B42AA8F1C1001670E7 /* LC75_HashMap&Set_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LC75_HashMap&Set_Tests.swift"; sourceTree = "<group>"; };
+		988074B62AA8F1D4001670E7 /* LC75_HashMap&Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LC75_HashMap&Set.swift"; sourceTree = "<group>"; };
 		98E366632A9E62C7009D9057 /* LeetCodeProblems */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCodeProblems; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E366662A9E62C7009D9057 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		98E366742A9E6754009D9057 /* LeetCodeProblemsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeetCodeProblemsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +105,7 @@
 				988074A72AA71DC1001670E7 /* LC75_TwoPointers.swift */,
 				988074AA2AA88AA1001670E7 /* LC75_SlidingWindow.swift */,
 				988074B12AA8E9CA001670E7 /* LC75_PrefixSum.swift */,
+				988074B62AA8F1D4001670E7 /* LC75_HashMap&Set.swift */,
 			);
 			path = LeetCode75;
 			sourceTree = "<group>";
@@ -111,6 +117,7 @@
 				988074A52AA71D95001670E7 /* LC75_TwoPointers_Tests.swift */,
 				988074AC2AA88B18001670E7 /* LC75_SlidingWindow_Tests.swift */,
 				988074AF2AA8E9AA001670E7 /* LC75_PrefixSum_Tests.swift */,
+				988074B42AA8F1C1001670E7 /* LC75_HashMap&Set_Tests.swift */,
 			);
 			path = LeetCodeProblemsTests;
 			sourceTree = "<group>";
@@ -209,6 +216,7 @@
 				98E366672A9E62C7009D9057 /* main.swift in Sources */,
 				988074A82AA71DC1001670E7 /* LC75_TwoPointers.swift in Sources */,
 				988074AB2AA88AA1001670E7 /* LC75_SlidingWindow.swift in Sources */,
+				988074B72AA8F1D4001670E7 /* LC75_HashMap&Set.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				988074B52AA8F1C1001670E7 /* LC75_HashMap&Set_Tests.swift in Sources */,
 				988074A32AA5E71E001670E7 /* LC75_Array_Tests.swift in Sources */,
 				988074AE2AA88B1D001670E7 /* LC75_SlidingWindow.swift in Sources */,
 				988074A92AA71DC1001670E7 /* LC75_TwoPointers.swift in Sources */,
@@ -224,6 +233,7 @@
 				988074A62AA71D95001670E7 /* LC75_TwoPointers_Tests.swift in Sources */,
 				988074A42AA5E727001670E7 /* LC75_Array.swift in Sources */,
 				988074AD2AA88B18001670E7 /* LC75_SlidingWindow_Tests.swift in Sources */,
+				988074B82AA8F296001670E7 /* LC75_HashMap&Set.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
