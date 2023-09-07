@@ -67,4 +67,23 @@ final class LC75_HashMap_Set_Tests: XCTestCase {
             XCTAssertEqual(actual, data.expected, "word1: \(data.word1), word2: \(data.word2)")
         }
     }
+    
+    
+    // MARK: Problem 2352. Equal Row and Column Pairs
+    private lazy var testsData_problem_2352: [(grid: [[Int]], expected: Int)] = {
+        var testsData = [(grid: [[Int]], expected: Int)]()
+        
+        testsData.append((grid: [[3, 2, 1], [1, 7, 6], [2, 7, 7]], expected: 1))
+        testsData.append((grid: [[3, 1, 2, 2], [1, 4, 4, 5], [2, 4, 2, 2], [2, 4, 2, 2]], expected: 3))
+        
+        return testsData
+    }()
+    
+    func tests_problem_2352_largestAltitude() throws {
+        for data in testsData_problem_2352 {
+            let actual = LC75_HashMap_Set.problem_2352_equalPairs(data.grid)
+            
+            XCTAssertEqual(actual, data.expected, "grid: \(data.grid)")
+        }
+    }
 }

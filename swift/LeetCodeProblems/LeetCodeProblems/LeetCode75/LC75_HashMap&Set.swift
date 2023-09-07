@@ -56,4 +56,24 @@ public final class LC75_HashMap_Set {
         
         return dict1.keys == dict2.keys && dict1.values.sorted() == dict2.values.sorted()
     }
+    
+    static func problem_2352_equalPairs(_ grid: [[Int]]) -> Int {
+        var dict = [Int: [Int]]()
+        for i in grid.indices {
+            for j in grid[i].indices {
+                dict[j, default: [Int]()].append(grid[i][j])
+            }
+        }
+        
+        var count = 0
+        for i in grid.indices {
+            for j in dict.indices {
+                if grid[i] == dict[j].value {
+                    count += 1
+                }
+            }
+        }
+        
+        return count
+    }
 }
