@@ -46,4 +46,23 @@ final class LC75_Stack_Tests: XCTestCase {
             XCTAssertEqual(actual, data.expected, "asteroids: \(data.asteroids)")
         }
     }
+    
+    // MARK: Problem 394. Decode String
+    private lazy var testsData_problem_394: [(s: String, expected: String)] = {
+        var testsData = [(s: String, expected: String)]()
+        
+        testsData.append((s: "3[a]2[bc]", expected: "aaabcbc"))
+        testsData.append((s: "3[a2[c]]", expected: "accaccacc"))
+        testsData.append((s: "2[abc]3[cd]ef", expected: "abcabccdcdcdef"))
+        
+        return testsData
+    }()
+    
+    func tests_problem_394_decodeString() throws {
+        for data in testsData_problem_394 {
+            let actual = LC75_Stack.problem_394_decodeString(data.s)
+            
+            XCTAssertEqual(actual, data.expected, "s: \(data.s)")
+        }
+    }
 }

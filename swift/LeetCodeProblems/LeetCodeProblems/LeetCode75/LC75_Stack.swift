@@ -49,4 +49,29 @@ public final class LC75_Stack {
         
         return stack
     }
+    
+    static func problem_394_decodeString(_ s: String) -> String {
+        var stack = [(substr: String, n: Int)]()
+        
+        var result: String = .init()
+        var count = 0
+        
+        for char in s {
+            if let num = Int(String(char)) {
+                count = count * 10 + num
+            } else if char == "[" {
+                stack.append((result, count))
+                result = .init()
+                count = 0
+            } else if char == "]" {
+                if let prev = stack.popLast() {
+                    result = prev.substr + String(repeating: result, count: prev.n)
+                }
+            } else {
+                result += String(char)
+            }
+        }
+        
+        return result
+    }
 }
