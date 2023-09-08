@@ -31,4 +31,45 @@ public final class LC75_Queue {
             return pings.count
         }
     }
+    
+    static func problem_649_predictPartyVictory(_ senate: String) -> String {
+        var senate = Array(senate.reversed())
+        var currentIdx = senate.count - 1
+        
+        while !senate.isEmpty {
+            if currentIdx < 0 {
+                currentIdx = senate.count - 1
+            }
+            let senator = senate[currentIdx]
+            var isFound = false
+            let start = (currentIdx > 0 ? currentIdx : senate.count) - 1
+            for i in stride(from: start, to: -1, by: -1) {
+                if senate[i] != senator {
+                    senate.remove(at: i)
+                    currentIdx -= 1
+                    isFound = true
+                    break
+                }
+            }
+            
+            if !isFound {
+                for i in stride(from: senate.count - 1, to: -1, by: -1) {
+                    if senate[i] != senator {
+                        senate.remove(at: i)
+                        currentIdx -= 1
+                        isFound = true
+                        break
+                    }
+                }
+            }
+            
+            if !isFound {
+                return senator == "R" ? "Radiant" : "Dire"
+            }
+            
+            currentIdx -= 1
+        }
+        
+        return .init()
+    }
 }
