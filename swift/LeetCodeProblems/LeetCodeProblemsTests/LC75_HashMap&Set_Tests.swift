@@ -19,7 +19,7 @@ final class LC75_HashMap_Set_Tests: XCTestCase {
         return testsData
     }()
     
-    func tests_problem_2215_largestAltitude() throws {
+    func tests_problem_2215_findDifference() throws {
         for data in testsData_problem_2215 {
             let actual = LC75_HashMap_Set.problem_2215_findDifference(data.nums1, data.nums2)
             
@@ -39,7 +39,7 @@ final class LC75_HashMap_Set_Tests: XCTestCase {
         return testsData
     }()
     
-    func tests_problem_1207_largestAltitude() throws {
+    func tests_problem_1207_uniqueOccurrences() throws {
         for data in testsData_problem_1207 {
             let actual = LC75_HashMap_Set.problem_1207_uniqueOccurrences(data.arr)
             
@@ -60,7 +60,7 @@ final class LC75_HashMap_Set_Tests: XCTestCase {
         return testsData
     }()
     
-    func tests_problem_1657_largestAltitude() throws {
+    func tests_problem_1657_closeStrings() throws {
         for data in testsData_problem_1657 {
             let actual = LC75_HashMap_Set.problem_1657_closeStrings(data.word1, data.word2)
             
@@ -79,7 +79,7 @@ final class LC75_HashMap_Set_Tests: XCTestCase {
         return testsData
     }()
     
-    func tests_problem_2352_largestAltitude() throws {
+    func tests_problem_2352_equalPairs() throws {
         for data in testsData_problem_2352 {
             let actual = LC75_HashMap_Set.problem_2352_equalPairs(data.grid)
             

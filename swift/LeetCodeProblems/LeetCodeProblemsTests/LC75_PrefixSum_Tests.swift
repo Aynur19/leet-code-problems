@@ -38,7 +38,7 @@ final class LC75_PrefixSum_Tests: XCTestCase {
         return testsData
     }()
     
-    func tests_problem_724_largestAltitude() throws {
+    func tests_problem_724_pivotIndex() throws {
         for data in testsData_problem_724 {
             let actual = LC75_PrefixSum.problem_724_pivotIndex(data.nums)
             

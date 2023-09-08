@@ -61,7 +61,7 @@ final class LC75_SlidingWindow_Tests: XCTestCase {
         return testsData
     }()
     
-    func tests_problem_1004_findMaxAverage() throws {
+    func tests_problem_1004_longestOnes() throws {
         for data in testsData_problem_1004 {
             let actual = LC75_SlidingWindow.problem_1004_longestOnes(data.nums, data.k)
             
@@ -85,7 +85,7 @@ final class LC75_SlidingWindow_Tests: XCTestCase {
         return testsData
     }()
     
-    func tests_problem_1493_findMaxAverage() throws {
+    func tests_problem_1493_longestSubarray() throws {
         for data in testsData_problem_1493 {
             let actual = LC75_SlidingWindow.problem_1493_longestSubarray(data.nums)
             
