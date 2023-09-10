@@ -32,7 +32,7 @@ final class LC75_Queue_Tests: XCTestCase {
         return testsData
     }()
     
-    func tests_problem_394_decodeString() throws {
+    func tests_problem_649_predictPartyVictory() throws {
         for data in testsData_problem_649 {
             let actual = LC75_Queue.problem_649_predictPartyVictory(data.senate)
             

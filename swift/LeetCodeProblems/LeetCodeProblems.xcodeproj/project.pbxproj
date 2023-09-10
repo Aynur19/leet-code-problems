@@ -28,6 +28,11 @@
 		98BFC9762AAB1D4800D42CFC /* LC75_Queue_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BFC9752AAB1D4800D42CFC /* LC75_Queue_Tests.swift */; };
 		98BFC9782AAB1D7900D42CFC /* LC75_Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BFC9772AAB1D7900D42CFC /* LC75_Queue.swift */; };
 		98BFC9792AAB1D7900D42CFC /* LC75_Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BFC9772AAB1D7900D42CFC /* LC75_Queue.swift */; };
+		98BFC97B2AAB5BA000D42CFC /* LC75_LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BFC97A2AAB5BA000D42CFC /* LC75_LinkedList.swift */; };
+		98BFC97C2AAB5BA000D42CFC /* LC75_LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BFC97A2AAB5BA000D42CFC /* LC75_LinkedList.swift */; };
+		98BFC97E2AAB5BB300D42CFC /* LC75_LinkedList_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BFC97D2AAB5BB300D42CFC /* LC75_LinkedList_Tests.swift */; };
+		98BFC9802AAB5D9E00D42CFC /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BFC97F2AAB5D9E00D42CFC /* ListNode.swift */; };
+		98BFC9812AAB5D9E00D42CFC /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BFC97F2AAB5D9E00D42CFC /* ListNode.swift */; };
 		98E366672A9E62C7009D9057 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E366662A9E62C7009D9057 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +63,9 @@
 		98BFC9722AA9B96D00D42CFC /* LC75_Stack_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC75_Stack_Tests.swift; sourceTree = "<group>"; };
 		98BFC9752AAB1D4800D42CFC /* LC75_Queue_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC75_Queue_Tests.swift; sourceTree = "<group>"; };
 		98BFC9772AAB1D7900D42CFC /* LC75_Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC75_Queue.swift; sourceTree = "<group>"; };
+		98BFC97A2AAB5BA000D42CFC /* LC75_LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC75_LinkedList.swift; sourceTree = "<group>"; };
+		98BFC97D2AAB5BB300D42CFC /* LC75_LinkedList_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC75_LinkedList_Tests.swift; sourceTree = "<group>"; };
+		98BFC97F2AAB5D9E00D42CFC /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
 		98E366632A9E62C7009D9057 /* LeetCodeProblems */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCodeProblems; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E366662A9E62C7009D9057 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		98E366742A9E6754009D9057 /* LeetCodeProblemsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeetCodeProblemsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +110,7 @@
 		98E366652A9E62C7009D9057 /* LeetCodeProblems */ = {
 			isa = PBXGroup;
 			children = (
+				98BFC97F2AAB5D9E00D42CFC /* ListNode.swift */,
 				98E3666D2A9E6696009D9057 /* LeetCode75 */,
 				98E366662A9E62C7009D9057 /* main.swift */,
 			);
@@ -118,6 +127,7 @@
 				988074B62AA8F1D4001670E7 /* LC75_HashMap&Set.swift */,
 				98BFC9702AA9B95700D42CFC /* LC75_Stack.swift */,
 				98BFC9772AAB1D7900D42CFC /* LC75_Queue.swift */,
+				98BFC97A2AAB5BA000D42CFC /* LC75_LinkedList.swift */,
 			);
 			path = LeetCode75;
 			sourceTree = "<group>";
@@ -132,6 +142,7 @@
 				988074B42AA8F1C1001670E7 /* LC75_HashMap&Set_Tests.swift */,
 				98BFC9722AA9B96D00D42CFC /* LC75_Stack_Tests.swift */,
 				98BFC9752AAB1D4800D42CFC /* LC75_Queue_Tests.swift */,
+				98BFC97D2AAB5BB300D42CFC /* LC75_LinkedList_Tests.swift */,
 			);
 			path = LeetCodeProblemsTests;
 			sourceTree = "<group>";
@@ -226,9 +237,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				988074A12AA5E6F0001670E7 /* LC75_Array.swift in Sources */,
+				98BFC9802AAB5D9E00D42CFC /* ListNode.swift in Sources */,
 				988074B22AA8E9CA001670E7 /* LC75_PrefixSum.swift in Sources */,
 				98BFC9782AAB1D7900D42CFC /* LC75_Queue.swift in Sources */,
 				98E366672A9E62C7009D9057 /* main.swift in Sources */,
+				98BFC97B2AAB5BA000D42CFC /* LC75_LinkedList.swift in Sources */,
 				988074A82AA71DC1001670E7 /* LC75_TwoPointers.swift in Sources */,
 				988074AB2AA88AA1001670E7 /* LC75_SlidingWindow.swift in Sources */,
 				98BFC9712AA9B95700D42CFC /* LC75_Stack.swift in Sources */,
@@ -241,11 +254,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				988074B52AA8F1C1001670E7 /* LC75_HashMap&Set_Tests.swift in Sources */,
+				98BFC97C2AAB5BA000D42CFC /* LC75_LinkedList.swift in Sources */,
 				98BFC9732AA9B96D00D42CFC /* LC75_Stack_Tests.swift in Sources */,
 				988074A32AA5E71E001670E7 /* LC75_Array_Tests.swift in Sources */,
 				988074AE2AA88B1D001670E7 /* LC75_SlidingWindow.swift in Sources */,
+				98BFC97E2AAB5BB300D42CFC /* LC75_LinkedList_Tests.swift in Sources */,
 				98BFC9762AAB1D4800D42CFC /* LC75_Queue_Tests.swift in Sources */,
 				988074A92AA71DC1001670E7 /* LC75_TwoPointers.swift in Sources */,
+				98BFC9812AAB5D9E00D42CFC /* ListNode.swift in Sources */,
 				988074B02AA8E9AA001670E7 /* LC75_PrefixSum_Tests.swift in Sources */,
 				988074B32AA8E9CE001670E7 /* LC75_PrefixSum.swift in Sources */,
 				98BFC9792AAB1D7900D42CFC /* LC75_Queue.swift in Sources */,
