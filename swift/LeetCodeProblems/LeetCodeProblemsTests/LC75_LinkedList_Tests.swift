@@ -54,6 +54,7 @@ final class LC75_LinkedList_Tests: XCTestCase {
         }
     }
     
+    
     // MARK: Problem 328. Odd Even Linked List
     private lazy var testsData_problem_328: [(head: ListNode?, expected: ListNode?)] = {
         var testsData = [(head: ListNode?, expected: ListNode?)]()
@@ -73,6 +74,31 @@ final class LC75_LinkedList_Tests: XCTestCase {
     func tests_problem_328_oddEvenList() throws {
         for data in testsData_problem_328 {
             let actual = LC75_LinkedList.problem_328_oddEvenList(data.head)
+            
+            XCTAssertTrue(equalListNodes(actual, data.expected), "head: \(String(describing: data.head))")
+        }
+    }
+    
+    
+    // MARK: Problem 206. Reverse Linked List
+    private lazy var testsData_problem_206: [(head: ListNode?, expected: ListNode?)] = {
+        var testsData = [(head: ListNode?, expected: ListNode?)]()
+        
+        testsData.append((head: ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5))))),
+                          expected: ListNode(5, ListNode(4, ListNode(3, ListNode(2, ListNode(1)))))))
+        
+        testsData.append((head: ListNode(1, ListNode(2)),
+                          expected: ListNode(2, ListNode(1))))
+        
+        testsData.append((head: nil,
+                          expected: nil))
+        
+        return testsData
+    }()
+    
+    func tests_problem_206_reverseList() throws {
+        for data in testsData_problem_206 {
+            let actual = LC75_LinkedList.problem_206_reverseList(data.head)
             
             XCTAssertTrue(equalListNodes(actual, data.expected), "head: \(String(describing: data.head))")
         }

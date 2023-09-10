@@ -35,14 +35,6 @@ public final class LC75_LinkedList {
         return head
     }
     
-    /// 2  1  3  5  6  4  7
-    /// 2  3  5  6  4  7
-    /// 1  5  6  4  7
-    /// 2  3  1  5  6  4  7
-    ///
-    /// 2 - current
-    /// 1 - tmp
-    /// 3 - tmp2
     static func problem_328_oddEvenList(_ head: ListNode?) -> ListNode? {
         guard head != nil && head?.next != nil && head?.next?.next != nil else { return head }
         
@@ -73,5 +65,24 @@ public final class LC75_LinkedList {
         evenTmpNode?.next = nil
         
         return head
+    }
+    
+    static func problem_206_reverseList(_ head: ListNode?) -> ListNode? {
+        if head == nil || head?.next == nil { return head }
+        
+        var current: ListNode? = head
+        var next: ListNode? = current?.next
+        
+        current?.next = nil
+        
+        while next != nil {
+            let tmp = next?.next
+            next?.next = current
+            current = next
+            
+            next = tmp
+        }
+        
+        return current
     }
 }
