@@ -103,4 +103,29 @@ final class LC75_LinkedList_Tests: XCTestCase {
             XCTAssertTrue(equalListNodes(actual, data.expected), "head: \(String(describing: data.head))")
         }
     }
+    
+    
+    // MARK: Problem 2130. Maximum Twin Sum of a Linked List
+    private lazy var testsData_problem_2130: [(head: ListNode?, expected: Int)] = {
+        var testsData = [(head: ListNode?, expected: Int)]()
+        
+        testsData.append((head: ListNode(5, ListNode(4, ListNode(2, ListNode(1)))),
+                          expected: 6))
+        
+        testsData.append((head: ListNode(4, ListNode(2, ListNode(2, ListNode(3)))),
+                          expected: 7))
+//
+        testsData.append((head: ListNode(1, ListNode(100000)),
+                          expected: 100001))
+        
+        return testsData
+    }()
+    
+    func tests_problem_2130_pairSum() throws {
+        for data in testsData_problem_2130 {
+            let actual = LC75_LinkedList.problem_2130_pairSum(data.head)
+            
+            XCTAssertEqual(actual, data.expected, "head: \(String(describing: data.head))")
+        }
+    }
 }

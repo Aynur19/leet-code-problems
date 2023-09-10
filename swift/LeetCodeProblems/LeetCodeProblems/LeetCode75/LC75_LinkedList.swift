@@ -85,4 +85,27 @@ public final class LC75_LinkedList {
         
         return current
     }
+    
+    static func problem_2130_pairSum(_ head: ListNode?) -> Int {
+        var head = head
+        var values = [Int]()
+        
+        while head != nil {
+            if let val = head?.val {
+                values.append(val)
+            }
+            head = head?.next
+        }
+        
+        var left = 0, right = values.count - 1
+        var maxSum = 0
+        
+        while left < right {
+            maxSum = max(maxSum, values[left] + values[right])
+            left += 1
+            right -= 1
+        }
+        
+        return maxSum
+    }
 }
