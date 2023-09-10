@@ -34,4 +34,44 @@ public final class LC75_LinkedList {
         
         return head
     }
+    
+    /// 2  1  3  5  6  4  7
+    /// 2  3  5  6  4  7
+    /// 1  5  6  4  7
+    /// 2  3  1  5  6  4  7
+    ///
+    /// 2 - current
+    /// 1 - tmp
+    /// 3 - tmp2
+    static func problem_328_oddEvenList(_ head: ListNode?) -> ListNode? {
+        guard head != nil && head?.next != nil && head?.next?.next != nil else { return head }
+        
+        let evenNode: ListNode? = head?.next
+        var evenTmpNode: ListNode? = evenNode
+        
+        var oddNode: ListNode? = evenNode?.next
+        head?.next = oddNode
+        
+        guard oddNode != nil else { return head }
+        
+        var current = oddNode?.next
+        var count = 1
+        while current != nil {
+            if count % 2 == 0 {
+                oddNode?.next = current
+                oddNode = oddNode?.next
+            } else {
+                evenTmpNode?.next = current
+                evenTmpNode = evenTmpNode?.next
+            }
+            
+            current = current?.next
+            count += 1
+        }
+        
+        oddNode?.next = evenNode
+        evenTmpNode?.next = nil
+        
+        return head
+    }
 }

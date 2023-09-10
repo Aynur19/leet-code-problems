@@ -46,9 +46,33 @@ final class LC75_LinkedList_Tests: XCTestCase {
         return testsData
     }()
     
-    func tests_problem_649_predictPartyVictory() throws {
+    func tests_problem_2095_deleteMiddle() throws {
         for data in testsData_problem_2095 {
             let actual = LC75_LinkedList.problem_2095_deleteMiddle(data.head)
+            
+            XCTAssertTrue(equalListNodes(actual, data.expected), "head: \(String(describing: data.head))")
+        }
+    }
+    
+    // MARK: Problem 328. Odd Even Linked List
+    private lazy var testsData_problem_328: [(head: ListNode?, expected: ListNode?)] = {
+        var testsData = [(head: ListNode?, expected: ListNode?)]()
+        
+        testsData.append((head: ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5))))),
+                          expected: ListNode(1, ListNode(3, ListNode(5, ListNode(2, ListNode(4)))))))
+        
+        testsData.append((head: ListNode(2, ListNode(1, ListNode(3, ListNode(5, ListNode(6, ListNode(4, ListNode(7))))))),
+                          expected: ListNode(2, ListNode(3, ListNode(6, ListNode(7, ListNode(1, ListNode(5, ListNode(4)))))))))
+        
+        testsData.append((head: ListNode(1, ListNode(1)),
+                          expected: ListNode(1, ListNode(1))))
+        
+        return testsData
+    }()
+    
+    func tests_problem_328_oddEvenList() throws {
+        for data in testsData_problem_328 {
+            let actual = LC75_LinkedList.problem_328_oddEvenList(data.head)
             
             XCTAssertTrue(equalListNodes(actual, data.expected), "head: \(String(describing: data.head))")
         }
