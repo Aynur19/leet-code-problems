@@ -69,4 +69,31 @@ public final class LC75_BinaryTree_DFS {
         
         return left + right + (node.val >= maxValue ? 1 : 0)
     }
+    
+    static func problem_437_pathSum(_ root: TreeNode?, _ targetSum: Int) -> Int {
+        var count = 0
+        var prefixSums = [Int:Int]()
+        var prefixSum = 0
+        
+        func prefixSumsCompute(_ node: TreeNode?, _ prefixSum: inout Int, _ prefixSums: inout [Int:Int]) {
+            guard let node = node else { return }
+
+            prefixSum += node.val
+
+            count += prefixSum == targetSum ? 1 : 0
+            count += prefixSums[prefixSum - targetSum] ?? 0
+
+            prefixSums[prefixSum, default: 0] += 1
+
+            prefixSumsCompute(node.left, &prefixSum, &prefixSums)
+            prefixSumsCompute(node.right, &prefixSum, &prefixSums)
+
+            prefixSums[prefixSum, default: 0] -= 1
+            prefixSum -= node.val
+        }
+        
+        prefixSumsCompute(root, &prefixSum, &prefixSums)
+        
+        return count
+    }
 }

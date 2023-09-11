@@ -89,4 +89,37 @@ final class LC75_BinaryTree_DFS_Tests: XCTestCase {
             XCTAssertEqual(actual, data.expected)
         }
     }
+    
+    
+    // MARK: Problem 1448. Count Good Nodes in Binary Tree
+    private lazy var testsData_problem_437: [(root: TreeNode?, targetSum: Int, expected: Int)] = {
+        var testsData = [(root: TreeNode?, targetSum: Int, expected: Int)]()
+        
+        let leftLeft_1 = TreeNode(3, TreeNode(3), TreeNode(-2))
+        let leftRight_1 = TreeNode(2, nil, TreeNode(1))
+        let right_1 = TreeNode(-3, nil, TreeNode(11))
+        let root_1 = TreeNode(10, TreeNode(5, leftLeft_1, leftRight_1), right_1)
+        
+        let leftLeft_2 = TreeNode(11, TreeNode(7), TreeNode(2))
+        let rightRight_2 = TreeNode(4, TreeNode(5), TreeNode(11))
+        let root_2 = TreeNode(5, TreeNode(4, leftLeft_2, nil), TreeNode(8, TreeNode(8), rightRight_2))
+        
+        testsData.append((root: root_1, targetSum: 8, expected: 3))
+        testsData.append((root: root_2, targetSum: 22, expected: 3))
+        
+        return testsData
+    }()
+    
+    func tests_problem_437_pathSum() throws {
+        for data in testsData_problem_437 {
+            let actual = LC75_BinaryTree_DFS.problem_437_pathSum(data.root, data.targetSum)
+            
+            XCTAssertEqual(actual, data.expected)
+        }
+    }
 }
+
+///                 5
+///         4                                    8
+///     11              nil                  13              4
+///  7              2                                       5            11
