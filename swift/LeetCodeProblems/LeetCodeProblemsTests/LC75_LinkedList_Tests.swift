@@ -114,7 +114,7 @@ final class LC75_LinkedList_Tests: XCTestCase {
         
         testsData.append((head: ListNode(4, ListNode(2, ListNode(2, ListNode(3)))),
                           expected: 7))
-//
+
         testsData.append((head: ListNode(1, ListNode(100000)),
                           expected: 100001))
         
