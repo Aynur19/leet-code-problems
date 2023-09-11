@@ -18,4 +18,41 @@ public final class LC75_BinaryTree_DFS {
         
         return max(left, right) + 1
     }
+    
+    static func problem_872_leafSimilar(_ root1: TreeNode?, _ root2: TreeNode?) -> Bool {
+        guard let root1 = root1, let root2 = root2 else { return false }
+        
+        var current: TreeNode
+        var nodes = [TreeNode]()
+        
+        var leaves1 = [Int]()
+        nodes.append(root1)
+        while !nodes.isEmpty {
+            current = nodes.removeLast()
+            
+            if let left = current.left { nodes.append(left) }
+            if let right = current.right { nodes.append(right) }
+            
+            if current.left == nil && current.right == nil {
+                leaves1.append(current.val)
+            }
+        }
+        
+        var leaves2 = [Int]()
+        nodes.append(root2)
+        while !nodes.isEmpty {
+            current = nodes.removeLast()
+            
+            if let left = current.left { nodes.append(left) }
+            if let right = current.right { nodes.append(right) }
+            
+            if current.left == nil && current.right == nil {
+                leaves2.append(current.val)
+            }
+        }
+        
+        return leaves1 == leaves2
+    }
+    
+    
 }
