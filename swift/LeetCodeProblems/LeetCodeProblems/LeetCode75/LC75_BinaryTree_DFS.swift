@@ -96,4 +96,38 @@ public final class LC75_BinaryTree_DFS {
         
         return count
     }
+    
+    static func problem_1372_longestZigZag(_ root: TreeNode?) -> Int {
+        guard let root = root, (root.left != nil || root.right != nil) else { return 0 }
+        var maxCount = 0
+        
+        func longestZigZag(_ node: TreeNode, _ isLeft: Bool = true) -> Int {
+            var leftCount = 0
+            var rightCount = 0
+            
+            if let left = node.left {
+                leftCount = longestZigZag(left) + 1
+            }
+            
+            if let right = node.right {
+                rightCount = longestZigZag(right, false) + 1
+            }
+            
+            maxCount = max(maxCount, max(leftCount, rightCount))
+            return isLeft ? rightCount : leftCount
+        }
+        
+        
+        if let left = root.left {
+            let leftCount = longestZigZag(left) + 1
+            maxCount = max(maxCount, leftCount)
+        }
+        
+        if let right = root.right {
+            let rightCount = longestZigZag(right, false) + 1
+            maxCount = max(maxCount, rightCount)
+        }
+        
+        return maxCount
+    }
 }

@@ -91,7 +91,7 @@ final class LC75_BinaryTree_DFS_Tests: XCTestCase {
     }
     
     
-    // MARK: Problem 1448. Count Good Nodes in Binary Tree
+    // MARK: Problem 437. Path Sum III
     private lazy var testsData_problem_437: [(root: TreeNode?, targetSum: Int, expected: Int)] = {
         var testsData = [(root: TreeNode?, targetSum: Int, expected: Int)]()
         
@@ -117,9 +117,40 @@ final class LC75_BinaryTree_DFS_Tests: XCTestCase {
             XCTAssertEqual(actual, data.expected)
         }
     }
+    
+    
+    // MARK: Problem 1372. Longest ZigZag Path in a Binary Tree
+    private lazy var testsData_problem_1372: [(root: TreeNode?, expected: Int)] = {
+        var testsData = [(root: TreeNode?, expected: Int)]()
+        
+        let level_1_1 = TreeNode(1)
+        let level_1_2 = TreeNode(1, nil, level_1_1)
+        let level_1_3 = TreeNode(1, nil, level_1_2)
+        let level_1_4 = TreeNode(1, level_1_3, TreeNode(1))
+        let level_1_5 = TreeNode(1, TreeNode(1), level_1_4)
+        let root_1 = TreeNode(1, nil, level_1_5)
+        
+        let level_2_1 = TreeNode(1)
+        let level_2_2 = TreeNode(1, nil, level_2_1)
+        let level_2_3 = TreeNode(1, level_2_2, TreeNode(1))
+        let level_2_4 = TreeNode(1, nil, level_2_3)
+        let root_2 = TreeNode(1, level_2_4, TreeNode(1))
+        
+        let root_3 = TreeNode(1)
+        
+        testsData.append((root: root_1, expected: 3))
+        testsData.append((root: root_2, expected: 4))
+        testsData.append((root: root_3, expected: 0))
+        
+        return testsData
+    }()
+    
+    func tests_problem_1372_longestZigZag() throws {
+        for data in testsData_problem_1372 {
+            let actual = LC75_BinaryTree_DFS.problem_1372_longestZigZag(data.root)
+            
+            XCTAssertEqual(actual, data.expected)
+        }
+    }
 }
 
-///                 5
-///         4                                    8
-///     11              nil                  13              4
-///  7              2                                       5            11
