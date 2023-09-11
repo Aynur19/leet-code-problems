@@ -54,5 +54,19 @@ public final class LC75_BinaryTree_DFS {
         return leaves1 == leaves2
     }
     
+    static func problem_1448_goodNodes(_ root: TreeNode?) -> Int {
+        guard let root = root else { return 0 }
+        
+        return goodNode(Int.min, root)
+    }
     
+    static private func goodNode(_ maxValue: Int, _ node: TreeNode?) -> Int {
+        guard let node = node else { return 0 }
+
+        let maxValue = max(maxValue, node.val)
+        let left = goodNode(maxValue, node.left)
+        let right = goodNode(maxValue, node.right)
+        
+        return left + right + (node.val >= maxValue ? 1 : 0)
+    }
 }
