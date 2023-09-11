@@ -152,5 +152,33 @@ final class LC75_BinaryTree_DFS_Tests: XCTestCase {
             XCTAssertEqual(actual, data.expected)
         }
     }
+    
+    
+    // MARK: Problem 236. Lowest Common Ancestor of a Binary Tree
+    private lazy var testsData_problem_236: [(root: TreeNode?, p: TreeNode?,
+                                               q: TreeNode?, expected: Int?)] = {
+        var testsData = [(root: TreeNode?, p: TreeNode?, q: TreeNode?, expected: Int?)]()
+        
+        let level_1_1 = TreeNode(2, TreeNode(7), TreeNode(4))
+        let level_1_2 = TreeNode(5, TreeNode(6), level_1_1)
+        let level_1_3 = TreeNode(1, TreeNode(0), TreeNode(8))
+        let root_1 = TreeNode(3, level_1_2, level_1_3)
+        
+        let root_3 = TreeNode(1, TreeNode(2), nil)
+        
+        testsData.append((root: root_1, TreeNode(5), TreeNode(1), expected: 3))
+        testsData.append((root: root_1, TreeNode(5), TreeNode(4), expected: 5))
+        testsData.append((root: root_3, TreeNode(1), TreeNode(2), expected: 1))
+        
+        return testsData
+    }()
+    
+    func tests_problem_236_lowestCommonAncestor() throws {
+        for data in testsData_problem_236 {
+            let actual = LC75_BinaryTree_DFS.problem_236_lowestCommonAncestor(data.root, data.p, data.q)
+            
+            XCTAssertEqual(actual?.val, data.expected)
+        }
+    }
 }
 

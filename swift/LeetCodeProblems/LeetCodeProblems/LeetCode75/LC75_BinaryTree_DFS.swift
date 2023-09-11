@@ -130,4 +130,40 @@ public final class LC75_BinaryTree_DFS {
         
         return maxCount
     }
+    
+    static func problem_236_lowestCommonAncestor(_ root: TreeNode?, _ p: TreeNode?, _ q: TreeNode?) -> TreeNode? {
+        func lowestCommonAncestor(_ node: TreeNode, _ p: Int, _ q: Int) -> Bool {
+            var result = false
+            
+            if node.val == p || node.val == q {
+                parent = node
+                return true
+            }
+            
+            if let left = node.left {
+                result = lowestCommonAncestor(left, p, q)
+            }
+            
+            var result2 = false
+            if let right = node.right {
+                result2 = lowestCommonAncestor(right, p, q)
+            }
+            
+            if result && result2 {
+                parent = node
+            }
+            
+            return result || result2
+        }
+        
+        guard let root = root,
+              let p = p?.val,
+              let q = q?.val
+        else { return root }
+        
+        var parent: TreeNode?
+        _ = lowestCommonAncestor(root, p, q)
+        
+        return parent
+    }
 }
