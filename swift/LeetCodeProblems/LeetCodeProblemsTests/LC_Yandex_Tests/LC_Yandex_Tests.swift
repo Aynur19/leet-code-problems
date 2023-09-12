@@ -27,4 +27,24 @@ final class LC_Yandex_Medium_Tests: XCTestCase {
             XCTAssertEqual(actual, data.expected)
         }
     }
+    
+    
+    // MARK: Problem 1493. Longest Subarray of 1's After Deleting One Element
+    lazy var testsData_problem_1493: [(nums: [Int], expected: Int)] = {
+        var testsData = [(nums: [Int], expected: Int)]()
+        
+        testsData.append((nums: [1, 1, 0, 1], expected: 3))
+        testsData.append((nums: [0, 1, 1, 1, 0, 1, 1, 0, 1], expected: 5))
+        testsData.append((nums: [1, 1, 1], expected: 2))
+        
+        return testsData
+    }()
+    
+    func tests_problem_1493_longestSubarray() throws {
+        for data in testsData_problem_1493 {
+            let actual = LC_Yandex_Medium.problem_1493_longestSubarray(data.nums)
+            
+            XCTAssertEqual(actual, data.expected)
+        }
+    }
 }
