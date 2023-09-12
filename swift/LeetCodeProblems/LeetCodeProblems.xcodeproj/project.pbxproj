@@ -97,6 +97,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98D8DF8A2AB02A3100AEBD4B /* LC75_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				988074A22AA5E71E001670E7 /* LC75_Array_Tests.swift */,
+				988074A52AA71D95001670E7 /* LC75_TwoPointers_Tests.swift */,
+				988074AC2AA88B18001670E7 /* LC75_SlidingWindow_Tests.swift */,
+				988074AF2AA8E9AA001670E7 /* LC75_PrefixSum_Tests.swift */,
+				988074B42AA8F1C1001670E7 /* LC75_HashMap&Set_Tests.swift */,
+				98BFC9722AA9B96D00D42CFC /* LC75_Stack_Tests.swift */,
+				98BFC9752AAB1D4800D42CFC /* LC75_Queue_Tests.swift */,
+				98BFC97D2AAB5BB300D42CFC /* LC75_LinkedList_Tests.swift */,
+				98D8DF882AAE076100AEBD4B /* LC75_BinaryTree_DFS_Tests.swift */,
+			);
+			path = LC75_Tests;
+			sourceTree = "<group>";
+		};
+		98D8DF8B2AB02A6300AEBD4B /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				98BFC97F2AAB5D9E00D42CFC /* ListNode.swift */,
+				98D8DF822AAE03BB00AEBD4B /* TreeNode.swift */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
 		98E3665A2A9E62C6009D9057 = {
 			isa = PBXGroup;
 			children = (
@@ -118,10 +143,9 @@
 		98E366652A9E62C7009D9057 /* LeetCodeProblems */ = {
 			isa = PBXGroup;
 			children = (
-				98BFC97F2AAB5D9E00D42CFC /* ListNode.swift */,
+				98D8DF8B2AB02A6300AEBD4B /* DataStructures */,
 				98E3666D2A9E6696009D9057 /* LeetCode75 */,
 				98E366662A9E62C7009D9057 /* main.swift */,
-				98D8DF822AAE03BB00AEBD4B /* TreeNode.swift */,
 			);
 			path = LeetCodeProblems;
 			sourceTree = "<group>";
@@ -145,15 +169,7 @@
 		98E366752A9E6754009D9057 /* LeetCodeProblemsTests */ = {
 			isa = PBXGroup;
 			children = (
-				988074A22AA5E71E001670E7 /* LC75_Array_Tests.swift */,
-				988074A52AA71D95001670E7 /* LC75_TwoPointers_Tests.swift */,
-				988074AC2AA88B18001670E7 /* LC75_SlidingWindow_Tests.swift */,
-				988074AF2AA8E9AA001670E7 /* LC75_PrefixSum_Tests.swift */,
-				988074B42AA8F1C1001670E7 /* LC75_HashMap&Set_Tests.swift */,
-				98BFC9722AA9B96D00D42CFC /* LC75_Stack_Tests.swift */,
-				98BFC9752AAB1D4800D42CFC /* LC75_Queue_Tests.swift */,
-				98BFC97D2AAB5BB300D42CFC /* LC75_LinkedList_Tests.swift */,
-				98D8DF882AAE076100AEBD4B /* LC75_BinaryTree_DFS_Tests.swift */,
+				98D8DF8A2AB02A3100AEBD4B /* LC75_Tests */,
 			);
 			path = LeetCodeProblemsTests;
 			sourceTree = "<group>";
