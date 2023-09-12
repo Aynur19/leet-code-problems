@@ -115,4 +115,42 @@ final class LC_Yandex_Medium {
 
         return result
     }
+    
+    
+    static func problem_443_compress(_ chars: inout [Character]) -> Int {
+        guard chars.count > 1 else { return 1 }
+
+        var count = 0
+        var charIdx = 0
+        var char = chars[charIdx]
+        
+        for i in chars.indices {
+            if chars[i] == char {
+                count += 1
+            } else {
+                compress(&chars, count, char, &charIdx)
+                count = 1
+                charIdx += 1
+                char = chars[i]
+            }
+        }
+        compress(&chars, count, char, &charIdx)
+
+        return charIdx + 1
+    }
+
+    static private func compress(_ chars: inout [Character], _ count: Int, _ char: Character, _ charIdx: inout Int) {
+        chars[charIdx] = char
+        
+        if count > 1 {
+            let countChars = Array(String(count))
+            let start = charIdx + 1
+    
+            for i in countChars.indices {
+                chars[start + i] = countChars[i]
+            }
+
+            charIdx += countChars.count
+        }
+    }
 }

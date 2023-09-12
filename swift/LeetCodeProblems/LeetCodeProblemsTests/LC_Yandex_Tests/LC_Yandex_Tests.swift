@@ -68,4 +68,29 @@ final class LC_Yandex_Medium_Tests: XCTestCase {
             XCTAssertEqual(actual, data.expected)
         }
     }
+    
+    
+    // MARK: Problem 443. String Compression
+    lazy var testsData_problem_443: [(chars: [Character], expected: Int, expectedChars: [Character])] = {
+        var testsData = [(chars: [Character], expected: Int, expectedChars: [Character])]()
+        
+        testsData.append((chars: ["a", "a", "b", "b", "c", "c", "c"],
+                          expected: 6, expectedChars: ["a", "2", "b", "2", "c", "3"]))
+        testsData.append((chars: ["a"],
+                          expected: 1, expectedChars: ["a"]))
+        testsData.append((chars: ["a", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b"],
+                          expected: 4, expectedChars: ["a", "b", "1", "2"]))
+        
+        return testsData
+    }()
+    
+    func tests_problem_443_compress() throws {
+        for data in testsData_problem_443 {
+            var chars = data.chars
+            let actual = LC_Yandex_Medium.problem_443_compress(&chars)
+            
+            XCTAssertEqual(actual, data.expected)
+            XCTAssertEqual(Array(chars[0..<data.expectedChars.count]), data.expectedChars)
+        }
+    }
 }
