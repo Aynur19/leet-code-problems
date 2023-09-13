@@ -1,5 +1,5 @@
 //
-//  LC_Yandex_Tests.swift
+//  LC_Yandex_Medium_Tests.swift
 //  LeetCodeProblemsTests
 //
 //  Created by Aynur Nasybullin on 12.09.2023.
@@ -43,27 +43,6 @@ final class LC_Yandex_Medium_Tests: XCTestCase {
     func tests_problem_1493_longestSubarray() throws {
         for data in testsData_problem_1493 {
             let actual = LC_Yandex_Medium.problem_1493_longestSubarray(data.nums)
-            
-            XCTAssertEqual(actual, data.expected)
-        }
-    }
-    
-    
-    // MARK: Problem 228. Summary Ranges
-    lazy var testsData_problem_228: [(nums: [Int], expected: [String])] = {
-        var testsData = [(nums: [Int], expected: [String])]()
-        
-        testsData.append((nums: [0, 1, 2, 4, 5, 7],
-                          expected: ["0->2", "4->5", "7"]))
-        testsData.append((nums: [0, 2, 3, 4, 6, 8, 9],
-                          expected: ["0", "2->4", "6", "8->9"]))
-        
-        return testsData
-    }()
-    
-    func tests_problem_228_summaryRanges() throws {
-        for data in testsData_problem_228 {
-            let actual = LC_Yandex_Medium.problem_228_summaryRanges(data.nums)
             
             XCTAssertEqual(actual, data.expected)
         }

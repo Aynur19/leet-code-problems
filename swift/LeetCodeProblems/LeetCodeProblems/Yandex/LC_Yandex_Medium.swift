@@ -46,6 +46,7 @@ final class LC_Yandex_Medium {
         return maxDistance
     }
     
+    
     // Time complexity: O(n)
     // Space complexity: O(1)
     static func problem_1493_longestSubarray(_ nums: [Int]) -> Int {
@@ -83,42 +84,26 @@ final class LC_Yandex_Medium {
         return maxLength
     }
     
+
     // Time complexity: O(n)
     // Space complexity: O(1)
-    static func problem_228_summaryRanges(_ nums: [Int]) -> [String] {
-        guard !nums.isEmpty else { return [] }
-        guard nums.count > 1 else { return ["\(nums[0])"] }
-
-        var result = [String]()
-        var left = 0
-        var right = left + 1
-
-        while right < nums.count {
-            if nums[right] - nums[right - 1] != 1 {
-                if left == right - 1 {
-                    result.append("\(nums[left])")
-                } else {
-                    result.append("\(nums[left])->\(nums[right - 1])")
-                }
-
-                left = right
-            }
-
-            right += 1
-        }
-
-        if left == right - 1 {
-            result.append("\(nums[left])")
-        } else {
-            result.append("\(nums[left])->\(nums[right - 1])")
-        }
-
-        return result
-    }
-    
-    
     static func problem_443_compress(_ chars: inout [Character]) -> Int {
         guard chars.count > 1 else { return 1 }
+        
+        func compress(_ chars: inout [Character], _ count: Int, _ char: Character, _ charIdx: inout Int) {
+            chars[charIdx] = char
+            
+            if count > 1 {
+                let countChars = Array(String(count))
+                let start = charIdx + 1
+        
+                for i in countChars.indices {
+                    chars[start + i] = countChars[i]
+                }
+
+                charIdx += countChars.count
+            }
+        }
 
         var count = 0
         var charIdx = 0
@@ -139,18 +124,5 @@ final class LC_Yandex_Medium {
         return charIdx + 1
     }
 
-    static private func compress(_ chars: inout [Character], _ count: Int, _ char: Character, _ charIdx: inout Int) {
-        chars[charIdx] = char
-        
-        if count > 1 {
-            let countChars = Array(String(count))
-            let start = charIdx + 1
     
-            for i in countChars.indices {
-                chars[start + i] = countChars[i]
-            }
-
-            charIdx += countChars.count
-        }
-    }
 }
