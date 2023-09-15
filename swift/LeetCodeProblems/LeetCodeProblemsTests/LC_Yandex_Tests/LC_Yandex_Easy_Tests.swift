@@ -28,4 +28,24 @@ final class LC_Yandex_Easy_Tests: XCTestCase {
             XCTAssertEqual(actual, data.expected)
         }
     }
+    
+    
+    // MARK: Problem 283. Move Zeroes
+    lazy var testsData_problem_283: [(nums: [Int], expected: [Int])] = {
+        var testsData = [(nums: [Int], expected: [Int])]()
+        
+        testsData.append((nums: [0, 1, 0, 3, 12], expected: [1, 3, 12, 0, 0]))
+        testsData.append((nums: [0], expected: [0]))
+        
+        return testsData
+    }()
+    
+    func tests_problem_283_moveZeroes() throws {
+        for data in testsData_problem_283 {
+            var nums = data.nums
+            LC_Yandex_Easy.problem_283_moveZeroes(&nums)
+            
+            XCTAssertEqual(nums, data.expected)
+        }
+    }
 }

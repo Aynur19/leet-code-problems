@@ -40,4 +40,22 @@ final class LC_Yandex_Easy {
 
         return result
     }
+    
+    
+    static func problem_283_moveZeroes(_ nums: inout [Int]) {
+        guard nums.count > 1 else { return }
+
+        var left = 0
+        for right in (left + 1)..<nums.count {
+            if nums[left] == 0, nums[right] != 0 {
+                let tmp = nums[left]
+                nums[left] = nums[right]
+                nums[right] = tmp
+            }
+
+            if nums[left] != 0 {
+                left += 1
+            }
+        }
+    }
 }
