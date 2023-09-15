@@ -125,4 +125,62 @@ final class LC_Yandex_Medium {
     }
 
     
+    // Time complexity: O(n1 + n2)
+    // Space complexity: O(n1)
+    static func problem_567_checkInclusion(_ s1: String, _ s2: String) -> Bool {
+        guard s1.count > 1 else {
+            return s2.contains(s1)
+        }
+        
+        func dictIsEmpty(_ dict: [Character:Int]) -> Bool {
+            for (_, val) in dict {
+                if val != 0 { return false }
+            }
+            
+            return true
+        }
+
+        let s1 = Array(s1)
+        var dict = [Character:Int]()
+        for i in s1.indices {
+            dict[s1[i], default: 0] += 1
+        }
+
+        let s2 = Array(s2)
+        var left = 0
+        while left < s2.count {
+            if dict[s2[left]] != nil { break }
+            left += 1
+        }
+        guard left < s2.count else { return false }
+        dict[s2[left], default: 0] -= 1
+
+        var right = left + 1
+        while right < s2.count {
+            if let count = dict[s2[right]] {
+                dict[s2[right]] = count - 1
+                
+                if right - left >= s1.count {
+                    if let count = dict[s2[left]] {
+                        dict[s2[left]] = count + 1
+                    }
+                    
+                    left += 1
+                }
+                
+                if count == 1, dictIsEmpty(dict) {
+                    return true
+                }
+            } else {
+                if let count = dict[s2[left]] {
+                    dict[s2[left]] = count + 1
+                }
+                left += 1
+            }
+
+            right += 1
+        }
+
+        return dictIsEmpty(dict)
+    }
 }

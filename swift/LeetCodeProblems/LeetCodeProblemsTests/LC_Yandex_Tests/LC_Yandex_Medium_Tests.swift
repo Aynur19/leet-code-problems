@@ -72,4 +72,27 @@ final class LC_Yandex_Medium_Tests: XCTestCase {
             XCTAssertEqual(Array(chars[0..<data.expectedChars.count]), data.expectedChars)
         }
     }
+    
+    
+    // MARK: Problem 567. Permutation in String
+    lazy var testsData_problem_567: [(s1: String, s2: String, expected: Bool)] = {
+        var testsData = [(s1: String, s2: String, expected: Bool)]()
+        
+        testsData.append((s1: "ab", s2: "eidbaooo", expected: true))
+        testsData.append((s1: "ab", s2: "eidboaoo", expected: false))
+        testsData.append((s1: "adc", s2: "dcda", expected: true))
+        testsData.append((s1: "hello", s2: "ooolleoooleh", expected: false))
+        testsData.append((s1: "abc", s2: "cccccbabbbaaaa", expected: true))
+        testsData.append((s1: "trinitrophenylmethylnitramine", s2: "dinitrophenylhydrazinetrinitrophenylmethylnitramine", expected: true))
+        
+        return testsData
+    }()
+    
+    func tests_problem_567_checkInclusion() throws {
+        for data in testsData_problem_567 {
+            let actual = LC_Yandex_Medium.problem_567_checkInclusion(data.s1, data.s2)
+            
+            XCTAssertEqual(actual, data.expected, "s1: \(data.s1), s2: \(data.s2)")
+        }
+    }
 }
