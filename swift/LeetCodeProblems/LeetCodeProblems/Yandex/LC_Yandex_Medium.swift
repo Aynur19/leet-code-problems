@@ -183,4 +183,34 @@ final class LC_Yandex_Medium {
 
         return dictIsEmpty(dict)
     }
+    
+    
+    // Approach: Two Pointer
+    // Time complexity: O(n)
+    // Space complexity: O(1)
+    static func problem_986_intervalIntersection(_ firstList: [[Int]], _ secondList: [[Int]]) -> [[Int]] {
+        guard !firstList.isEmpty, !secondList.isEmpty else { return [] }
+        
+        var result = [[Int]]()
+        var ptr1 = 0, ptr2 = 0
+
+        while ptr1 < firstList.count, ptr2 < secondList.count {
+            if firstList[ptr1][1] < secondList[ptr2][0] {
+                ptr1 += 1
+            } else if firstList[ptr1][0] > secondList[ptr2][1] {
+                ptr2 += 1
+            } else {
+                let start = max(firstList[ptr1][0], secondList[ptr2][0])
+                if firstList[ptr1][1] >= secondList[ptr2][1] {
+                    result.append([start, secondList[ptr2][1]])
+                    ptr2 += 1
+                } else {
+                    result.append([start, firstList[ptr1][1]])
+                    ptr1 += 1
+                }
+            }
+        }
+
+        return result
+    }
 }

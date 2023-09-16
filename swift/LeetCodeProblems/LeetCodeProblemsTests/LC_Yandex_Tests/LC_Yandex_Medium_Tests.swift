@@ -95,4 +95,28 @@ final class LC_Yandex_Medium_Tests: XCTestCase {
             XCTAssertEqual(actual, data.expected, "s1: \(data.s1), s2: \(data.s2)")
         }
     }
+    
+    
+    // MARK: Problem 986. Interval List Intersections
+    lazy var testsData_problem_986: [(firstList: [[Int]], secondList: [[Int]], expected: [[Int]])] = {
+        var testsData = [(firstList: [[Int]], secondList: [[Int]], expected: [[Int]])]()
+        
+        testsData.append((firstList: [[0, 2], [5, 10], [13, 23], [24, 25]],
+                          secondList: [[1, 5], [8, 12], [15, 24], [25, 26]],
+                          expected: [[1, 2], [5, 5], [8, 10], [15, 23], [24, 24], [25, 25]]))
+        
+        testsData.append((firstList: [[1, 3], [5, 9]],
+                          secondList: [],
+                          expected: []))
+        
+        return testsData
+    }()
+    
+    func tests_problem_986_intervalIntersection() throws {
+        for data in testsData_problem_986 {
+            let actual = LC_Yandex_Medium.problem_986_intervalIntersection(data.firstList, data.secondList)
+            
+            XCTAssertEqual(actual, data.expected, "firstList: \(data.firstList), secondList: \(data.secondList)")
+        }
+    }
 }
