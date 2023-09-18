@@ -243,4 +243,64 @@ final class LC_Yandex_Medium {
 
         return count
     }
+    
+    
+    // Approach: Hash Table (Counter) + Sliding Window
+    // Time complexity: O(Np) + O(Ns)
+    // Space complexity: O(2*26)
+    static func problem_438_findAnagrams(_ s: String, _ p: String) -> [Int] {
+        guard s.count >= p.count else { return [] }
+
+        let n = 26
+        let s = Array(s)
+        let p = Array(p)
+        let aIdx = Character("a").asciiValue!
+        var countS = Array<Int>(repeating: 0, count: n)
+        var countP = countS
+        var matches = 0
+        var result = [Int]()
+        
+        for i in 0..<p.count {
+            if let sIdx = s[i].asciiValue, let pIdx = p[i].asciiValue {
+                countS[Int(sIdx - aIdx)] += 1
+                countP[Int(pIdx - aIdx)] += 1
+            }
+        }
+        
+        for i in 0..<n where countS[i] == countP[i] {
+            matches += 1
+        }
+
+        if matches == n { result.append(0) }
+        
+        for i in p.count..<s.count {
+            if let idx = s[i - p.count].asciiValue {
+                let charIdx = Int(idx - aIdx)
+                let diff = countS[charIdx] - countP[charIdx]
+                if diff == 1 {
+                    matches += 1
+                } else if diff == 0 {
+                    matches -= 1
+                }
+
+                countS[charIdx] -= 1
+            }
+
+            if let idx = s[i].asciiValue {
+                let charIdx = Int(idx - aIdx)
+                let diff = countS[charIdx] - countP[charIdx]
+                if diff == -1 {
+                    matches += 1
+                } else if diff == 0 {
+                    matches -= 1
+                }
+
+                countS[charIdx] += 1
+            }
+
+            if matches == n { result.append(i - p.count + 1) }
+        }
+
+        return result
+    }
 }

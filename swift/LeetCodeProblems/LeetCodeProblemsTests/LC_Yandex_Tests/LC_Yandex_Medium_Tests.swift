@@ -138,4 +138,24 @@ final class LC_Yandex_Medium_Tests: XCTestCase {
             XCTAssertEqual(actual, data.expected, "nums: \(data.nums), k: \(data.k)")
         }
     }
+    
+    
+    // MARK: Problem 438. Find All Anagrams in a String
+    lazy var testsData_problem_438: [(s: String, p: String, expected: [Int])] = {
+        var testsData = [(s: String, p: String, expected: [Int])]()
+        
+        testsData.append((s: "cbaebabacd", p: "abc", expected: [0, 6]))
+        testsData.append((s: "abab", p: "ab", expected: [0, 1, 2]))
+        testsData.append((s: "abacbabc", p: "abc", expected: [1, 2, 3, 5]))
+        
+        return testsData
+    }()
+    
+    func tests_problem_438_findAnagrams() throws {
+        for data in testsData_problem_438 {
+            let actual = LC_Yandex_Medium.problem_438_findAnagrams(data.s, data.p)
+            
+            XCTAssertEqual(actual, data.expected, "s: \(data.s), p: \(data.p)")
+        }
+    }
 }
