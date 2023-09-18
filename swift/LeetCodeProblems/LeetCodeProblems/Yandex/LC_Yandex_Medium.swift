@@ -213,4 +213,34 @@ final class LC_Yandex_Medium {
 
         return result
     }
+    
+    
+    // Approach: Hash Table + Prefix Sum
+    // Time complexity: O(n)
+    // Space complexity: O(n)
+    static func problem_560_subarraySum(_ nums: [Int], _ k: Int) -> Int {
+        var prefixSum = [Int]()
+        prefixSum.append(nums[0])
+
+        for i in 1..<nums.count {
+            prefixSum.append(prefixSum[i - 1] + nums[i])
+        }
+
+        var dict = [Int:Int]()
+        var count = 0
+
+        for i in nums.indices {
+            if prefixSum[i] == k {
+                count += 1
+            }
+
+            if let value = dict[prefixSum[i] - k] {
+                count += value
+            }
+
+            dict[prefixSum[i], default: 0] += 1
+        }
+
+        return count
+    }
 }

@@ -119,4 +119,23 @@ final class LC_Yandex_Medium_Tests: XCTestCase {
             XCTAssertEqual(actual, data.expected, "firstList: \(data.firstList), secondList: \(data.secondList)")
         }
     }
+    
+    
+    // MARK: Problem 560. Subarray Sum Equals K
+    lazy var testsData_problem_560: [(nums: [Int], k: Int, expected: Int)] = {
+        var testsData = [(nums: [Int], k: Int, expected: Int)]()
+        
+        testsData.append((nums: [1, 1, 1], k: 2, expected: 2))
+        testsData.append((nums: [1, 2, 3], k: 3, expected: 2))
+        
+        return testsData
+    }()
+    
+    func tests_problem_560_subarraySum() throws {
+        for data in testsData_problem_560 {
+            let actual = LC_Yandex_Medium.problem_560_subarraySum(data.nums, data.k)
+            
+            XCTAssertEqual(actual, data.expected, "nums: \(data.nums), k: \(data.k)")
+        }
+    }
 }
