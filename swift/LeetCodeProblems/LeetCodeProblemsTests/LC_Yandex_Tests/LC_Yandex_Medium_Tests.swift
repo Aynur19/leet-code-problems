@@ -195,4 +195,35 @@ final class LC_Yandex_Medium_Tests: XCTestCase {
             XCTAssertEqual(actual, data.expected, "commands: \(data.commands), args: \(data.args)")
         }
     }
+    
+    
+    // MARK: Problem 380. Insert Delete GetRandom O(1)
+    lazy var testsData_problem_380: [(commands: [String], args: [[Int]], expected: [String])] = {
+        var testsData = [(commands: [String], args: [[Int]], expected: [String])]()
+        
+        testsData.append((commands: ["RandomizedSet", "insert", "remove", "insert", "getRandom", "remove", "insert", "getRandom"],
+                          args: [[], [1], [2], [2], [], [1], [2], []],
+                          expected: ["true", "false", "true", "true", "false"]))
+        
+        return testsData
+    }()
+    
+    func tests_problem_380_RandomizedSet() throws {
+        for data in testsData_problem_380 {
+            var actual = [String]()
+            let randomSet = RandomizedSet()
+            
+            for i in 1..<data.commands.count {
+                if data.commands[i] == "insert" {
+                    actual.append("\(randomSet.insert(data.args[i][0]))")
+                } else if data.commands[i] == "remove" {
+                    actual.append("\(randomSet.remove(data.args[i][0]))")
+                } else if data.commands[i] == "getRandom" {
+                    _ = randomSet.getRandom()
+                }
+            }
+            
+            XCTAssertEqual(actual, data.expected, "commands: \(data.commands), args: \(data.args)")
+        }
+    }
 }

@@ -13,7 +13,6 @@ class LRUCache {
     private var nodes = [Int:DoubleLinkedList<Int>]()
     
     private var head: DoubleLinkedList<Int>?
-//    private var last: DoubleLinkedList<Int>?
     
     init(_ capacity: Int) {
         self.capacity = capacity
