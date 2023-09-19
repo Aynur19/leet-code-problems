@@ -226,4 +226,31 @@ final class LC_Yandex_Medium_Tests: XCTestCase {
             XCTAssertEqual(actual, data.expected, "commands: \(data.commands), args: \(data.args)")
         }
     }
+    
+    
+    // MARK: Problem 22. Generate Parentheses
+    lazy var testsData_problem_22: [(n: Int, expected: [String])] = {
+        var testsData = [(n: Int, expected: [String])]()
+        
+        testsData.append((n: 3, expected: ["((()))", "(()())", "(())()", "()(())", "()()()"]))
+        testsData.append((n: 1, expected: ["()"]))
+        
+        return testsData
+    }()
+    
+    func tests_problem_22_generateParenthesis() throws {
+        for data in testsData_problem_22 {
+            let actual = Yandex_Problems.problem_22_generateParenthesis(data.n)
+            
+            XCTAssertEqual(actual, data.expected, "n: \(data.n)")
+        }
+    }
+    
+    func tests_problem_22_generateParenthesis2() throws {
+        for data in testsData_problem_22 {
+            let actual = Yandex_Problems.problem_22_generateParenthesis2(data.n)
+            
+            XCTAssertEqual(actual, data.expected, "n: \(data.n)")
+        }
+    }
 }

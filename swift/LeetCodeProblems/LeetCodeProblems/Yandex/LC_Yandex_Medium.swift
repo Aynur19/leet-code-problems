@@ -304,6 +304,35 @@ final class LC_Yandex_Medium {
         return result
     }
     
-    
-    
+    // Approach: Recursion
+    // Time complexity: O(C(n) * n)
+    // Space complexity: O(C(n) * n)
+    // C(n) - Catalan number
+    static func problem_22_generateParenthesis(_ n: Int) -> [String] {
+        func generateParenthesis(_ result: inout [String], _ current: inout [Character], _ openN: Int, _ closeN: Int) {
+            if openN == 0, closeN == 0 {
+                result.append(String(current))
+                return
+            }
+            
+            if openN > 0 {
+                current.append("(")
+                generateParenthesis(&result, &current, openN - 1, closeN + 1)
+                _ = current.removeLast()
+            }
+            
+            if closeN > 0 {
+                current.append(")")
+                generateParenthesis(&result, &current, openN, closeN - 1)
+                current.removeLast()
+            }
+        }
+        
+        var result = [String]()
+        var current = [Character]()
+        
+        generateParenthesis(&result, &current, n, 0)
+                
+        return result
+    }
 }
