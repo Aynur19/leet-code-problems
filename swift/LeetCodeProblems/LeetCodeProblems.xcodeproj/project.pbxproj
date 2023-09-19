@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		981568D22AB88E70007BD890 /* DoubleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981568D12AB88E6F007BD890 /* DoubleLinkedList.swift */; };
+		981568D42AB899A6007BD890 /* LRUCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981568D32AB899A6007BD890 /* LRUCache.swift */; };
+		981568D52AB899AC007BD890 /* LRUCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981568D32AB899A6007BD890 /* LRUCache.swift */; };
+		981568D62AB899B0007BD890 /* DoubleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981568D12AB88E6F007BD890 /* DoubleLinkedList.swift */; };
 		9836A0922AB199EF0025E1A8 /* LC_Yandex_Easy_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9836A0912AB199EF0025E1A8 /* LC_Yandex_Easy_Tests.swift */; };
 		9836A0942AB19A2E0025E1A8 /* LC_Yandex_Easy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9836A0932AB19A2E0025E1A8 /* LC_Yandex_Easy.swift */; };
 		9836A0952AB19BEA0025E1A8 /* LC_Yandex_Easy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9836A0932AB19A2E0025E1A8 /* LC_Yandex_Easy.swift */; };
@@ -60,6 +64,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		981568D12AB88E6F007BD890 /* DoubleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleLinkedList.swift; sourceTree = "<group>"; };
+		981568D32AB899A6007BD890 /* LRUCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LRUCache.swift; sourceTree = "<group>"; };
 		9836A0912AB199EF0025E1A8 /* LC_Yandex_Easy_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC_Yandex_Easy_Tests.swift; sourceTree = "<group>"; };
 		9836A0932AB19A2E0025E1A8 /* LC_Yandex_Easy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC_Yandex_Easy.swift; sourceTree = "<group>"; };
 		988074A02AA5E6F0001670E7 /* LC75_Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC75_Array.swift; sourceTree = "<group>"; };
@@ -128,6 +134,8 @@
 			children = (
 				98BFC97F2AAB5D9E00D42CFC /* ListNode.swift */,
 				98D8DF822AAE03BB00AEBD4B /* TreeNode.swift */,
+				981568D12AB88E6F007BD890 /* DoubleLinkedList.swift */,
+				981568D32AB899A6007BD890 /* LRUCache.swift */,
 			);
 			path = DataStructures;
 			sourceTree = "<group>";
@@ -293,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				981568D42AB899A6007BD890 /* LRUCache.swift in Sources */,
 				988074A12AA5E6F0001670E7 /* LC75_Array.swift in Sources */,
 				98BFC9802AAB5D9E00D42CFC /* ListNode.swift in Sources */,
 				988074B22AA8E9CA001670E7 /* LC75_PrefixSum.swift in Sources */,
@@ -303,6 +312,7 @@
 				98D8DF832AAE03BB00AEBD4B /* TreeNode.swift in Sources */,
 				988074A82AA71DC1001670E7 /* LC75_TwoPointers.swift in Sources */,
 				988074AB2AA88AA1001670E7 /* LC75_SlidingWindow.swift in Sources */,
+				981568D22AB88E70007BD890 /* DoubleLinkedList.swift in Sources */,
 				98BFC9712AA9B95700D42CFC /* LC75_Stack.swift in Sources */,
 				988074B72AA8F1D4001670E7 /* LC75_HashMap&Set.swift in Sources */,
 				98D8DF8F2AB03B8D00AEBD4B /* LC_Yandex_Medium.swift in Sources */,
@@ -321,6 +331,7 @@
 				988074AE2AA88B1D001670E7 /* LC75_SlidingWindow.swift in Sources */,
 				98BFC97E2AAB5BB300D42CFC /* LC75_LinkedList_Tests.swift in Sources */,
 				98BFC9762AAB1D4800D42CFC /* LC75_Queue_Tests.swift in Sources */,
+				981568D62AB899B0007BD890 /* DoubleLinkedList.swift in Sources */,
 				9836A0922AB199EF0025E1A8 /* LC_Yandex_Easy_Tests.swift in Sources */,
 				988074A92AA71DC1001670E7 /* LC75_TwoPointers.swift in Sources */,
 				98BFC9812AAB5D9E00D42CFC /* ListNode.swift in Sources */,
@@ -338,6 +349,7 @@
 				98BFC9742AA9B97300D42CFC /* LC75_Stack.swift in Sources */,
 				98D8DF902AB03BA000AEBD4B /* LC_Yandex_Medium.swift in Sources */,
 				9836A0952AB19BEA0025E1A8 /* LC_Yandex_Easy.swift in Sources */,
+				981568D52AB899AC007BD890 /* LRUCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

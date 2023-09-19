@@ -158,4 +158,41 @@ final class LC_Yandex_Medium_Tests: XCTestCase {
             XCTAssertEqual(actual, data.expected, "s: \(data.s), p: \(data.p)")
         }
     }
+    
+    
+    // MARK: Problem 146. LRU Cache
+    lazy var testsData_problem_146: [(commands: [String], args: [[Int]], expected: [Int])] = {
+        var testsData = [(commands: [String], args: [[Int]], expected: [Int])]()
+        
+        testsData.append((commands: ["LRUCache", "put", "put", "get", "put", "get", "put", "get", "get", "get"],
+                          args: [[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]],
+                          expected: [1, -1, -1, 3, 4]))
+        
+        testsData.append((commands: ["LRUCache", "put", "put", "put", "put", "get", "get", "get", "get", "put", "get", "get", "get", "get", "get"],
+                          args: [[3], [1, 1], [2, 2], [3, 3], [4, 4], [4], [3], [2], [1], [5, 5], [1], [2], [3], [4], [5]],
+                          expected: [4, 3, 2, -1, -1, 2, 3, -1, 5]))
+        
+        testsData.append((commands: ["LRUCache", "get", "get", "put", "get", "put", "put", "put", "put", "get", "put"],
+                          args: [[1], [6], [8], [12, 1], [2], [15, 11], [5, 2], [1, 15], [4, 2], [5], [15, 15]],
+                          expected: [-1, -1, -1, -1]))
+        
+        return testsData
+    }()
+    
+    func tests_problem_146_LRUCache() throws {
+        for data in testsData_problem_146 {
+            var actual = [Int]()
+            let lruCache = LRUCache(data.args[0][0])
+            
+            for i in 1..<data.commands.count {
+                if data.commands[i] == "put" {
+                    lruCache.put(data.args[i][0], data.args[i][1])
+                } else if data.commands[i] == "get" {
+                    actual.append(lruCache.get(data.args[i][0]))
+                }
+            }
+            
+            XCTAssertEqual(actual, data.expected, "commands: \(data.commands), args: \(data.args)")
+        }
+    }
 }
