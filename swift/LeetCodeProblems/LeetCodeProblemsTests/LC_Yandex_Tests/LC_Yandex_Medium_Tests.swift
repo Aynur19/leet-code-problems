@@ -284,4 +284,32 @@ final class LC_Yandex_Medium_Tests: XCTestCase {
             XCTAssertEqual(actual, expected, "strs: \(data.strs)")
         }
     }
+    
+    
+    // MARK: Problem 125. Valid Palindrome
+    lazy var testsData_problem_125: [(s: String, expected: Bool)] = {
+        var testsData = [(s: String, expected: Bool)]()
+        
+        testsData.append((s: "A man, a plan, a canal: Panama", expected: true))
+        testsData.append((s: "race a car", expected: false))
+        testsData.append((s: " ", expected: true))
+        
+        return testsData
+    }()
+    
+    func tests_problem_125_isPalindrome() throws {
+        for data in testsData_problem_125 {
+            let actual = Yandex_Problems.problem_125_isPalindrome(data.s)
+            
+            XCTAssertEqual(actual, data.expected, "s: \(data.s)")
+        }
+    }
+    
+    func tests_problem_125_isPalindrome2() throws {
+        for data in testsData_problem_125 {
+            let actual = Yandex_Problems.problem_125_isPalindrome2(data.s)
+            
+            XCTAssertEqual(actual, data.expected, "s: \(data.s)")
+        }
+    }
 }

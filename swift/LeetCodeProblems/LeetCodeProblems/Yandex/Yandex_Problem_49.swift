@@ -30,7 +30,7 @@ extension Yandex_Problems {
     
     // Approach: Hash Table
     // Time complexity: O(n * m * log(m)) => 86 ms
-    // Space complexity: O(n * m * log(m)) => 15.99 MB
+    // Space complexity: O(n) => 15.99 MB
     static func problem_49_groupAnagrams2(_ strs: [String]) -> [[String]] {
         guard strs.count > 1 else { return [strs] }
         
