@@ -253,4 +253,35 @@ final class LC_Yandex_Medium_Tests: XCTestCase {
             XCTAssertEqual(actual, data.expected, "n: \(data.n)")
         }
     }
+    
+    
+    // MARK: Problem 49. Group Anagrams
+    lazy var testsData_problem_49: [(strs: [String], expected: [[String]])] = {
+        var testsData = [(strs: [String], expected: [[String]])]()
+        
+        testsData.append((strs: ["eat", "tea", "tan", "ate", "nat", "bat"],
+                          expected: [["bat"], ["nat", "tan"], ["ate", "eat", "tea"]]))
+        testsData.append((strs: [""], expected: [[""]]))
+        testsData.append((strs: ["a"], expected: [["a"]]))
+        
+        return testsData
+    }()
+    
+    func tests_problem_49_groupAnagrams() throws {
+        for data in testsData_problem_49 {
+            let actual = Yandex_Problems.problem_49_groupAnagrams(data.strs).map { $0.sorted().joined() }.sorted()
+            let expected = data.expected.map { $0.sorted().joined() }.sorted()
+            
+            XCTAssertEqual(actual, expected, "strs: \(data.strs)")
+        }
+    }
+    
+    func tests_problem_49_groupAnagrams2() throws {
+        for data in testsData_problem_49 {
+            let actual = Yandex_Problems.problem_49_groupAnagrams2(data.strs).map { $0.sorted().joined() }.sorted()
+            let expected = data.expected.map { $0.sorted().joined() }.sorted()
+            
+            XCTAssertEqual(actual, expected, "strs: \(data.strs)")
+        }
+    }
 }
