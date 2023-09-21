@@ -32,4 +32,36 @@ final class Yandex_Problems_Tests: XCTestCase {
         }
     }
     
+    
+    // MARK: Problem 2: 2. Add Two Numbers
+    lazy var testsData_problem_2: [(l1: ListNode?, l2: ListNode?, expected: ListNode?)] = {
+        var testsData = [(l1: ListNode?, l2: ListNode?, expected: ListNode?)]()
+        
+        testsData.append((l1: ListNode(2, ListNode(4, ListNode(3))),
+                          l2: ListNode(5, ListNode(6, ListNode(4))),
+                          expected: ListNode(7, ListNode(0, ListNode(8)))))
+        
+        testsData.append((l1: ListNode(0),
+                          l2: ListNode(0),
+                          expected: ListNode(0)))
+        
+        testsData.append((l1: ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9))))))),
+                          l2: ListNode(9, ListNode(9, ListNode(9, ListNode(9)))),
+                          expected: ListNode(8, ListNode(9, ListNode(9, ListNode(9, ListNode(0, ListNode(0, ListNode(0, ListNode(1))))))))))
+        
+        testsData.append((l1: ListNode(2, ListNode(4, ListNode(9))),
+                          l2: ListNode(5, ListNode(6, ListNode(4, ListNode(9)))),
+                          expected: ListNode(7, ListNode(0, ListNode(4, ListNode(0, ListNode(1)))))))
+        
+        return testsData
+    }()
+    
+    func tests_problem_2_addTwoNumbers() throws {
+        for data in testsData_problem_2 {
+            let actual = Yandex_Problems.problem_2_addTwoNumbers(data.l1, data.l2)
+            
+            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected),
+                          "l1: \(String(describing: data.l1)), l2: \(String(describing: data.l2))")
+        }
+    }
 }
