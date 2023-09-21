@@ -106,4 +106,24 @@ final class Yandex_Problems_Tests: XCTestCase {
                           "s: \(data.s)")
         }
     }
+    
+    
+    // MARK: Problem 5: 11. Container With Most Water
+    func tests_problem_11_maxArea() throws {
+        lazy var testsData_problem_11: [(height: [Int], expected: Int)] = {
+            var testsData = [(height: [Int], expected: Int)]()
+            
+            testsData.append((height: [1, 8, 6, 2, 5, 4, 8, 3, 7], expected: 49))
+            testsData.append((height: [1, 1], expected: 1))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_11 {
+            let actual = Yandex_Problems.problem_11_maxArea(data.height)
+            
+            XCTAssertEqual(actual, data.expected,
+                          "height: \(data.height)")
+        }
+    }
 }

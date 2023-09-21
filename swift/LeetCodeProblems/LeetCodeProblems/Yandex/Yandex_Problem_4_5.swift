@@ -24,9 +24,9 @@
 // s consist of only digits and English letters.
 
 extension Yandex_Problems {
-    // Approach: Hash Table
-    // Time complexity: O(n^2) => 10 ms
-    // Space complexity: O(n) => 14.68 MB
+    // Approach: Array, Two Pointer
+    // Time complexity: O(n^2) => 93 ms
+    // Space complexity: O(n) => 14.36 MB
     static func problem_5_longestPalindrome(_ s: String) -> String {
         func check(_ s: [Character], _ left: Int, _ right: Int) -> Bool {
             var left = left
