@@ -126,4 +126,25 @@ final class Yandex_Problems_Tests: XCTestCase {
                           "height: \(data.height)")
         }
     }
+    
+    
+    // MARK: Problem 6: 12. Integer to Roman
+    func tests_problem_12_intToRoman() throws {
+        lazy var testsData_problem_12: [(num: Int, expected: String)] = {
+            var testsData = [(num: Int, expected: String)]()
+            
+            testsData.append((num: 3, expected: "III"))
+            testsData.append((num: 58, expected: "LVIII"))
+            testsData.append((num: 1994, expected: "MCMXCIV"))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_12 {
+            let actual = Yandex_Problems.problem_12_intToRoman(data.num)
+            
+            XCTAssertEqual(actual, data.expected,
+                          "num: \(data.num)")
+        }
+    }
 }
