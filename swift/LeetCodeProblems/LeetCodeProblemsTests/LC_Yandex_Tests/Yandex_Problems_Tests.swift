@@ -251,4 +251,25 @@ final class Yandex_Problems_Tests: XCTestCase {
                               "head: \(String(describing: data.head)), n: \(data.n)")
         }
     }
+    
+    
+    // MARK: Problem 11: 19. Remove Nth Node From End of List
+    func tests_problem_20_isValid() throws {
+        lazy var testsData_problem_20: [(s: String, expected: Bool)] = {
+            var testsData = [(s: String, expected: Bool)]()
+            
+            testsData.append((s: "()", expected: true))
+            testsData.append((s: "()[]{}", expected: true))
+            testsData.append((s: "(]", expected: false))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_20 {
+            let actual = Yandex_Problems.problem_20_isValid(data.s)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "s: \(data.s)")
+        }
+    }
 }
