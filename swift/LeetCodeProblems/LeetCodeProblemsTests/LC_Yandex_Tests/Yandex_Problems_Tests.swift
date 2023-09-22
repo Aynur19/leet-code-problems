@@ -149,7 +149,7 @@ final class Yandex_Problems_Tests: XCTestCase {
     }
     
     
-    // MARK: Problem 7: 12. Integer to Roman
+    // MARK: Problem 7: 13. Integer to Roman
     func tests_problem_13_romanToInt() throws {
         lazy var testsData_problem_13: [(s: String, expected: Int)] = {
             var testsData = [(s: String, expected: Int)]()
@@ -169,6 +169,33 @@ final class Yandex_Problems_Tests: XCTestCase {
                           "s: \(data.s)")
             XCTAssertEqual(actual2, data.expected,
                           "s: \(data.s)")
+        }
+    }
+    
+    
+    // MARK: Problem 8: 15. 3Sum
+    func tests_problem_15_threeSum() throws {
+        lazy var testsData_problem_13: [(nums: [Int], expected:  [[Int]])] = {
+            var testsData = [(nums: [Int], expected:  [[Int]])]()
+            
+            testsData.append((nums: [-1, 0, 1, 2, -1, -4], expected: [[-1, -1, 2], [-1, 0, 1]]))
+            testsData.append((nums: [0, 1, 1], expected:  []))
+            testsData.append((nums: [0, 0, 0], expected:  [[0, 0, 0]]))
+            testsData.append((nums: [-1, 0, 1, 0], expected:  [[-1, 0, 1]]))
+            testsData.append((nums: [1, -1, -1, 0], expected:  [[-1, 0, 1]]))
+            testsData.append((nums: [-2, 0, 1, 1, 2], expected:  [[-2, 0, 2], [-2, 1, 1]]))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_13 {
+            let actual = Yandex_Problems.problem_15_threeSum(data.nums)
+                .sorted(by: { $0.sorted().lexicographicallyPrecedes($1.sorted()) })
+            let expected = data.expected
+                .sorted(by: { $0.sorted().lexicographicallyPrecedes($1.sorted()) })
+            
+            XCTAssertEqual(actual, expected,
+                          "nums: \(data.nums)")
         }
     }
 }
