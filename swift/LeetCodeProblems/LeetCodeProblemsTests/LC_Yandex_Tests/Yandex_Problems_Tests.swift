@@ -299,8 +299,6 @@ final class Yandex_Problems_Tests: XCTestCase {
     
 
     // MARK: Problem 13: 22. Generate Parentheses
-    
-    
     func tests_problem_22_generateParenthesis() throws {
         lazy var testsData_problem_22: [(n: Int, expected: [String])] = {
             var testsData = [(n: Int, expected: [String])]()
@@ -317,6 +315,31 @@ final class Yandex_Problems_Tests: XCTestCase {
             
             XCTAssertEqual(actual, data.expected, "n: \(data.n)")
             XCTAssertEqual(actual2, data.expected, "n: \(data.n)")
+        }
+    }
+    
+    
+    // MARK: Problem 14: 26. Remove Duplicates from Sorted Array
+    func tests_problem_26_removeDuplicates() throws {
+        lazy var testsData_problem_26: [(nums: [Int], expected: Int, expectedNums: [Int])] = {
+            var testsData = [(nums: [Int], expected: Int, expectedNums: [Int])]()
+            
+            testsData.append((nums: [1, 1, 2],
+                              expected: 2,
+                              expectedNums: [1, 2]))
+            testsData.append((nums: [0, 0, 1, 1, 1, 2, 2, 3, 3, 4],
+                              expected: 5,
+                              expectedNums: [0, 1, 2, 3, 4]))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_26 {
+            var nums = data.nums
+            let actual = Yandex_Problems.problem_26_removeDuplicates(&nums)
+            
+            XCTAssertEqual(actual, data.expected, "nums: \(data.nums)")
+            XCTAssertEqual(Array(nums[0..<actual]), data.expectedNums, "nums: \(data.nums)")
         }
     }
 }
