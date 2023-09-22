@@ -1,11 +1,27 @@
 //
-//  Yandex_Problem_22.swift
+//  Yandex_Problem_13_22.swift
 //  LeetCodeProblems
 //
-//  Created by Aynur Nasybullin on 19.09.2023.
+//  Created by Aynur Nasybullin on 22.09.2023.
 //
 
-import Foundation
+// 22. Generate Parentheses
+// Medium
+
+// Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+
+ 
+// Example 1:
+// Input: n = 3
+// Output: ["((()))","(()())","(())()","()(())","()()()"]
+
+// Example 2:
+// Input: n = 1
+// Output: ["()"]
+ 
+
+// Constraints:
+// 1 <= n <= 8
 
 extension Yandex_Problems {
     // Approach: Recursion
