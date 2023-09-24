@@ -362,4 +362,34 @@ final class Yandex_Problems_Tests: XCTestCase {
                            "haystack: \(data.haystack); needle: \(data.needle)")
         }
     }
+    
+    
+    // MARK: Problem 16: 33. Search in Rotated Sorted Array
+    func tests_problem_33_search() throws {
+        lazy var testsData_problem_33: [(nums: [Int], target: Int, expected: Int)] = {
+            var testsData = [(nums: [Int], target: Int, expected: Int)]()
+            
+            testsData.append((nums: [4, 5, 6, 7, 0, 1, 2],
+                              target: 1, expected: 5))
+            testsData.append((nums: [4, 5, 6, 7, 8, 1, 2, 3],
+                              target: 8, expected: 4))
+            
+            testsData.append((nums: [4, 5, 6, 7, 0, 1, 2],
+                              target: 0, expected: 4))
+            testsData.append((nums: [4, 5, 6, 7, 0, 1, 2],
+                              target: 3, expected: -1))
+            testsData.append((nums: [1], target: 0, expected: -1))
+            testsData.append((nums: [1, 3], target: 1, expected: 0))
+            testsData.append((nums: [1, 3], target: 2, expected: -1))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_33 {
+            let actual = Yandex_Problems.problem_33_search(data.nums, data.target)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "nums: \(data.nums); target: \(data.target)")
+        }
+    }
 }
