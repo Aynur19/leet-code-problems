@@ -392,4 +392,33 @@ final class Yandex_Problems_Tests: XCTestCase {
                            "nums: \(data.nums); target: \(data.target)")
         }
     }
+    
+    
+    // MARK: Problem 17: 34. Find First and Last Position of Element in Sorted Array
+    func tests_problem_34_searchRange() throws {
+        lazy var testsData_problem_34: [(nums: [Int], target: Int, expected: [Int])] = {
+            var testsData = [(nums: [Int], target: Int, expected: [Int])]()
+            
+            testsData.append((nums: [5, 7, 7, 8, 8, 10],
+                              target: 8, expected: [3, 4]))
+            testsData.append((nums: [5, 7, 7, 8, 8, 10],
+                              target: 6, expected: [-1, -1]))
+            testsData.append((nums: [],
+                              target: 0, expected: [-1, -1]))
+            
+            testsData.append((nums: [2, 2],
+                              target: 2, expected: [0, 1]))
+            testsData.append((nums: [1, 4],
+                              target: 4, expected: [1, 1]))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_34 {
+            let actual = Yandex_Problems.problem_34_searchRange(data.nums, data.target)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "nums: \(data.nums); target: \(data.target)")
+        }
+    }
 }
