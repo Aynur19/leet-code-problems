@@ -421,4 +421,27 @@ final class Yandex_Problems_Tests: XCTestCase {
                            "nums: \(data.nums); target: \(data.target)")
         }
     }
+    
+    
+    // MARK: Problem 18: 43. Multiply Strings
+    func tests_problem_43_multiply() throws {
+        lazy var testsData_problem_43: [(num1: String, num2: String, expected: String)] = {
+            var testsData = [(num1: String, num2: String, expected: String)]()
+            
+            testsData.append((num1: "2", num2: "3", expected: "6"))
+            testsData.append((num1: "123", num2: "456", expected: "56088"))
+            testsData.append((num1: "498828660196", num2: "840477629533", expected: "419254329864656431168468"))
+            testsData.append((num1: "0", num2: "0", expected: "0"))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_43 {
+            let actual = Yandex_Problems.problem_43_multiply(data.num1, data.num2)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "num1: \(data.num1); num2: \(data.num2)")
+        }
+    }
 }
+
