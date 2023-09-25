@@ -501,5 +501,28 @@ final class Yandex_Problems_Tests: XCTestCase {
             XCTAssertEqual(actual2, expected, "strs: \(data.strs)")
         }
     }
+    
+    
+    // MARK: Problem 21: 56. Merge Intervals
+    func tests_problem_56_merge() throws {
+        lazy var testsData_problem_56: [(intervals: [[Int]], expected: [[Int]])] = {
+            var testsData = [(intervals: [[Int]], expected: [[Int]])]()
+            
+            testsData.append((intervals: [[1, 3], [2, 6], [8, 10], [15, 18]],
+                              expected: [[1, 6], [8, 10], [15, 18]]))
+            testsData.append((intervals: [[1, 4], [4, 5]],
+                              expected: [[1, 5]]))
+            testsData.append((intervals: [[1, 4], [0, 4]],
+                              expected: [[0, 4]]))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_56 {
+            let actual = Yandex_Problems.problem_56_merge(data.intervals)
+            
+            XCTAssertEqual(actual, data.expected, "intervals: \(data.intervals)")
+        }
+    }
 }
 
