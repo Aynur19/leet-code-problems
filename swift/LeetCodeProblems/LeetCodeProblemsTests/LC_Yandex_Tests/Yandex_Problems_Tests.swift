@@ -524,5 +524,33 @@ final class Yandex_Problems_Tests: XCTestCase {
             XCTAssertEqual(actual, data.expected, "intervals: \(data.intervals)")
         }
     }
+    
+    
+    // MARK: Problem 22: 59. Spiral Matrix II
+    func tests_problem_59_generateMatrix() throws {
+        lazy var testsData_problem_59: [(n: Int, expected: [[Int]])] = {
+            var testsData = [(n: Int, expected: [[Int]])]()
+            
+            testsData.append((n: 3,
+                              expected: [[1, 2, 3], [8, 9, 4], [7, 6, 5]]))
+            testsData.append((n: 1,
+                              expected: [[1]]))
+            testsData.append((n: 4,
+                              expected: [
+                                [1, 2, 3, 4],
+                                [12, 13, 14, 5],
+                                [11, 16, 15, 6],
+                                [10, 9, 8, 7]]))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_59 {
+            let actual = Yandex_Problems.problem_59_generateMatrix(data.n)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "n: \(data.n)")
+        }
+    }
 }
 
