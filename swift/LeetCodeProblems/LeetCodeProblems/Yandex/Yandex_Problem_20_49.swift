@@ -1,11 +1,35 @@
 //
-//  Yandex_Problem_49.swift
+//  Yandex_Problem_20_49.swift
 //  LeetCodeProblems
 //
-//  Created by Aynur Nasybullin on 20.09.2023.
+//  Created by Aynur Nasybullin on 25.09.2023.
 //
 
-import Foundation
+// 49. Group Anagrams
+// Solved
+
+// Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+
+// An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+ 
+// Example 1:
+// Input: strs = ["eat","tea","tan","ate","nat","bat"]
+// Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+
+// Example 2:
+// Input: strs = [""]
+// Output: [[""]]
+
+// Example 3:
+// Input: strs = ["a"]
+// Output: [["a"]]
+ 
+
+// Constraints:
+// 1 <= strs.length <= 10^4
+// 0 <= strs[i].length <= 100
+// strs[i] consists of lowercase English letters.
 
 extension Yandex_Problems {
     // Approach: Hash Table
