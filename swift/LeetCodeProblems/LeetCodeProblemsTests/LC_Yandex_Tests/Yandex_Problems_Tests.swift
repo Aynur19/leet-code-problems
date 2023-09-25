@@ -443,5 +443,39 @@ final class Yandex_Problems_Tests: XCTestCase {
                            "num1: \(data.num1); num2: \(data.num2)")
         }
     }
+    
+    
+    // MARK: Problem 19: 48. Rotate Image
+    func tests_problem_48_rotate() throws {
+        lazy var testsData_problem_48: [(matrix: [[Int]], expected: [[Int]])] = {
+            var testsData = [(matrix: [[Int]], expected: [[Int]])]()
+            
+            testsData.append((matrix: [[1, 2, 3],
+                                       [4, 5, 6],
+                                       [7, 8, 9]],
+                              expected: [[7, 4, 1],
+                                         [8, 5, 2],
+                                         [9, 6, 3]]))
+            
+            testsData.append((matrix: [[5, 1, 9, 11],
+                                       [2, 4, 8, 10],
+                                       [13, 3, 6, 7],
+                                       [15, 14, 12, 16]],
+                              expected: [[15, 13, 2, 5],
+                                         [14, 3, 4, 1],
+                                         [12, 6, 8, 9],
+                                         [16, 7, 10, 11]]))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_48 {
+            var matrix = data.matrix
+            Yandex_Problems.problem_48_rotate(&matrix)
+            
+            XCTAssertEqual(matrix, data.expected,
+                           "matrix: \(data.matrix)")
+        }
+    }
 }
 
