@@ -552,5 +552,35 @@ final class Yandex_Problems_Tests: XCTestCase {
                            "n: \(data.n)")
         }
     }
+    
+    
+    // MARK: Problem 23: 71. Simplify Path
+    func tests_problem_71_simplifyPath() throws {
+        lazy var testsData_problem_71: [(path: String, expected: String)] = {
+            var testsData = [(path: String, expected: String)]()
+            
+            testsData.append((path: "/home/",
+                              expected: "/home"))
+            testsData.append((path: "/../",
+                              expected: "/"))
+            testsData.append((path: "/home//foo/",
+                              expected: "/home/foo"))
+            testsData.append((path: "../home//foo/",
+                              expected: "/home/foo"))
+            testsData.append((path: "../home/../foo/",
+                              expected: "/foo"))
+            testsData.append((path: "/a/./b/../../c/",
+                              expected: "/c"))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_71 {
+            let actual = Yandex_Problems.problem_71_simplifyPath(data.path)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "path: \(data.path)")
+        }
+    }
 }
 
