@@ -1,5 +1,5 @@
 //
-//  Yandex_Problem_21_56.swift
+//  Yandex_Problem_22_56.swift
 //  LeetCodeProblems
 //
 //  Created by Aynur Nasybullin on 25.09.2023.
@@ -35,7 +35,7 @@ extension Yandex_Problems {
         guard intervals.count > 1 else { return intervals }
         var result = [[Int]]()
         
-        var intervals = intervals.sorted(by: { $0[0] < $1[0] })         // O(log n)
+        let intervals = intervals.sorted(by: { $0[0] < $1[0] })         // O(log n)
         var l = intervals[0][0]
         var r = intervals[0][1]
         

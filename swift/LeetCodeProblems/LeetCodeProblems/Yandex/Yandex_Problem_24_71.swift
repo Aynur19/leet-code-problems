@@ -1,5 +1,5 @@
 //
-//  Yandex_Problem_23_71.swift
+//  Yandex_Problem_24_71.swift
 //  LeetCodeProblems
 //
 //  Created by Aynur Nasybullin on 25.09.2023.

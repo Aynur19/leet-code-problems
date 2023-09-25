@@ -503,7 +503,7 @@ final class Yandex_Problems_Tests: XCTestCase {
     }
     
     
-    // MARK: Problem 21: 56. Merge Intervals
+    // MARK: Problem 22: 56. Merge Intervals
     func tests_problem_56_merge() throws {
         lazy var testsData_problem_56: [(intervals: [[Int]], expected: [[Int]])] = {
             var testsData = [(intervals: [[Int]], expected: [[Int]])]()
@@ -526,7 +526,7 @@ final class Yandex_Problems_Tests: XCTestCase {
     }
     
     
-    // MARK: Problem 22: 59. Spiral Matrix II
+    // MARK: Problem 23: 59. Spiral Matrix II
     func tests_problem_59_generateMatrix() throws {
         lazy var testsData_problem_59: [(n: Int, expected: [[Int]])] = {
             var testsData = [(n: Int, expected: [[Int]])]()
@@ -554,7 +554,7 @@ final class Yandex_Problems_Tests: XCTestCase {
     }
     
     
-    // MARK: Problem 23: 71. Simplify Path
+    // MARK: Problem 24: 71. Simplify Path
     func tests_problem_71_simplifyPath() throws {
         lazy var testsData_problem_71: [(path: String, expected: String)] = {
             var testsData = [(path: String, expected: String)]()
