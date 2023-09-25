@@ -503,6 +503,33 @@ final class Yandex_Problems_Tests: XCTestCase {
     }
     
     
+    // MARK: Problem 21: 53. Maximum Subarray
+    func tests_problem_53_maxSubArray() throws {
+        lazy var testsData_problem_53: [(nums: [Int], expected: Int)] = {
+            var testsData = [(nums: [Int], expected: Int)]()
+            
+            testsData.append((nums: [-2, 1, -3, 4, -1, 2, 1, -5, 4],
+                              expected: 6))
+            testsData.append((nums: [1],
+                              expected: 1))
+            testsData.append((nums: [5, 4, -1, 7, 8],
+                              expected: 23))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_53 {
+            let actual = Yandex_Problems.problem_53_maxSubArray(data.nums)
+            let actual2 = Yandex_Problems.problem_53_maxSubArray2(data.nums)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "nums: \(data.nums)")
+            XCTAssertEqual(actual2, data.expected,
+                           "nums: \(data.nums)")
+        }
+    }
+    
+    
     // MARK: Problem 22: 56. Merge Intervals
     func tests_problem_56_merge() throws {
         lazy var testsData_problem_56: [(intervals: [[Int]], expected: [[Int]])] = {

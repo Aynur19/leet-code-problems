@@ -65,6 +65,8 @@
 		9864316A2AC1893000EC6B70 /* Yandex_Problem_23_59.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986431682AC1893000EC6B70 /* Yandex_Problem_23_59.swift */; };
 		9864316C2AC1AD7C00EC6B70 /* Yandex_Problem_24_71.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9864316B2AC1AD7C00EC6B70 /* Yandex_Problem_24_71.swift */; };
 		9864316D2AC1AD7C00EC6B70 /* Yandex_Problem_24_71.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9864316B2AC1AD7C00EC6B70 /* Yandex_Problem_24_71.swift */; };
+		9864316F2AC1D5AC00EC6B70 /* Yandex_Problem_21_53.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9864316E2AC1D5AC00EC6B70 /* Yandex_Problem_21_53.swift */; };
+		986431702AC1D5AC00EC6B70 /* Yandex_Problem_21_53.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9864316E2AC1D5AC00EC6B70 /* Yandex_Problem_21_53.swift */; };
 		988074A12AA5E6F0001670E7 /* LC75_Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988074A02AA5E6F0001670E7 /* LC75_Array.swift */; };
 		988074A32AA5E71E001670E7 /* LC75_Array_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988074A22AA5E71E001670E7 /* LC75_Array_Tests.swift */; };
 		988074A42AA5E727001670E7 /* LC75_Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988074A02AA5E6F0001670E7 /* LC75_Array.swift */; };
@@ -149,6 +151,7 @@
 		986431652AC1784100EC6B70 /* Yandex_Problem_22_56.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_22_56.swift; sourceTree = "<group>"; };
 		986431682AC1893000EC6B70 /* Yandex_Problem_23_59.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_23_59.swift; sourceTree = "<group>"; };
 		9864316B2AC1AD7C00EC6B70 /* Yandex_Problem_24_71.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_24_71.swift; sourceTree = "<group>"; };
+		9864316E2AC1D5AC00EC6B70 /* Yandex_Problem_21_53.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_21_53.swift; sourceTree = "<group>"; };
 		988074A02AA5E6F0001670E7 /* LC75_Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC75_Array.swift; sourceTree = "<group>"; };
 		988074A22AA5E71E001670E7 /* LC75_Array_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC75_Array_Tests.swift; sourceTree = "<group>"; };
 		988074A52AA71D95001670E7 /* LC75_TwoPointers_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC75_TwoPointers_Tests.swift; sourceTree = "<group>"; };
@@ -230,6 +233,7 @@
 				9864316B2AC1AD7C00EC6B70 /* Yandex_Problem_24_71.swift */,
 				986431682AC1893000EC6B70 /* Yandex_Problem_23_59.swift */,
 				986431652AC1784100EC6B70 /* Yandex_Problem_22_56.swift */,
+				9864316E2AC1D5AC00EC6B70 /* Yandex_Problem_21_53.swift */,
 				986431622AC1760E00EC6B70 /* Yandex_Problem_20_49.swift */,
 				9864315F2AC165EF00EC6B70 /* Yandex_Problem_19_48.swift */,
 				98D848682AC07F82004A7FF1 /* Yandex_Problem_18_43.swift */,
@@ -435,6 +439,7 @@
 				981568E12ABAF7AE007BD890 /* Yandex_Problem_206.swift in Sources */,
 				986431662AC1784100EC6B70 /* Yandex_Problem_22_56.swift in Sources */,
 				981568D82AB9AE1C007BD890 /* RandomizedSet.swift in Sources */,
+				9864316F2AC1D5AC00EC6B70 /* Yandex_Problem_21_53.swift in Sources */,
 				9836A0942AB19A2E0025E1A8 /* LC_Yandex_Easy.swift in Sources */,
 				98BFC97B2AAB5BA000D42CFC /* LC75_LinkedList.swift in Sources */,
 				98D8DF832AAE03BB00AEBD4B /* TreeNode.swift in Sources */,
@@ -496,6 +501,7 @@
 				981568E22ABAF7AE007BD890 /* Yandex_Problem_206.swift in Sources */,
 				981568F72ABC4422007BD890 /* Yandex_Problem_4_5.swift in Sources */,
 				981569092ABD9A48007BD890 /* Yandex_Problem_10_19.swift in Sources */,
+				986431702AC1D5AC00EC6B70 /* Yandex_Problem_21_53.swift in Sources */,
 				988074A62AA71D95001670E7 /* LC75_TwoPointers_Tests.swift in Sources */,
 				981568DF2ABA0FCF007BD890 /* Yandex_Problems.swift in Sources */,
 				988074A42AA5E727001670E7 /* LC75_Array.swift in Sources */,
