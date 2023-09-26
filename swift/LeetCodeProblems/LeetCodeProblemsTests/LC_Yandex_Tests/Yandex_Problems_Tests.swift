@@ -9,6 +9,32 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class Yandex_Problems_Tests: XCTestCase {
+    // MARK: Problem 27: 98. Validate Binary Search Tree
+    func tests_problem_98_isValidBST() throws {
+        lazy var testsData_problem_98: [(root: TreeNode?, expected: Bool)] = {
+            var testsData = [(root: TreeNode?, expected: Bool)]()
+            
+            testsData.append((root: TreeNode(2, TreeNode(1), TreeNode(3)),
+                              expected: true))
+            testsData.append((root: TreeNode(2, TreeNode(2), TreeNode(2)),
+                              expected: false))
+            testsData.append((root: TreeNode(5, TreeNode(1), TreeNode(4, TreeNode(3), TreeNode(6))),
+                              expected: false))
+            testsData.append((root: TreeNode(5, TreeNode(4), TreeNode(6, TreeNode(3), TreeNode(7))),
+                              expected: false))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_98 {
+            let actual = Yandex_Problems.problem_98_isValidBST(data.root)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "root: \(String(describing: data.root))")
+        }
+    }
+    
+    
     // MARK: Problem 1: 1. Two Sum
     func tests_problem_228_summaryRanges() throws {
         lazy var testsData_problem_1: [(nums: [Int], target: Int, expected: [Int])] = {
