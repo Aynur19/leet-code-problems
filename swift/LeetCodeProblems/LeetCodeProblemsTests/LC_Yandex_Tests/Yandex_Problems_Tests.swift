@@ -643,5 +643,39 @@ final class Yandex_Problems_Tests: XCTestCase {
                            "matrix: \(data.matrix); target: \(data.target)")
         }
     }
+    
+    
+    // MARK: Problem 26: 88. Merge Sorted Array
+    func tests_problem_88_merge() throws {
+        lazy var testsData_problem_88: [(nums1: [Int], m: Int, nums2: [Int], n: Int, expected: [Int])] = {
+            var testsData = [(nums1: [Int], m: Int, nums2: [Int], n: Int, expected: [Int])]()
+            
+            testsData.append((nums1: [1, 2, 3, 0, 0, 0], m: 3,
+                              nums2: [2, 5, 6], n: 3,
+                              expected: [1, 2, 2, 3, 5, 6]))
+            testsData.append((nums1: [1], m: 1,
+                              nums2: [], n: 0,
+                              expected: [1]))
+            testsData.append((nums1: [0], m: 0,
+                              nums2: [1], n: 1,
+                              expected: [1]))
+            testsData.append((nums1: [-1, 0, 0, 3, 3, 3, 0, 0, 0], m: 6,
+                              nums2: [1, 2, 2], n: 3,
+                              expected: [-1, 0, 0, 1, 2, 2, 3, 3, 3]))
+            testsData.append((nums1: [4, 0, 0, 0, 0, 0], m: 1,
+                              nums2: [1, 2, 3, 5, 6], n: 5,
+                              expected: [1, 2, 3, 4, 5, 6]))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_88 {
+            var nums1 = data.nums1
+            Yandex_Problems.problem_88_merge(&nums1, data.m, data.nums2, data.n)
+            
+            XCTAssertEqual(nums1, data.expected,
+                           "nums1: \(data.nums1); nums2: \(data.nums2)")
+        }
+    }
 }
 
