@@ -9,6 +9,33 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class Yandex_Problems_Tests: XCTestCase {
+    // MARK: Problem 28: 100. Same Tree
+    func tests_problem_100_isSameTree() throws {
+        lazy var testsData_problem_100: [(p: TreeNode?, q: TreeNode?, expected: Bool)] = {
+            var testsData = [(p: TreeNode?, q: TreeNode?, expected: Bool)]()
+            
+            testsData.append((p: TreeNode(1, TreeNode(2), TreeNode(3)),
+                              q: TreeNode(1, TreeNode(2), TreeNode(3)),
+                              expected: true))
+            testsData.append((p: TreeNode(1, TreeNode(2), nil),
+                              q: TreeNode(1, nil, TreeNode(2)),
+                              expected: false))
+            testsData.append((p: TreeNode(1, TreeNode(2), TreeNode(1)),
+                              q: TreeNode(1, TreeNode(1), TreeNode(2)),
+                              expected: false))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_100 {
+            let actual = Yandex_Problems.problem_100_isSameTree(data.p, data.q)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "p: \(String(describing: data.p))")
+        }
+    }
+    
+    
     // MARK: Problem 27: 98. Validate Binary Search Tree
     func tests_problem_98_isValidBST() throws {
         lazy var testsData_problem_98: [(root: TreeNode?, expected: Bool)] = {

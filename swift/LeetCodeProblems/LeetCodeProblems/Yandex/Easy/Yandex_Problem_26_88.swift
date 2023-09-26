@@ -42,9 +42,6 @@
 // 1 <= m + n <= 200
 // -10^9 <= nums1[i], nums2[j] <= 10^9
 
-// 1 2 3 4 7 0 0 0
-// 2 5 6
-
 extension Yandex_Problems {
     // Approach: Array, Pointers
     // Time complexity: O(n + m)) => 4 ms
