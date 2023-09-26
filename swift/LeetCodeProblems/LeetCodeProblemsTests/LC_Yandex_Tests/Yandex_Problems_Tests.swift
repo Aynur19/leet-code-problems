@@ -10,6 +10,34 @@ import XCTest
 
 final class Yandex_Problems_Tests: XCTestCase {
     // MARK: Problem 28: 100. Same Tree
+    func tests_problem_101_isSymmetric() throws {
+        lazy var testsData_problem_101: [(root: TreeNode?, expected: Bool)] = {
+            var testsData = [(root: TreeNode?, expected: Bool)]()
+            
+            testsData.append((root: TreeNode(1, TreeNode(2, TreeNode(3), TreeNode(4)),
+                                             TreeNode(2, TreeNode(4), TreeNode(3))),
+                              expected: true))
+            testsData.append((root: TreeNode(1, TreeNode(2, nil, TreeNode(3)),
+                                             TreeNode(2, nil, TreeNode(3))),
+                              expected: false))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_101 {
+            let actual = Yandex_Problems.problem_101_isSymmetric(data.root)
+            let actual2 = Yandex_Problems.problem_101_isSymmetric2(data.root)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "root: \(String(describing: data.root))")
+            XCTAssertEqual(actual2, data.expected,
+                           "root: \(String(describing: data.root))")
+        }
+    }
+    
+    
+    
+    // MARK: Problem 28: 100. Same Tree
     func tests_problem_100_isSameTree() throws {
         lazy var testsData_problem_100: [(p: TreeNode?, q: TreeNode?, expected: Bool)] = {
             var testsData = [(p: TreeNode?, q: TreeNode?, expected: Bool)]()
