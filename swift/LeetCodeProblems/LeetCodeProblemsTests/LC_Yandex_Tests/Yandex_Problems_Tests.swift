@@ -9,7 +9,39 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class Yandex_Problems_Tests: XCTestCase {
-    // MARK: Problem 28: 100. Same Tree
+    // MARK: Problem 30: 102. Binary Tree Level Order Traversal
+    func tests_problem_102_levelOrder() throws {
+        lazy var testsData_problem_102: [(root: TreeNode?, expected: [[Int]])] = {
+            var testsData = [(root: TreeNode?, expected: [[Int]])]()
+            
+            testsData.append((root: TreeNode(1, nil, TreeNode(2)),
+                              expected: [[1], [2]]))
+            testsData.append((root: TreeNode(3,
+                                             TreeNode(9),
+                                             TreeNode(20, TreeNode(15), TreeNode(7))),
+                              expected: [[3], [9, 20], [15, 7]]))
+            testsData.append((root: TreeNode(1,
+                                             TreeNode(2, TreeNode(4), nil),
+                                             TreeNode(3, nil, TreeNode(5))),
+                              expected: [[1], [2, 3], [4, 5]]))
+            testsData.append((root: TreeNode(1),
+                              expected: [[1]]))
+            testsData.append((root: nil,
+                              expected: []))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_102 {
+            let actual = Yandex_Problems.problem_102_levelOrder(data.root)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "root: \(String(describing: data.root))")
+        }
+    }
+    
+    
+    // MARK: Problem 29: 101. Symmetric Tree
     func tests_problem_101_isSymmetric() throws {
         lazy var testsData_problem_101: [(root: TreeNode?, expected: Bool)] = {
             var testsData = [(root: TreeNode?, expected: Bool)]()
