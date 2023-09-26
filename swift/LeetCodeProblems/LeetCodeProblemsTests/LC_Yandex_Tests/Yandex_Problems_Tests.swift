@@ -609,5 +609,39 @@ final class Yandex_Problems_Tests: XCTestCase {
                            "path: \(data.path)")
         }
     }
+    
+    
+    // MARK: Problem 25: 74. Search a 2D Matrix
+    func tests_problem_74_searchMatrix() throws {
+        lazy var testsData_problem_74: [(matrix: [[Int]], target: Int, expected: Bool)] = {
+            var testsData = [(matrix: [[Int]], target: Int, expected: Bool)]()
+            
+            testsData.append((matrix: [[1, 3, 5, 7],
+                                       [10, 11, 16, 20],
+                                       [23, 30, 34, 60]],
+                              target: 3, expected: true))
+            testsData.append((matrix: [[1, 3, 5, 7],
+                                       [10, 11, 16, 20],
+                                       [23, 30, 34, 60]],
+                              target: 13, expected: false))
+            testsData.append((matrix: [[1]],
+                              target: 1, expected: true))
+            testsData.append((matrix: [[1, 3]],
+                              target: 1, expected: true))
+            testsData.append((matrix: [[1], [2]],
+                              target: 1, expected: true))
+            testsData.append((matrix: [[1], [2]],
+                              target: 2, expected: true))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_74 {
+            let actual = Yandex_Problems.problem_74_searchMatrix(data.matrix, data.target)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "matrix: \(data.matrix); target: \(data.target)")
+        }
+    }
 }
 
