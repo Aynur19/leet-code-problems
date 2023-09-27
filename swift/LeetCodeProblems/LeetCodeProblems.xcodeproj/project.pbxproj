@@ -95,6 +95,8 @@
 		9864319C2AC42FE500EC6B70 /* HitCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9864319A2AC42FE500EC6B70 /* HitCounter.swift */; };
 		9864319E2AC43BAA00EC6B70 /* Yandex_Problem_91_977.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9864319D2AC43BAA00EC6B70 /* Yandex_Problem_91_977.swift */; };
 		9864319F2AC43BAA00EC6B70 /* Yandex_Problem_91_977.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9864319D2AC43BAA00EC6B70 /* Yandex_Problem_91_977.swift */; };
+		986431A12AC4416300EC6B70 /* Yandex_Problem_41_340.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986431A02AC4416300EC6B70 /* Yandex_Problem_41_340.swift */; };
+		986431A22AC4416300EC6B70 /* Yandex_Problem_41_340.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986431A02AC4416300EC6B70 /* Yandex_Problem_41_340.swift */; };
 		988074A12AA5E6F0001670E7 /* LC75_Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988074A02AA5E6F0001670E7 /* LC75_Array.swift */; };
 		988074A32AA5E71E001670E7 /* LC75_Array_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988074A22AA5E71E001670E7 /* LC75_Array_Tests.swift */; };
 		988074A42AA5E727001670E7 /* LC75_Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988074A02AA5E6F0001670E7 /* LC75_Array.swift */; };
@@ -194,6 +196,7 @@
 		986431972AC42C8800EC6B70 /* Yandex_Problem_47_228.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_47_228.swift; sourceTree = "<group>"; };
 		9864319A2AC42FE500EC6B70 /* HitCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitCounter.swift; sourceTree = "<group>"; };
 		9864319D2AC43BAA00EC6B70 /* Yandex_Problem_91_977.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_91_977.swift; sourceTree = "<group>"; };
+		986431A02AC4416300EC6B70 /* Yandex_Problem_41_340.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_41_340.swift; sourceTree = "<group>"; };
 		988074A02AA5E6F0001670E7 /* LC75_Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC75_Array.swift; sourceTree = "<group>"; };
 		988074A22AA5E71E001670E7 /* LC75_Array_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC75_Array_Tests.swift; sourceTree = "<group>"; };
 		988074A52AA71D95001670E7 /* LC75_TwoPointers_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC75_TwoPointers_Tests.swift; sourceTree = "<group>"; };
@@ -248,6 +251,7 @@
 				986431942AC42B8B00EC6B70 /* Yandex_Problem_87_849.swift */,
 				986431852AC4006500EC6B70 /* Yandex_Problem_63_356.swift */,
 				986431912AC42A5900EC6B70 /* Yandex_Problem_42_161.swift */,
+				986431A02AC4416300EC6B70 /* Yandex_Problem_41_340.swift */,
 				986431822AC34E6400EC6B70 /* Yandex_Problem_30_102.swift */,
 				986431772AC2EDBF00EC6B70 /* Yandex_Problem_27_98.swift */,
 				986431712AC1F04900EC6B70 /* Yandex_Problem_25_74.swift */,
@@ -276,8 +280,8 @@
 		9864317B2AC31F6500EC6B70 /* Easy */ = {
 			isa = PBXGroup;
 			children = (
-				986431972AC42C8800EC6B70 /* Yandex_Problem_47_228.swift */,
 				9864319D2AC43BAA00EC6B70 /* Yandex_Problem_91_977.swift */,
+				986431972AC42C8800EC6B70 /* Yandex_Problem_47_228.swift */,
 				9864317F2AC3257700EC6B70 /* Yandex_Problem_29_101.swift */,
 				9864317C2AC3203200EC6B70 /* Yandex_Problem_28_100.swift */,
 				986431742AC2C34C00EC6B70 /* Yandex_Problem_26_88.swift */,
@@ -490,6 +494,7 @@
 			files = (
 				981568F32ABC3B1C007BD890 /* Yandex_Problem_3_3.swift in Sources */,
 				986431722AC1F04900EC6B70 /* Yandex_Problem_25_74.swift in Sources */,
+				986431A12AC4416300EC6B70 /* Yandex_Problem_41_340.swift in Sources */,
 				986431752AC2C34C00EC6B70 /* Yandex_Problem_26_88.swift in Sources */,
 				981568D42AB899A6007BD890 /* LRUCache.swift in Sources */,
 				988074A12AA5E6F0001670E7 /* LC75_Array.swift in Sources */,
@@ -562,6 +567,7 @@
 				9864316D2AC1AD7C00EC6B70 /* Yandex_Problem_24_71.swift in Sources */,
 				9864317E2AC3203200EC6B70 /* Yandex_Problem_28_100.swift in Sources */,
 				988074AE2AA88B1D001670E7 /* LC75_SlidingWindow.swift in Sources */,
+				986431A22AC4416300EC6B70 /* Yandex_Problem_41_340.swift in Sources */,
 				98BFC97E2AAB5BB300D42CFC /* LC75_LinkedList_Tests.swift in Sources */,
 				98BFC9762AAB1D4800D42CFC /* LC75_Queue_Tests.swift in Sources */,
 				981568D62AB899B0007BD890 /* DoubleLinkedList.swift in Sources */,
