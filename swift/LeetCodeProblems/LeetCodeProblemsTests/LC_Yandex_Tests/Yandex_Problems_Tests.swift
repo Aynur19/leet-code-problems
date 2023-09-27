@@ -9,6 +9,26 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class Yandex_Problems_Tests: XCTestCase {
+    // MARK: Problem 97: 1493. Longest Subarray of 1's After Deleting One Element
+    func tests_problem_1493_longestSubarray() throws {
+        lazy var testsData_problem_1493: [(nums: [Int], expected: Int)] = {
+            var testsData = [(nums: [Int], expected: Int)]()
+            
+            testsData.append((nums: [1, 1, 0, 1], expected: 3))
+            testsData.append((nums: [0, 1, 1, 1, 0, 1, 1, 0, 1], expected: 5))
+            testsData.append((nums: [1, 1, 1], expected: 2))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_1493 {
+            let actual = Yandex_Problems.problem_1493_longestSubarray(data.nums)
+            
+            XCTAssertEqual(actual, data.expected)
+        }
+    }
+    
+    
     // MARK: Problem 63: 356. Line Reflection
     func tests_problem_356_isReflected() throws {
         lazy var testsData_problem_356: [(points: [[Int]], expected: Bool)] = {

@@ -22,6 +22,9 @@
 // Could you do better than O(n2)?
 
 extension Yandex_Problems {
+    // Approach: Hash Table, Array, Min/Max
+    // Time complexity: O(n) ...
+    // Space complexity: O(n) ...
     static func problem_356_isReflected(_ points: [[Int]]) -> Bool {
         guard !points.isEmpty else { return false }
         guard points.count > 1 else { return true }
