@@ -9,6 +9,34 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class Yandex_Problems_Tests: XCTestCase {
+    // MARK: Problem 63: 356. Line Reflection
+    func tests_problem_356_isReflected() throws {
+        lazy var testsData_problem_356: [(points: [[Int]], expected: Bool)] = {
+            var testsData = [(points: [[Int]], expected: Bool)]()
+            
+            testsData.append((points: [[1, 1], [-1, 1]],
+                              expected: true))
+            testsData.append((points: [[1, 1], [-1, -1]],
+                              expected: false))
+            testsData.append((points: [[1, 1], [1, 1], [-1, 1]],
+                              expected: true))
+            testsData.append((points: [[1, 1]],
+                              expected: true))
+            testsData.append((points: [],
+                              expected: false))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_356 {
+            let actual = Yandex_Problems.problem_356_isReflected(data.points)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "points: \(data.points)")
+        }
+    }
+    
+    
     // MARK: Problem 30: 102. Binary Tree Level Order Traversal
     func tests_problem_102_levelOrder() throws {
         lazy var testsData_problem_102: [(root: TreeNode?, expected: [[Int]])] = {
