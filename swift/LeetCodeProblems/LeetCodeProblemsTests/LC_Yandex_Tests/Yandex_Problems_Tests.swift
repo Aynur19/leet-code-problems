@@ -9,6 +9,26 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class Yandex_Problems_Tests: XCTestCase {
+    
+    // MARK: Problem 61: 347. Top K Frequent Elements
+    func tests_problem_347_topKFrequent() throws {
+        lazy var testsData_problem_347: [(nums: [Int], k: Int, expected: [Int])] = {
+            var testsData = [(nums: [Int], k: Int, expected: [Int])]()
+            
+            testsData.append((nums: [1,1,1,2,2,3], k: 2, expected: [1, 2]))
+            testsData.append((nums: [1], k: 1, expected: [1]))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_347 {
+            let actual = Yandex_Problems.problem_347_topKFrequent(data.nums, data.k)
+            
+            XCTAssertEqual(actual, data.expected)
+        }
+    }
+    
+    
     // MARK: Problem 97: 1493. Longest Subarray of 1's After Deleting One Element
     func tests_problem_1493_longestSubarray() throws {
         lazy var testsData_problem_1493: [(nums: [Int], expected: Int)] = {
