@@ -1,8 +1,8 @@
 //
-//  Yandex_Problem_1_1.swift
+//  Problem_1.swift
 //  LeetCodeProblems
 //
-//  Created by Aynur Nasybullin on 20.09.2023.
+//  Created by Aynur Nasybullin on 05.10.2023.
 //
 
 // 1. Two Sum
@@ -32,7 +32,7 @@
 // Only one valid answer exists.
 
 
-extension Yandex_Problems {
+extension LeetCodeProblems {
     // Approach: Hash Table
     // Time complexity: O(n) => 39 ms
     // Space complexity: O(n) => 14.29 MB
