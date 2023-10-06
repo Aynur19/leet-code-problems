@@ -9,27 +9,6 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class LC75_LinkedList_Tests: XCTestCase {
-    private func equalListNodes(_ l1: ListNode? , _ l2: ListNode?) -> Bool {
-        var l1 = l1, l2 = l2
-
-        guard l1 != nil, l2 != nil else {
-            if l1 == nil, l2 == nil { return true }
-            else { return false }
-        }
-        
-        while l1?.next != nil, l2?.next != nil {
-            if l1?.val != l2?.val { return false }
-            
-            l1 = l1?.next
-            l2 = l2?.next
-        }
-        
-        guard l1 != nil, l2 != nil, l1?.val == l2?.val else { return false }
-        guard l1?.next == nil, l2?.next == nil else { return false }
-        
-        return true
-    }
-    
     // MARK: Problem 2095. Delete the Middle Node of a Linked List
     private lazy var testsData_problem_2095: [(head: ListNode?, expected: ListNode?)] = {
         var testsData = [(head: ListNode?, expected: ListNode?)]()
@@ -50,7 +29,7 @@ final class LC75_LinkedList_Tests: XCTestCase {
         for data in testsData_problem_2095 {
             let actual = LC75_LinkedList.problem_2095_deleteMiddle(data.head)
             
-            XCTAssertTrue(equalListNodes(actual, data.expected), "head: \(String(describing: data.head))")
+            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), "head: \(String(describing: data.head))")
         }
     }
     
@@ -75,7 +54,7 @@ final class LC75_LinkedList_Tests: XCTestCase {
         for data in testsData_problem_328 {
             let actual = LC75_LinkedList.problem_328_oddEvenList(data.head)
             
-            XCTAssertTrue(equalListNodes(actual, data.expected), "head: \(String(describing: data.head))")
+            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), "head: \(String(describing: data.head))")
         }
     }
     
@@ -100,7 +79,7 @@ final class LC75_LinkedList_Tests: XCTestCase {
         for data in testsData_problem_206 {
             let actual = LC75_LinkedList.problem_206_reverseList(data.head)
             
-            XCTAssertTrue(equalListNodes(actual, data.expected), "head: \(String(describing: data.head))")
+            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected), "head: \(String(describing: data.head))")
         }
     }
     
