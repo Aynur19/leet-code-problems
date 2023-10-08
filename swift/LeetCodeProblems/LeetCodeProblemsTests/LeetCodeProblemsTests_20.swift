@@ -9,6 +9,27 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class LeetCodeProblemsTests_20: XCTestCase {
+    
+    // MARK: Problem: 4. Median of Two Sorted Arrays
+    func tests_problem_4_findMedianSortedArrays() throws {
+        lazy var testsData_problem_4: [(nums1: [Int], nums2: [Int], expected: Double)] = {
+            var testsData = [(nums1: [Int], nums2: [Int], expected: Double)]()
+            
+            testsData.append((nums1: [1, 3], nums2: [2], expected: 2))
+            testsData.append((nums1: [1, 2], nums2: [3, 4], expected: 2.5))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_4 {
+            let actual = LeetCodeProblems.problem_4_findMedianSortedArrays(data.nums1, data.nums2)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "nums1: \(data.nums1); nums2: \(data.nums2)")
+        }
+    }
+    
+    
     // MARK: Problem: 3. Longest Substring Without Repeating Characters
     func tests_problem_3_lengthOfLongestSubstring() throws {
         lazy var testsData_problem_3: [(s: String, expected: Int)] = {
