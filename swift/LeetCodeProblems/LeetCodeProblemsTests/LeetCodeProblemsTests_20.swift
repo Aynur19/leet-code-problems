@@ -9,6 +9,27 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class LeetCodeProblemsTests_20: XCTestCase {
+    // MARK: Problem 6. Zigzag Conversion
+    func tests_problem_6_convert() throws {
+        lazy var testsData_problem_6: [(s: String, numRows: Int, expected: String)] = {
+            var testsData = [(s: String, numRows: Int, expected: String)]()
+            
+            testsData.append((s: "PAYPALISHIRING", numRows: 3, expected: "PAHNAPLSIIGYIR"))
+            testsData.append((s: "PAYPALISHIRING", numRows: 4, expected: "PINALSIGYAHRPI"))
+            testsData.append((s: "A", numRows: 1, expected: "A"))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_6 {
+            let actual = LeetCodeProblems.problem_6_convert(data.s, data.numRows)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "s: \(data.s); numRows: \(data.numRows)")
+        }
+    }
+    
+    
     // MARK: Problem 5. Longest Palindromic Substring
     func tests_problem_5_longestPalindrome() throws {
         lazy var testsData_problem_5: [(s: String, expected: String)] = {
