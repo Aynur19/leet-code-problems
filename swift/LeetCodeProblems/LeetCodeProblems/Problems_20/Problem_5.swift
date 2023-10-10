@@ -1,8 +1,8 @@
 //
-//  Yandex_Problem_4_5.swift
+//  Problem_5.swift
 //  LeetCodeProblems
 //
-//  Created by Aynur Nasybullin on 21.09.2023.
+//  Created by Aynur Nasybullin on 10.10.2023.
 //
 
 // 5. Longest Palindromic Substring
@@ -23,7 +23,7 @@
 // 1 <= s.length <= 1000
 // s consist of only digits and English letters.
 
-extension Yandex_Problems {
+extension LeetCodeProblems {
     // Approach: Array, Two Pointer
     // Time complexity: O(n^2) => 93 ms
     // Space complexity: O(n) => 14.36 MB
@@ -65,3 +65,4 @@ extension Yandex_Problems {
         return String(s[0])
     }
 }
+

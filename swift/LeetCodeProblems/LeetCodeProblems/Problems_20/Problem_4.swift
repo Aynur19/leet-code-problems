@@ -35,7 +35,7 @@
 import Foundation
 
 extension LeetCodeProblems {
-    // Approach: Hash Table
+    // Approach: Binary Search, Arrays, Pointers
     // Time complexity: O(log (n + m)) => 66 ms
     // Space complexity: O(1) => 14.26 MB
     static func problem_4_findMedianSortedArrays(_ nums1: [Int], _ nums2: [Int]) -> Double {

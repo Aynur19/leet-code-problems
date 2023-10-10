@@ -190,27 +190,6 @@ final class Yandex_Problems_Tests: XCTestCase {
     }
     
     
-    // MARK: Problem 4: 5. Longest Palindromic Substring
-    func tests_problem_5_longestPalindrome() throws {
-        lazy var testsData_problem_5: [(s: String, expected: String)] = {
-            var testsData = [(s: String, expected: String)]()
-            
-            testsData.append((s: "babad", expected: "bab"))
-            testsData.append((s: "cbbd", expected: "bb"))
-            testsData.append((s: "a", expected: "a"))
-            
-            return testsData
-        }()
-        
-        for data in testsData_problem_5 {
-            let actual = Yandex_Problems.problem_5_longestPalindrome(data.s)
-            
-            XCTAssertEqual(actual, data.expected,
-                          "s: \(data.s)")
-        }
-    }
-    
-    
     // MARK: Problem 5: 11. Container With Most Water
     func tests_problem_11_maxArea() throws {
         lazy var testsData_problem_11: [(height: [Int], expected: Int)] = {

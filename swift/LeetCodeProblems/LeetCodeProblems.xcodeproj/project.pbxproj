@@ -20,12 +20,6 @@
 		981568E72ABB3D0C007BD890 /* Yandex_Problem_125.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981568E62ABB3D0C007BD890 /* Yandex_Problem_125.swift */; };
 		981568E82ABB3D0C007BD890 /* Yandex_Problem_125.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981568E62ABB3D0C007BD890 /* Yandex_Problem_125.swift */; };
 		981568EE2ABB66C5007BD890 /* Yandex_Problems_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981568EC2ABB66C5007BD890 /* Yandex_Problems_Tests.swift */; };
-		981568F02ABB693F007BD890 /* Yandex_Problem_2_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981568EF2ABB693F007BD890 /* Yandex_Problem_2_2.swift */; };
-		981568F12ABB693F007BD890 /* Yandex_Problem_2_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981568EF2ABB693F007BD890 /* Yandex_Problem_2_2.swift */; };
-		981568F32ABC3B1C007BD890 /* Yandex_Problem_3_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981568F22ABC3B1C007BD890 /* Yandex_Problem_3_3.swift */; };
-		981568F42ABC3B1C007BD890 /* Yandex_Problem_3_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981568F22ABC3B1C007BD890 /* Yandex_Problem_3_3.swift */; };
-		981568F62ABC4422007BD890 /* Yandex_Problem_4_5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981568F52ABC4422007BD890 /* Yandex_Problem_4_5.swift */; };
-		981568F72ABC4422007BD890 /* Yandex_Problem_4_5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981568F52ABC4422007BD890 /* Yandex_Problem_4_5.swift */; };
 		981568F92ABC5488007BD890 /* Yandex_Problem_5_11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981568F82ABC5488007BD890 /* Yandex_Problem_5_11.swift */; };
 		981568FA2ABC5488007BD890 /* Yandex_Problem_5_11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981568F82ABC5488007BD890 /* Yandex_Problem_5_11.swift */; };
 		981568FC2ABC5DC4007BD890 /* Yandex_Problem_6_12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981568FB2ABC5DC4007BD890 /* Yandex_Problem_6_12.swift */; };
@@ -50,6 +44,8 @@
 		981569182ABDFE65007BD890 /* Yandex_Problem_15_28.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981569162ABDFE65007BD890 /* Yandex_Problem_15_28.swift */; };
 		9815691A2ABEB6FD007BD890 /* Yandex_Problem_16_33.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981569192ABEB6FD007BD890 /* Yandex_Problem_16_33.swift */; };
 		9815691B2ABEB6FD007BD890 /* Yandex_Problem_16_33.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981569192ABEB6FD007BD890 /* Yandex_Problem_16_33.swift */; };
+		9829A69F2AD540C4004E6377 /* Problem_5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9829A69E2AD540C4004E6377 /* Problem_5.swift */; };
+		9829A6A02AD54145004E6377 /* Problem_5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9829A69E2AD540C4004E6377 /* Problem_5.swift */; };
 		9836A0922AB199EF0025E1A8 /* LC_Yandex_Easy_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9836A0912AB199EF0025E1A8 /* LC_Yandex_Easy_Tests.swift */; };
 		9836A0942AB19A2E0025E1A8 /* LC_Yandex_Easy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9836A0932AB19A2E0025E1A8 /* LC_Yandex_Easy.swift */; };
 		9836A0952AB19BEA0025E1A8 /* LC_Yandex_Easy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9836A0932AB19A2E0025E1A8 /* LC_Yandex_Easy.swift */; };
@@ -173,9 +169,6 @@
 		981568E02ABAF7AE007BD890 /* Yandex_Problem_206.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_206.swift; sourceTree = "<group>"; };
 		981568E62ABB3D0C007BD890 /* Yandex_Problem_125.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_125.swift; sourceTree = "<group>"; };
 		981568EC2ABB66C5007BD890 /* Yandex_Problems_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problems_Tests.swift; sourceTree = "<group>"; };
-		981568EF2ABB693F007BD890 /* Yandex_Problem_2_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_2_2.swift; sourceTree = "<group>"; };
-		981568F22ABC3B1C007BD890 /* Yandex_Problem_3_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_3_3.swift; sourceTree = "<group>"; };
-		981568F52ABC4422007BD890 /* Yandex_Problem_4_5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_4_5.swift; sourceTree = "<group>"; };
 		981568F82ABC5488007BD890 /* Yandex_Problem_5_11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_5_11.swift; sourceTree = "<group>"; };
 		981568FB2ABC5DC4007BD890 /* Yandex_Problem_6_12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_6_12.swift; sourceTree = "<group>"; };
 		981568FE2ABC7FB3007BD890 /* Yandex_Problem_7_13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_7_13.swift; sourceTree = "<group>"; };
@@ -188,6 +181,7 @@
 		981569132ABDD4DC007BD890 /* Yandex_Problem_14_26.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_14_26.swift; sourceTree = "<group>"; };
 		981569162ABDFE65007BD890 /* Yandex_Problem_15_28.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_15_28.swift; sourceTree = "<group>"; };
 		981569192ABEB6FD007BD890 /* Yandex_Problem_16_33.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_16_33.swift; sourceTree = "<group>"; };
+		9829A69E2AD540C4004E6377 /* Problem_5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_5.swift; sourceTree = "<group>"; };
 		9836A0912AB199EF0025E1A8 /* LC_Yandex_Easy_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC_Yandex_Easy_Tests.swift; sourceTree = "<group>"; };
 		9836A0932AB19A2E0025E1A8 /* LC_Yandex_Easy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LC_Yandex_Easy.swift; sourceTree = "<group>"; };
 		9864315F2AC165EF00EC6B70 /* Yandex_Problem_19_48.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_19_48.swift; sourceTree = "<group>"; };
@@ -295,9 +289,6 @@
 				981569012ABCACBD007BD890 /* Yandex_Problem_8_15.swift */,
 				981568FB2ABC5DC4007BD890 /* Yandex_Problem_6_12.swift */,
 				981568F82ABC5488007BD890 /* Yandex_Problem_5_11.swift */,
-				981568F52ABC4422007BD890 /* Yandex_Problem_4_5.swift */,
-				981568F22ABC3B1C007BD890 /* Yandex_Problem_3_3.swift */,
-				981568EF2ABB693F007BD890 /* Yandex_Problem_2_2.swift */,
 			);
 			path = Medium;
 			sourceTree = "<group>";
@@ -327,6 +318,7 @@
 				98C97B322ACE9C360023DBCA /* Problem_2.swift */,
 				98C97B352ACE9C6B0023DBCA /* Problem_3.swift */,
 				98C97B382AD2B2F80023DBCA /* Problem_4.swift */,
+				9829A69E2AD540C4004E6377 /* Problem_5.swift */,
 			);
 			path = Problems_20;
 			sourceTree = "<group>";
@@ -531,7 +523,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				981568F32ABC3B1C007BD890 /* Yandex_Problem_3_3.swift in Sources */,
 				986431722AC1F04900EC6B70 /* Yandex_Problem_25_74.swift in Sources */,
 				986431A12AC4416300EC6B70 /* Yandex_Problem_41_340.swift in Sources */,
 				986431752AC2C34C00EC6B70 /* Yandex_Problem_26_88.swift in Sources */,
@@ -578,11 +569,11 @@
 				986431892AC4120F00EC6B70 /* Yandex_Problem_97_1493.swift in Sources */,
 				9864319B2AC42FE500EC6B70 /* HitCounter.swift in Sources */,
 				98C97B392AD2B2F80023DBCA /* Problem_4.swift in Sources */,
-				981568F62ABC4422007BD890 /* Yandex_Problem_4_5.swift in Sources */,
 				986431782AC2EDBF00EC6B70 /* Yandex_Problem_27_98.swift in Sources */,
 				986431952AC42B8B00EC6B70 /* Yandex_Problem_87_849.swift in Sources */,
 				988074AB2AA88AA1001670E7 /* LC75_SlidingWindow.swift in Sources */,
 				981568D22AB88E70007BD890 /* DoubleLinkedList.swift in Sources */,
+				9829A69F2AD540C4004E6377 /* Problem_5.swift in Sources */,
 				981568F92ABC5488007BD890 /* Yandex_Problem_5_11.swift in Sources */,
 				98BFC9712AA9B95700D42CFC /* LC75_Stack.swift in Sources */,
 				98D848692AC07F82004A7FF1 /* Yandex_Problem_18_43.swift in Sources */,
@@ -595,7 +586,6 @@
 				98D8DF8F2AB03B8D00AEBD4B /* LC_Yandex_Medium.swift in Sources */,
 				981568FC2ABC5DC4007BD890 /* Yandex_Problem_6_12.swift in Sources */,
 				986431632AC1760E00EC6B70 /* Yandex_Problem_20_49.swift in Sources */,
-				981568F02ABB693F007BD890 /* Yandex_Problem_2_2.swift in Sources */,
 				98D8DF862AAE073500AEBD4B /* LC75_BinaryTree_DFS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,13 +634,12 @@
 				9815691B2ABEB6FD007BD890 /* Yandex_Problem_16_33.swift in Sources */,
 				986431872AC4006500EC6B70 /* Yandex_Problem_63_356.swift in Sources */,
 				98BFC9792AAB1D7900D42CFC /* LC75_Queue.swift in Sources */,
-				981568F42ABC3B1C007BD890 /* Yandex_Problem_3_3.swift in Sources */,
 				986431842AC34E6400EC6B70 /* Yandex_Problem_30_102.swift in Sources */,
 				98D8486A2AC07F82004A7FF1 /* Yandex_Problem_18_43.swift in Sources */,
 				981568E22ABAF7AE007BD890 /* Yandex_Problem_206.swift in Sources */,
-				981568F72ABC4422007BD890 /* Yandex_Problem_4_5.swift in Sources */,
 				98C97B342ACE9C360023DBCA /* Problem_2.swift in Sources */,
 				981569092ABD9A48007BD890 /* Yandex_Problem_10_19.swift in Sources */,
+				9829A6A02AD54145004E6377 /* Problem_5.swift in Sources */,
 				986431AB2AC4699100EC6B70 /* Yandex_Problem_83_692.swift in Sources */,
 				986431702AC1D5AC00EC6B70 /* Yandex_Problem_21_53.swift in Sources */,
 				988074A62AA71D95001670E7 /* LC75_TwoPointers_Tests.swift in Sources */,
@@ -665,7 +654,6 @@
 				986431962AC42B8B00EC6B70 /* Yandex_Problem_87_849.swift in Sources */,
 				981568FD2ABC5DC4007BD890 /* Yandex_Problem_6_12.swift in Sources */,
 				98D8DF872AAE073500AEBD4B /* LC75_BinaryTree_DFS.swift in Sources */,
-				981568F12ABB693F007BD890 /* Yandex_Problem_2_2.swift in Sources */,
 				988074B82AA8F296001670E7 /* LC75_HashMap&Set.swift in Sources */,
 				981569062ABD8CA7007BD890 /* Yandex_Problem_9_16.swift in Sources */,
 				986431A52AC4425D00EC6B70 /* Yandex_Problem_94_2215.swift in Sources */,
