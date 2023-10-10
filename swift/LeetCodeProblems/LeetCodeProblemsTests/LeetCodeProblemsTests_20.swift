@@ -9,6 +9,27 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class LeetCodeProblemsTests_20: XCTestCase {
+    // MARK: Problem 7. Reverse Integer
+    func tests_problem_7_reverse() throws {
+        lazy var testsData_problem_7: [(x: Int, expected: Int)] = {
+            var testsData = [(x: Int, expected: Int)]()
+            
+            testsData.append((x: 123, expected: 321))
+            testsData.append((x: -123, expected: -321))
+            testsData.append((x: 120, expected: 21))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_7 {
+            let actual = LeetCodeProblems.problem_7_reverse(data.x)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "x: \(data.x)")
+        }
+    }
+    
+    
     // MARK: Problem 6. Zigzag Conversion
     func tests_problem_6_convert() throws {
         lazy var testsData_problem_6: [(s: String, numRows: Int, expected: String)] = {
