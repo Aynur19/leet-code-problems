@@ -9,6 +9,27 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class LeetCodeProblemsTests_20: XCTestCase {
+    // MARK: Problem 9. Palindrome Number
+    func tests_problem_9_isPalindrome() throws {
+        lazy var testsData_problem_9: [(x: Int, expected: Bool)] = {
+            var testsData = [(x: Int, expected: Bool)]()
+            
+            testsData.append((x: 121, expected: true))
+            testsData.append((x: -121, expected: false))
+            testsData.append((x: 10, expected: false))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_9 {
+            let actual = LeetCodeProblems.problem_9_isPalindrome(data.x)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "x: \(data.x)")
+        }
+    }
+    
+    
     // MARK: Problem 8. String to Integer (atoi)
     func tests_problem_8_myAtoi() throws {
         lazy var testsData_problem_8: [(s: String, expected: Int)] = {
