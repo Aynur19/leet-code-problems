@@ -9,6 +9,30 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class LeetCodeProblemsTests_20: XCTestCase {
+    // MARK: Problem 8. String to Integer (atoi)
+    func tests_problem_8_myAtoi() throws {
+        lazy var testsData_problem_8: [(s: String, expected: Int)] = {
+            var testsData = [(s: String, expected: Int)]()
+            
+            testsData.append((s: "42", expected: 42))
+            testsData.append((s: "   -42", expected: -42))
+            testsData.append((s: "4193 with words", expected: 4193))
+            testsData.append((s: "00000-42a1234", expected: 0))
+            testsData.append((s: "words and 987", expected: 0))
+            testsData.append((s: "20000000000000000000", expected: Int(Int32.max)))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_8 {
+            let actual = LeetCodeProblems.problem_8_myAtoi(data.s)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "s: '\(data.s)'")
+        }
+    }
+    
+    
     // MARK: Problem 7. Reverse Integer
     func tests_problem_7_reverse() throws {
         lazy var testsData_problem_7: [(x: Int, expected: Int)] = {
