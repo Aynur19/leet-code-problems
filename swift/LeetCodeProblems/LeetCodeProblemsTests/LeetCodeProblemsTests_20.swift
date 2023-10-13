@@ -9,6 +9,27 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class LeetCodeProblemsTests_20: XCTestCase {
+    // MARK: Problem 12. Integer to Roman
+    func tests_problem_12_intToRoman() throws {
+        lazy var testsData_problem_12: [(num: Int, expected: String)] = {
+            var testsData = [(num: Int, expected: String)]()
+            
+            testsData.append((num: 3, expected: "III"))
+            testsData.append((num: 58, expected: "LVIII"))
+            testsData.append((num: 1994, expected: "MCMXCIV"))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_12 {
+            let actual = LeetCodeProblems.problem_12_intToRoman(data.num)
+            
+            XCTAssertEqual(actual, data.expected,
+                          "num: \(data.num)")
+        }
+    }
+    
+    
     // MARK: Problem 11. Container With Most Water
     func tests_problem_11_maxArea() throws {
         lazy var testsData_problem_11: [(height: [Int], expected: Int)] = {

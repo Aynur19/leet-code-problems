@@ -1,8 +1,8 @@
 //
-//  Yandex_Problem_6_12.swift
+//  Problem_12.swift
 //  LeetCodeProblems
 //
-//  Created by Aynur Nasybullin on 21.09.2023.
+//  Created by Aynur Nasybullin on 13.10.2023.
 //
 
 // 12. Integer to Roman
@@ -48,7 +48,7 @@
 // Constraints:
 // 1 <= num <= 3999
 
-extension Yandex_Problems {
+extension LeetCodeProblems {
     // Approach: Tuple, Array, Pointer
     // Time complexity: O(n) => 18 ms
     // Space complexity: O(1) => 13.71 MB
@@ -75,7 +75,6 @@ extension Yandex_Problems {
                 i += 1
             }
         }
-        
         
         return result
     }
