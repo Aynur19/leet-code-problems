@@ -1,8 +1,8 @@
 //
-//  Yandex_Problem_7_13.swift
+//  Preblem_13.swift
 //  LeetCodeProblems
 //
-//  Created by Aynur Nasybullin on 21.09.2023.
+//  Created by Aynur Nasybullin on 13.10.2023.
 //
 
 // 13. Roman to Integer
@@ -51,7 +51,7 @@
 // It is guaranteed that s is a valid roman numeral in the range [1, 3999].
 
 
-extension Yandex_Problems {
+extension LeetCodeProblems {
     // Approach: Hash Table, Pointer
     // Time complexity: O(n) => 11 ms
     // Space complexity: O(1) => 14.48 MB
@@ -68,7 +68,7 @@ extension Yandex_Problems {
         
         var result = 0
         var i = 0
-        var s = Array(s)
+        let s = Array(s)
         
         while i < s.count - 1 {
             if let num = romanNumbers[String(s[i...i + 1])] {
@@ -118,3 +118,4 @@ extension Yandex_Problems {
         return result
     }
 }
+
