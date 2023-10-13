@@ -9,6 +9,27 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class LeetCodeProblemsTests_20: XCTestCase {
+    // MARK: Problem 10. Regular Expression Matching
+    func tests_problem_10_cleanPattern() throws {
+        lazy var testsData_problem_10: [(s: String, p: String, expected: Bool)] = {
+            var testsData = [(s: String, p: String, expected: Bool)]()
+            
+            testsData.append((s: "aa", p: "a", expected: false))
+            testsData.append((s: "aa", p: "a*", expected: true))
+            testsData.append((s: "ab", p: ".*", expected: true))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_10 {
+            let actual = LeetCodeProblems.problem_10_cleanPattern(data.s, data.p)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "s: '\(data.s)'; p: '\(data.p)'")
+        }
+    }
+    
+    
     // MARK: Problem 9. Palindrome Number
     func tests_problem_9_isPalindrome() throws {
         lazy var testsData_problem_9: [(x: Int, expected: Bool)] = {
