@@ -1,10 +1,9 @@
 //
-//  Yandex_Problem_8_15.swift
+//  Problem_15.swift
 //  LeetCodeProblems
 //
-//  Created by Aynur Nasybullin on 21.09.2023.
+//  Created by Aynur Nasybullin on 15.10.2023.
 //
-
 
 // 15. 3Sum
 // Medium
@@ -39,8 +38,7 @@
 // 3 <= nums.length <= 3000
 // -10^5 <= nums[i] <= 10^5
 
-// -3 -2 -1 0  1 2 3
-extension Yandex_Problems {
+extension LeetCodeProblems {
     // Approach: Three Pointers, Sorting
     // Time complexity: O(n^2) => 156 ms
     // Space complexity: O(1) => 18.66 MB
@@ -90,3 +88,4 @@ extension Yandex_Problems {
         return result
     }
 }
+

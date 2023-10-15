@@ -190,33 +190,6 @@ final class Yandex_Problems_Tests: XCTestCase {
     }
     
     
-    // MARK: Problem 8: 15. 3Sum
-    func tests_problem_15_threeSum() throws {
-        lazy var testsData_problem_15: [(nums: [Int], expected:  [[Int]])] = {
-            var testsData = [(nums: [Int], expected:  [[Int]])]()
-            
-            testsData.append((nums: [-1, 0, 1, 2, -1, -4], expected: [[-1, -1, 2], [-1, 0, 1]]))
-            testsData.append((nums: [0, 1, 1], expected:  []))
-            testsData.append((nums: [0, 0, 0], expected:  [[0, 0, 0]]))
-            testsData.append((nums: [-1, 0, 1, 0], expected:  [[-1, 0, 1]]))
-            testsData.append((nums: [1, -1, -1, 0], expected:  [[-1, 0, 1]]))
-            testsData.append((nums: [-2, 0, 1, 1, 2], expected:  [[-2, 0, 2], [-2, 1, 1]]))
-            
-            return testsData
-        }()
-        
-        for data in testsData_problem_15 {
-            let actual = Yandex_Problems.problem_15_threeSum(data.nums)
-                .sorted(by: { $0.sorted().lexicographicallyPrecedes($1.sorted()) })
-            let expected = data.expected
-                .sorted(by: { $0.sorted().lexicographicallyPrecedes($1.sorted()) })
-            
-            XCTAssertEqual(actual, expected,
-                          "nums: \(data.nums)")
-        }
-    }
-    
-    
     // MARK: Problem 9: 16. 3Sum Closest
     func tests_problem_16_threeSumClosest() throws {
         lazy var testsData_problem_16: [(nums: [Int], target: Int, expected:  Int)] = {
