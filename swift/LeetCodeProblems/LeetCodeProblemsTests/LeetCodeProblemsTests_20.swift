@@ -11,7 +11,29 @@ import XCTest
 final class LeetCodeProblemsTests_20: XCTestCase {
     
     
-    // MARK: Problem 9: 16. 3Sum Closest
+    // MARK: Problem 17. Letter Combinations of a Phone Number
+    func tests_problem_17_letterCombinations() throws {
+        lazy var testsData_problem_17: [(digits: String, expected: [String])] = {
+            var testsData = [(digits: String, expected: [String])]()
+            
+            testsData.append((digits: "23",
+                              expected: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]))
+            testsData.append((digits: "", expected: []))
+            testsData.append((digits: "2", expected: ["a", "b", "c"]))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_17 {
+            let actual = LeetCodeProblems.problem_17_letterCombinations(data.digits)
+            
+            XCTAssertEqual(actual, data.expected,
+                          "digits: \(data.digits)")
+        }
+    }
+    
+    
+    // MARK: Problem 16. 3Sum Closest
     func tests_problem_16_threeSumClosest() throws {
         lazy var testsData_problem_16: [(nums: [Int], target: Int, expected:  Int)] = {
             var testsData = [(nums: [Int], target: Int, expected:  Int)]()
