@@ -1,8 +1,8 @@
 //
-//  Yandex_Problem_9_16.swift
+//  Problem_16.swift
 //  LeetCodeProblems
 //
-//  Created by Aynur Nasybullin on 22.09.2023.
+//  Created by Aynur Nasybullin on 15.10.2023.
 //
 
 // 16. 3Sum Closest
@@ -31,7 +31,7 @@
 // -1000 <= nums[i] <= 1000
 // -10^4 <= target <= 10^4
 
-extension Yandex_Problems {
+extension LeetCodeProblems {
     // Approach: Three Pointers, Sorting
     // Time complexity: O(n^2) => 35 ms
     // Space complexity: O(1) => 14.14 MB
@@ -69,3 +69,4 @@ extension Yandex_Problems {
         return result
     }
 }
+
