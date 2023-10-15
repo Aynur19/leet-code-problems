@@ -1,5 +1,5 @@
 //
-//  Preblem_13.swift
+//  Problem_13.swift
 //  LeetCodeProblems
 //
 //  Created by Aynur Nasybullin on 13.10.2023.

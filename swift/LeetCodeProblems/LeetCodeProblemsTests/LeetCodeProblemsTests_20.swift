@@ -9,6 +9,28 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class LeetCodeProblemsTests_20: XCTestCase {
+    // MARK: Problem 14. Longest Common Prefix
+    func tests_problem_14_longestCommonPrefix() throws {
+        lazy var testsData_problem_14: [(strs: [String], expected: String)] = {
+            var testsData = [(strs: [String], expected: String)]()
+            
+            testsData.append((strs: ["flower", "flow", "flight"],
+                              expected: "fl"))
+            testsData.append((strs: ["dog", "racecar", "car"],
+                              expected: ""))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_14 {
+            let actual = LeetCodeProblems.problem_14_longestCommonPrefix(data.strs)
+            
+            XCTAssertEqual(actual, data.expected,
+                          "strs: '\(data.strs)'")
+        }
+    }
+    
+    
     // MARK: Problem 13. Integer to Roman
     func tests_problem_13_romanToInt() throws {
         lazy var testsData_problem_13: [(s: String, expected: Int)] = {
