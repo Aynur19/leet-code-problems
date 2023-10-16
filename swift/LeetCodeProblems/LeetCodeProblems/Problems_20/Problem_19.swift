@@ -1,8 +1,8 @@
 //
-//  Yandex_Problem_10_19.swift
+//  Problem_19.swift
 //  LeetCodeProblems
 //
-//  Created by Aynur Nasybullin on 22.09.2023.
+//  Created by Aynur Nasybullin on 16.10.2023.
 //
 
 // 19. Remove Nth Node From End of List
@@ -30,7 +30,7 @@
 // 0 <= Node.val <= 100
 // 1 <= n <= sz
 
-extension Yandex_Problems {
+extension LeetCodeProblems {
     // Approach: Linked List
     // Time complexity: O(n) => 0 ms
     // Space complexity: O(1) => 13.93 MB
@@ -60,3 +60,4 @@ extension Yandex_Problems {
         return head
     }
 }
+

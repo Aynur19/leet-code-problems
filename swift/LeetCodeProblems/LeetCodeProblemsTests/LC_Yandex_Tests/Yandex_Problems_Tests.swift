@@ -190,39 +190,6 @@ final class Yandex_Problems_Tests: XCTestCase {
     }
     
     
-    // MARK: Problem 10: 19. Remove Nth Node From End of List
-    func tests_problem_19_removeNthFromEnd() throws {
-        lazy var testsData_problem_19: [(head: ListNode?, n: Int, expected: ListNode?)] = {
-            var testsData = [(head: ListNode?, n: Int, expected: ListNode?)]()
-            
-            testsData.append((head: ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5))))),
-                              n: 2,
-                              expected: ListNode(1, ListNode(2, ListNode(3, ListNode(5))))))
-            
-            testsData.append((head: ListNode(1),
-                              n: 1,
-                              expected: nil))
-            
-            testsData.append((head: ListNode(1, ListNode(2)),
-                              n: 1,
-                              expected: ListNode(1)))
-            
-            testsData.append((head: ListNode(1, ListNode(2)),
-                              n: 2,
-                              expected: ListNode(2)))
-            
-            return testsData
-        }()
-        
-        for data in testsData_problem_19 {
-                let actual = Yandex_Problems.problem_19_removeNthFromEnd(data.head, data.n)
-            
-                XCTAssertTrue(ListNode.equalListNodes(actual, data.expected),
-                              "head: \(String(describing: data.head)), n: \(data.n)")
-        }
-    }
-    
-    
     // MARK: Problem 11: 20. Valid Parentheses
     func tests_problem_20_isValid() throws {
         lazy var testsData_problem_20: [(s: String, expected: Bool)] = {
