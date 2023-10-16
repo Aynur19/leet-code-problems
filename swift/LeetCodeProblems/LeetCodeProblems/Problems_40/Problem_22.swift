@@ -1,12 +1,14 @@
 //
-//  Yandex_Problem_13_22.swift
+//  Problem_22.swift
 //  LeetCodeProblems
 //
-//  Created by Aynur Nasybullin on 22.09.2023.
+//  Created by Aynur Nasybullin on 16.10.2023.
 //
 
 // 22. Generate Parentheses
 // Medium
+// URL: https://leetcode.com/problems/generate-parentheses/
+// Topics: String, Dynamic Programming, Backtracking
 
 // Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 
@@ -23,7 +25,7 @@
 // Constraints:
 // 1 <= n <= 8
 
-extension Yandex_Problems {
+extension LeetCodeProblems {
     // Approach: Recursion
     // Time complexity: O(C(n) * n)
     // Space complexity: O(C(n) * n)
@@ -112,3 +114,4 @@ extension Yandex_Problems {
         return result
     }
 }
+

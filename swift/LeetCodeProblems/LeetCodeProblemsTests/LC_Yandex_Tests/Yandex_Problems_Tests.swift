@@ -189,27 +189,6 @@ final class Yandex_Problems_Tests: XCTestCase {
         }
     }
     
-
-    // MARK: Problem 13: 22. Generate Parentheses
-    func tests_problem_22_generateParenthesis() throws {
-        lazy var testsData_problem_22: [(n: Int, expected: [String])] = {
-            var testsData = [(n: Int, expected: [String])]()
-            
-            testsData.append((n: 3, expected: ["((()))", "(()())", "(())()", "()(())", "()()()"]))
-            testsData.append((n: 1, expected: ["()"]))
-            
-            return testsData
-        }()
-        
-        for data in testsData_problem_22 {
-            let actual = Yandex_Problems.problem_22_generateParenthesis(data.n)
-            let actual2 = Yandex_Problems.problem_22_generateParenthesis2(data.n)
-            
-            XCTAssertEqual(actual, data.expected, "n: \(data.n)")
-            XCTAssertEqual(actual2, data.expected, "n: \(data.n)")
-        }
-    }
-    
     
     // MARK: Problem 14: 26. Remove Duplicates from Sorted Array
     func tests_problem_26_removeDuplicates() throws {
