@@ -1,8 +1,8 @@
 //
-//  Yandex_Problem_11_20.swift
+//  Problem_20.swift
 //  LeetCodeProblems
 //
-//  Created by Aynur Nasybullin on 22.09.2023.
+//  Created by Aynur Nasybullin on 16.10.2023.
 //
 
 // 20. Valid Parentheses
@@ -31,10 +31,10 @@
  
 
 // Constraints:
-// 1 <= s.length <= 104
+// 1 <= s.length <= 10^4
 // s consists of parentheses only '()[]{}'.
 
-extension Yandex_Problems {
+extension LeetCodeProblems {
     // Approach: Hash Table, Array
     // Time complexity: O(n) => 0 ms
     // Space complexity: O(n) => 14.39 MB

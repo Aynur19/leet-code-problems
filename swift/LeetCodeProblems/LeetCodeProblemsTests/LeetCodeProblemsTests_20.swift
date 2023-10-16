@@ -9,6 +9,25 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class LeetCodeProblemsTests_20: XCTestCase {
+    // MARK: Problem 20. Valid Parentheses
+    func tests_problem_20_isValid() throws {
+        lazy var testsData_problem_20: [(s: String, expected: Bool)] = {
+            var testsData = [(s: String, expected: Bool)]()
+            
+            testsData.append((s: "()", expected: true))
+            testsData.append((s: "()[]{}", expected: true))
+            testsData.append((s: "(]", expected: false))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_20 {
+            let actual = LeetCodeProblems.problem_20_isValid(data.s)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "s: \(data.s)")
+        }
+    }
     
     
     // MARK: Problem 19. Remove Nth Node From End of List

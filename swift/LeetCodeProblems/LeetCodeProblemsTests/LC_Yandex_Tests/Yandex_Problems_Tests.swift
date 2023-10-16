@@ -190,27 +190,6 @@ final class Yandex_Problems_Tests: XCTestCase {
     }
     
     
-    // MARK: Problem 11: 20. Valid Parentheses
-    func tests_problem_20_isValid() throws {
-        lazy var testsData_problem_20: [(s: String, expected: Bool)] = {
-            var testsData = [(s: String, expected: Bool)]()
-            
-            testsData.append((s: "()", expected: true))
-            testsData.append((s: "()[]{}", expected: true))
-            testsData.append((s: "(]", expected: false))
-            
-            return testsData
-        }()
-        
-        for data in testsData_problem_20 {
-            let actual = Yandex_Problems.problem_20_isValid(data.s)
-            
-            XCTAssertEqual(actual, data.expected,
-                           "s: \(data.s)")
-        }
-    }
-    
-    
     // MARK: Problem 12: 21. Merge Two Sorted Lists
     func tests_problem_21_mergeTwoLists() throws {
         lazy var testsData_problem_21: [(list1: ListNode?, list2: ListNode?, expected: ListNode?)] = {
