@@ -189,30 +189,6 @@ final class Yandex_Problems_Tests: XCTestCase {
         }
     }
     
-    
-    // MARK: Problem 12: 21. Merge Two Sorted Lists
-    func tests_problem_21_mergeTwoLists() throws {
-        lazy var testsData_problem_21: [(list1: ListNode?, list2: ListNode?, expected: ListNode?)] = {
-            var testsData = [(list1: ListNode?, list2: ListNode?, expected: ListNode?)]()
-            
-            testsData.append((list1: ListNode(1, ListNode(2, ListNode(4))),
-                              list2: ListNode(1, ListNode(3, ListNode(4))),
-                              expected: ListNode(1, ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(4))))))))
-            
-            testsData.append((list1: nil, list2: nil, expected: nil))
-            testsData.append((list1: nil, list2: ListNode(0), expected: ListNode(0)))
-            
-            return testsData
-        }()
-        
-        for data in testsData_problem_21 {
-            let actual = Yandex_Problems.problem_21_mergeTwoLists(data.list1, data.list2)
-            
-            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected),
-                          "list1: \(String(describing: data.list1)); list2: \(String(describing: data.list2))")
-        }
-    }
-    
 
     // MARK: Problem 13: 22. Generate Parentheses
     func tests_problem_22_generateParenthesis() throws {

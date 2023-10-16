@@ -1,11 +1,12 @@
 //
-//  Yandex_Problem_12_21.swift
+//  Problem_21.swift
 //  LeetCodeProblems
 //
-//  Created by Aynur Nasybullin on 22.09.2023.
+//  Created by Aynur Nasybullin on 16.10.2023.
 //
 
 // 21. Merge Two Sorted Lists
+// URL: https://leetcode.com/problems/merge-two-sorted-lists/
 // Easy
 
 // You are given the heads of two sorted linked lists list1 and list2.
@@ -33,7 +34,7 @@
 // -100 <= Node.val <= 100
 // Both list1 and list2 are sorted in non-decreasing order.
 
-extension Yandex_Problems {
+extension LeetCodeProblems {
     // Approach: Linked List, Pointers
     // Time complexity: O(min(n1, n2)) => 6 ms
     // Space complexity: O(1) => 13.97 MB
