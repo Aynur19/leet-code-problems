@@ -11,13 +11,45 @@ import XCTest
 final class LeetCodeProblemsTests_20: XCTestCase {
     
     
+    // MARK: Problem 18. 4Sum
+    func tests_problem_18_fourSum() throws {
+        lazy var testsData_problem_18: [(nums: [Int], target: Int, expected: [[Int]])] = {
+            var testsData = [(nums: [Int], target: Int, expected: [[Int]])]()
+            
+            testsData.append((nums: [1, 0, -1, 0, -2, 2],
+                              target: 0,
+                              expected: [[-2, -1, 1, 2],
+                                         [-2, 0, 0, 2],
+                                         [-1, 0, 0, 1]]))
+            testsData.append((nums: [2, 2, 2, 2, 2],
+                              target: 8,
+                              expected: [[2, 2, 2, 2]]))
+            testsData.append((nums: [-2, -1, -1, 1, 1, 2, 2],
+                              target: 0,
+                              expected: [[-2, -1, 1, 2],
+                                         [-1, -1, 1, 1]]))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_18 {
+            let actual = LeetCodeProblems.problem_18_fourSum(data.nums, data.target).sorted { $0.lexicographicallyPrecedes($1) }
+            
+            XCTAssertEqual(actual, data.expected,
+                           "nums: \(data.nums); target: \(data.target)")
+        }
+    }
+    
+    
     // MARK: Problem 17. Letter Combinations of a Phone Number
     func tests_problem_17_letterCombinations() throws {
         lazy var testsData_problem_17: [(digits: String, expected: [String])] = {
             var testsData = [(digits: String, expected: [String])]()
             
             testsData.append((digits: "23",
-                              expected: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]))
+                              expected: ["ad", "ae", "af",
+                                         "bd", "be", "bf",
+                                         "cd", "ce", "cf"]))
             testsData.append((digits: "", expected: []))
             testsData.append((digits: "2", expected: ["a", "b", "c"]))
             
