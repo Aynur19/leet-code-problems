@@ -11,6 +11,35 @@ import XCTest
 final class LeetCodeProblemsTests_40: XCTestCase {
     
     
+    // MARK: Problem 23. Merge k Sorted Lists
+    func tests_problem_23_mergeKLists() throws {
+        lazy var testsData_problem_23: [(lists: [ListNode?], expected: ListNode?)] = {
+            var testsData = [(lists: [ListNode?], expected: ListNode?)]()
+            
+            testsData.append((lists: [
+                ListNode(1, ListNode(4, ListNode(5))),
+                ListNode(1, ListNode(3, ListNode(4))),
+                ListNode(2, ListNode(6))
+            ],
+                              expected: ListNode(1, ListNode(1, ListNode(2,
+                                        ListNode(3, ListNode(4, ListNode(4,
+                                        ListNode(5, ListNode(6))))))))
+                             ))
+            testsData.append((lists: [], expected: nil))
+            testsData.append((lists: [nil], expected: nil))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_23 {
+            let actual = LeetCodeProblems.problem_23_mergeKLists(data.lists)
+            
+            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected),
+                          "lists: \(data.lists)")
+        }
+    }
+    
+    
     // MARK: Problem 22. Generate Parentheses
     func tests_problem_22_generateParenthesis() throws {
         lazy var testsData_problem_22: [(n: Int, expected: [String])] = {
