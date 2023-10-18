@@ -11,6 +11,36 @@ import XCTest
 final class LeetCodeProblemsTests_40: XCTestCase {
     
     
+    // MARK: Problem 24. Swap Nodes in Pairs
+    func tests_problem_24_swapPairs() throws {
+        lazy var testsData_problem_24: [(head: ListNode?, expected: ListNode?)] = {
+            var testsData = [(head: ListNode?, expected: ListNode?)]()
+            
+            testsData.append((
+                head: ListNode(1, ListNode(2, ListNode(3, ListNode(4)))),
+                expected: ListNode(2, ListNode(1, ListNode(4, ListNode(3))))
+            ))
+            testsData.append((
+                head: nil,
+                expected: nil
+            ))
+            testsData.append((
+                head: ListNode(1),
+                expected: ListNode(1)
+            ))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_24 {
+            let actual = LeetCodeProblems.problem_24_swapPairs(data.head)
+            
+            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected),
+                          "head: \(String(describing: data.head))")
+        }
+    }
+    
+    
     // MARK: Problem 23. Merge k Sorted Lists
     func tests_problem_23_mergeKLists() throws {
         lazy var testsData_problem_23: [(lists: [ListNode?], expected: ListNode?)] = {
