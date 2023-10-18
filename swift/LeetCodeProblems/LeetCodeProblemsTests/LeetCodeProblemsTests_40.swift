@@ -11,6 +11,34 @@ import XCTest
 final class LeetCodeProblemsTests_40: XCTestCase {
     
     
+    // MARK: Problem 25. Reverse Nodes in k-Group
+    func tests_problem_25_reverseKGroup() throws {
+        lazy var testsData_problem_25: [(head: ListNode?, k: Int, expected: ListNode?)] = {
+            var testsData = [(head: ListNode?, k: Int, expected: ListNode?)]()
+            
+            testsData.append((
+                head: ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5))))),
+                k: 2,
+                expected: ListNode(2, ListNode(1, ListNode(4, ListNode(3, ListNode(5)))))
+            ))
+            testsData.append((
+                head: ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5))))),
+                k: 3,
+                expected: ListNode(3, ListNode(2, ListNode(1, ListNode(4, ListNode(5)))))
+            ))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_25 {
+            let actual = LeetCodeProblems.problem_25_reverseKGroup(data.head, data.k)
+            
+            XCTAssertTrue(ListNode.equalListNodes(actual, data.expected),
+                          "head: \(String(describing: data.head)), k: \(data.k)")
+        }
+    }
+    
+    
     // MARK: Problem 24. Swap Nodes in Pairs
     func tests_problem_24_swapPairs() throws {
         lazy var testsData_problem_24: [(head: ListNode?, expected: ListNode?)] = {

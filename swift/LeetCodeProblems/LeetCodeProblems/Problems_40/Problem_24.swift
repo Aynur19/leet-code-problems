@@ -31,6 +31,9 @@
 // 0 <= Node.val <= 100
 
 extension LeetCodeProblems {
+    // Approach: Linked List, Recursion
+    // Time complexity: O(n) = 3 ms
+    // Space complexity: O(1) = 14.17 MB
     static func problem_24_swapPairs(_ head: ListNode?) -> ListNode? {
         func swapPairs(_ head: ListNode?) -> ListNode? {
             guard head != nil && head?.next != nil else { return head }
