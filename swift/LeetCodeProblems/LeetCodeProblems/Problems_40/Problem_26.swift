@@ -1,12 +1,14 @@
 //
-//  Yandex_Problem_14_26.swift
+//  Problem_26.swift
 //  LeetCodeProblems
 //
-//  Created by Aynur Nasybullin on 22.09.2023.
+//  Created by Aynur Nasybullin on 18.10.2023.
 //
 
 // 26. Remove Duplicates from Sorted Array
 // Easy
+// URL: https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
+// Topics: Array, Two Pointers
 
 // Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
 
@@ -46,7 +48,7 @@
 // -100 <= nums[i] <= 100
 // nums is sorted in non-decreasing order.
 
-extension Yandex_Problems {
+extension LeetCodeProblems {
     // Approach: Two Pointers
     // Time complexity: O(n) => 44 ms
     // Space complexity: O(1) => 14.86 MB
@@ -63,3 +65,4 @@ extension Yandex_Problems {
         return prev + 1
     }
 }
+

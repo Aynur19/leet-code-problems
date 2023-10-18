@@ -190,31 +190,6 @@ final class Yandex_Problems_Tests: XCTestCase {
     }
     
     
-    // MARK: Problem 14: 26. Remove Duplicates from Sorted Array
-    func tests_problem_26_removeDuplicates() throws {
-        lazy var testsData_problem_26: [(nums: [Int], expected: Int, expectedNums: [Int])] = {
-            var testsData = [(nums: [Int], expected: Int, expectedNums: [Int])]()
-            
-            testsData.append((nums: [1, 1, 2],
-                              expected: 2,
-                              expectedNums: [1, 2]))
-            testsData.append((nums: [0, 0, 1, 1, 1, 2, 2, 3, 3, 4],
-                              expected: 5,
-                              expectedNums: [0, 1, 2, 3, 4]))
-            
-            return testsData
-        }()
-        
-        for data in testsData_problem_26 {
-            var nums = data.nums
-            let actual = Yandex_Problems.problem_26_removeDuplicates(&nums)
-            
-            XCTAssertEqual(actual, data.expected, "nums: \(data.nums)")
-            XCTAssertEqual(Array(nums[0..<actual]), data.expectedNums, "nums: \(data.nums)")
-        }
-    }
-    
-    
     // MARK: Problem 15: 28. Find the Index of the First Occurrence in a String
     func tests_problem_28_strStr() throws {
         lazy var testsData_problem_28: [(haystack: String, needle: String, expected: Int)] = {
