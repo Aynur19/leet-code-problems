@@ -9,7 +9,50 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class LeetCodeProblemsTests_40: XCTestCase {
-    // MARK: Problem 15: 28. Find the Index of the First Occurrence in a String
+    // MARK: Problem 29. Divide Two Integers
+    func tests_problem_29_divide() throws {
+        lazy var testsData_problem_29: [(dividend: Int, divisor: Int, expected: Int)] = {
+            var testsData = [(dividend: Int, divisor: Int, expected: Int)]()
+            
+            testsData.append((
+                dividend: 10,
+                divisor: 3,
+                expected: 3
+            ))
+            testsData.append((
+                dividend: 7,
+                divisor: -3,
+                expected: -2
+            ))
+            testsData.append((
+                dividend: 1004958205,
+                divisor: -2137325331,
+                expected: 0
+            ))
+            testsData.append((
+                dividend: -1,
+                divisor: 1,
+                expected: -1
+            ))
+            testsData.append((
+                dividend: -2147483648,
+                divisor: 2,
+                expected: -1073741824
+            ))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_29 {
+            let actual = LeetCodeProblems.problem_29_divide(data.dividend, data.divisor)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "dividend: \(data.dividend); divisor: \(data.divisor)")
+        }
+    }
+    
+    
+    // MARK: Problem 28. Find the Index of the First Occurrence in a String
     func tests_problem_28_strStr() throws {
         lazy var testsData_problem_28: [(haystack: String, needle: String, expected: Int)] = {
             var testsData = [(haystack: String, needle: String, expected: Int)]()
