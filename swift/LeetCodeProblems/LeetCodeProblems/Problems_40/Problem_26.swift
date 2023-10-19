@@ -52,7 +52,6 @@ extension LeetCodeProblems {
     // Approach: Two Pointers
     // Time complexity: O(n) => 44 ms
     // Space complexity: O(1) => 14.86 MB
-    // C(n) - Catalan number
     static func problem_26_removeDuplicates(_ nums: inout [Int]) -> Int {
         guard nums.count > 1 else { return nums.count }
         var prev = 0

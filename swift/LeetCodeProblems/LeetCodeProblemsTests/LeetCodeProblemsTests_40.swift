@@ -10,6 +10,37 @@ import XCTest
 
 final class LeetCodeProblemsTests_40: XCTestCase {
     // MARK: Problem 26. Remove Duplicates from Sorted Array
+    func tests_problem_27_removeElement() throws {
+        lazy var testsData_problem_27: [(nums: [Int], val: Int, expected: Int, expectedNums: [Int])] = {
+            var testsData = [(nums: [Int], val: Int, expected: Int, expectedNums: [Int])]()
+            
+            testsData.append((
+                nums: [3, 2, 2, 3],
+                val: 3,
+                expected: 2,
+                expectedNums: [2, 2]
+            ))
+            testsData.append((
+                nums: [0, 1, 2, 2, 3, 0, 4, 2],
+                val: 2,
+                expected: 5,
+                expectedNums: [0, 1, 3, 0, 4]
+            ))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_27 {
+            var nums = data.nums
+            let actual = LeetCodeProblems.problem_27_removeElement(&nums, data.val)
+            
+            XCTAssertEqual(actual, data.expected, "nums: \(data.nums)")
+            XCTAssertEqual(Array(nums[0..<actual]), data.expectedNums, "nums: \(data.nums)")
+        }
+    }
+    
+    
+    // MARK: Problem 26. Remove Duplicates from Sorted Array
     func tests_problem_26_removeDuplicates() throws {
         lazy var testsData_problem_26: [(nums: [Int], expected: Int, expectedNums: [Int])] = {
             var testsData = [(nums: [Int], expected: Int, expectedNums: [Int])]()

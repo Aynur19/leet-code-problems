@@ -66,6 +66,8 @@
 		9851B5E62ADFCD100044C549 /* Problem_25.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9851B5E42ADFCD0F0044C549 /* Problem_25.swift */; };
 		9851B5E82ADFEBA70044C549 /* Problem_26.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9851B5E72ADFEBA70044C549 /* Problem_26.swift */; };
 		9851B5E92ADFEBA80044C549 /* Problem_26.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9851B5E72ADFEBA70044C549 /* Problem_26.swift */; };
+		9851B5F22AE0F18D0044C549 /* Problem_27.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9851B5F12AE0F18D0044C549 /* Problem_27.swift */; };
+		9851B5F32AE0F18D0044C549 /* Problem_27.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9851B5F12AE0F18D0044C549 /* Problem_27.swift */; };
 		986431602AC165EF00EC6B70 /* Yandex_Problem_19_48.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9864315F2AC165EF00EC6B70 /* Yandex_Problem_19_48.swift */; };
 		986431612AC165EF00EC6B70 /* Yandex_Problem_19_48.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9864315F2AC165EF00EC6B70 /* Yandex_Problem_19_48.swift */; };
 		986431632AC1760E00EC6B70 /* Yandex_Problem_20_49.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986431622AC1760E00EC6B70 /* Yandex_Problem_20_49.swift */; };
@@ -216,6 +218,7 @@
 		9851B5E12ADFCA720044C549 /* Problem_24.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_24.swift; sourceTree = "<group>"; };
 		9851B5E42ADFCD0F0044C549 /* Problem_25.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_25.swift; sourceTree = "<group>"; };
 		9851B5E72ADFEBA70044C549 /* Problem_26.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_26.swift; sourceTree = "<group>"; };
+		9851B5F12AE0F18D0044C549 /* Problem_27.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem_27.swift; sourceTree = "<group>"; };
 		9864315F2AC165EF00EC6B70 /* Yandex_Problem_19_48.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_19_48.swift; sourceTree = "<group>"; };
 		986431622AC1760E00EC6B70 /* Yandex_Problem_20_49.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_20_49.swift; sourceTree = "<group>"; };
 		986431652AC1784100EC6B70 /* Yandex_Problem_22_56.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yandex_Problem_22_56.swift; sourceTree = "<group>"; };
@@ -305,6 +308,7 @@
 				9851B5E12ADFCA720044C549 /* Problem_24.swift */,
 				9851B5E42ADFCD0F0044C549 /* Problem_25.swift */,
 				9851B5E72ADFEBA70044C549 /* Problem_26.swift */,
+				9851B5F12AE0F18D0044C549 /* Problem_27.swift */,
 			);
 			path = Problems_40;
 			sourceTree = "<group>";
@@ -614,6 +618,7 @@
 				9829A6A22AD541D2004E6377 /* Problem_6.swift in Sources */,
 				9851B5E22ADFCA720044C549 /* Problem_24.swift in Sources */,
 				9836A0942AB19A2E0025E1A8 /* LC_Yandex_Easy.swift in Sources */,
+				9851B5F22AE0F18D0044C549 /* Problem_27.swift in Sources */,
 				986431922AC42A5900EC6B70 /* Yandex_Problem_42_161.swift in Sources */,
 				98BFC97B2AAB5BA000D42CFC /* LC75_LinkedList.swift in Sources */,
 				98D8DF832AAE03BB00AEBD4B /* TreeNode.swift in Sources */,
@@ -747,6 +752,7 @@
 				98C97B2F2ACE9ADB0023DBCA /* LeetCodeProblems.swift in Sources */,
 				98C97B2C2ACE9AAA0023DBCA /* Problem_1.swift in Sources */,
 				9829A6A32AD54E00004E6377 /* Problem_6.swift in Sources */,
+				9851B5F32AE0F18D0044C549 /* Problem_27.swift in Sources */,
 				986431812AC3257700EC6B70 /* Yandex_Problem_29_101.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
