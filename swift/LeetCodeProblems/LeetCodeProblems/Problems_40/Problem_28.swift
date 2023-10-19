@@ -1,12 +1,14 @@
 //
-//  Yandex_Problem_15_28.swift
+//  Problem_28.swift
 //  LeetCodeProblems
 //
-//  Created by Aynur Nasybullin on 22.09.2023.
+//  Created by Aynur Nasybullin on 19.10.2023.
 //
 
 // 28. Find the Index of the First Occurrence in a String
 // Easy
+// URL: https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
+// Topics: Two Pointers, String, String Matching
 
 // Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
 
@@ -27,7 +29,7 @@
 // 1 <= haystack.length, needle.length <= 104
 // haystack and needle consist of only lowercase English characters.
 
-extension Yandex_Problems {
+extension LeetCodeProblems {
     // Approach: Two Pointers, Array
     // Time complexity: O(n1 * n2) => 4 ms
     // Space complexity: O(n1 + n2) => 13.78 MB
@@ -86,3 +88,4 @@ extension Yandex_Problems {
         return -1
     }
 }
+

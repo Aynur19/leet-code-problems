@@ -9,6 +9,34 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class LeetCodeProblemsTests_40: XCTestCase {
+    // MARK: Problem 15: 28. Find the Index of the First Occurrence in a String
+    func tests_problem_28_strStr() throws {
+        lazy var testsData_problem_28: [(haystack: String, needle: String, expected: Int)] = {
+            var testsData = [(haystack: String, needle: String, expected: Int)]()
+            
+            testsData.append((
+                haystack: "sadbutsad",
+                needle: "sad",
+                expected: 0
+            ))
+            testsData.append((
+                haystack: "leetcode",
+                needle: "leeto",
+                expected: -1
+            ))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_28 {
+            let actual = LeetCodeProblems.problem_28_strStr(data.haystack, data.needle)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "haystack: \(data.haystack); needle: \(data.needle)")
+        }
+    }
+    
+    
     // MARK: Problem 26. Remove Duplicates from Sorted Array
     func tests_problem_27_removeElement() throws {
         lazy var testsData_problem_27: [(nums: [Int], val: Int, expected: Int, expectedNums: [Int])] = {

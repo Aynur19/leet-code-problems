@@ -190,26 +190,6 @@ final class Yandex_Problems_Tests: XCTestCase {
     }
     
     
-    // MARK: Problem 15: 28. Find the Index of the First Occurrence in a String
-    func tests_problem_28_strStr() throws {
-        lazy var testsData_problem_28: [(haystack: String, needle: String, expected: Int)] = {
-            var testsData = [(haystack: String, needle: String, expected: Int)]()
-            
-            testsData.append((haystack: "sadbutsad", needle: "sad", expected: 0))
-            testsData.append((haystack: "leetcode", needle: "leeto", expected: -1))
-            
-            return testsData
-        }()
-        
-        for data in testsData_problem_28 {
-            let actual = Yandex_Problems.problem_28_strStr(data.haystack, data.needle)
-            
-            XCTAssertEqual(actual, data.expected,
-                           "haystack: \(data.haystack); needle: \(data.needle)")
-        }
-    }
-    
-    
     // MARK: Problem 16: 33. Search in Rotated Sorted Array
     func tests_problem_33_search() throws {
         lazy var testsData_problem_33: [(nums: [Int], target: Int, expected: Int)] = {
