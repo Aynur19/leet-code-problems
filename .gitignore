@@ -26,3 +26,5 @@ leetcode/
 
 # Ignore any user-specific configurations or credentials
 config.json
+
+**/NestedInteger.swift
