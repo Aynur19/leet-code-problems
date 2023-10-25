@@ -9,6 +9,40 @@ import XCTest
 @testable import LeetCodeProblems
 
 final class LeetCodeProblemsTests_40: XCTestCase {
+    
+    // MARK: Problem 30. Substring with Concatenation of All Words
+    func tests_problem_30_findSubstring() throws {
+        lazy var testsData_problem_30: [(s: String, words: [String], expected: [Int])] = {
+            var testsData = [(s: String, words: [String], expected: [Int])]()
+            
+            testsData.append((
+                s: "barfoothefoobarman",
+                words: ["foo", "bar"],
+                expected: [0, 9]
+            ))
+            testsData.append((
+                s: "wordgoodgoodgoodbestword",
+                words: ["word", "good", "best", "word"],
+                expected: []
+            ))
+            testsData.append((
+                s: "barfoofoobarthefoobarman",
+                words: ["bar", "foo", "the"],
+                expected: [6, 9, 12]
+            ))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_30 {
+            let actual = LeetCodeProblems.problem_30_findSubstring(data.s, data.words)
+            
+            XCTAssertEqual(actual, data.expected,
+                           "s: '\(data.s)'; word: \(data.words)")
+        }
+    }
+    
+    
     // MARK: Problem 29. Divide Two Integers
     func tests_problem_29_divide() throws {
         lazy var testsData_problem_29: [(dividend: Int, divisor: Int, expected: Int)] = {
