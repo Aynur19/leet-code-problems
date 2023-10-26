@@ -10,6 +10,44 @@ import XCTest
 
 final class LeetCodeProblemsTests_40: XCTestCase {
     
+    // MARK: Problem 31. Next Permutation
+    func tests_problem_31_nextPermutation() throws {
+        lazy var testsData_problem_31: [(nums: [Int], expected: [Int])] = {
+            var testsData = [(nums: [Int], expected: [Int])]()
+            
+            testsData.append((
+                nums: [1, 2, 3],
+                expected: [1, 3, 2]
+            ))
+            testsData.append((
+                nums: [3, 2, 1],
+                expected: [1, 2, 3]
+            ))
+            testsData.append((
+                nums: [1, 1, 5],
+                expected: [1, 5, 1]
+            ))
+            testsData.append((
+                nums: [1, 2],
+                expected: [2, 1]
+            ))
+            testsData.append((
+                nums: [1, 3, 2],
+                expected: [2, 1, 3]
+            ))
+            
+            return testsData
+        }()
+        
+        for data in testsData_problem_31 {
+            var nums = data.nums
+            LeetCodeProblems.problem_31_nextPermutation(&nums)
+            
+            XCTAssertEqual(nums, data.expected,
+                           "nums: \(data.nums)")
+        }
+    }
+    
     // MARK: Problem 30. Substring with Concatenation of All Words
     func tests_problem_30_findSubstring() throws {
         lazy var testsData_problem_30: [(s: String, words: [String], expected: [Int])] = {
